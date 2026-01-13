@@ -25,6 +25,9 @@ A curated list of **CodePen demos, animation libraries, motion tools, and visual
 - [Andrei Victor – UI Animation](https://codepen.io/andreivictor/pen/oNGXzwE)
 - [David Khourshid – State & Motion Demo](https://codepen.io/davidkpiano/pen/aqNZxX)
 - [Zain Zafar – UI Animation](https://codepen.io/zainzafar/pen/oNypoEr)
+- [Keral Patel – Motion UI](https://codepen.io/keralpatel/pen/BajqRWK)
+- [Wes Biazetto – Motion UI](https://codepen.io/wbiazetto/pen/MdMyjP)
+- [Andrei Victor – Motion UI](https://codepen.io/andreivictor/pen/oNGXzwE)
 
 ---
 
