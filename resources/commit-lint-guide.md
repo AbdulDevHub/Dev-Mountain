@@ -1,7 +1,6 @@
 ---
 title: Commit Lint & Conventional Commits
 description: A quick reference guide for writing consistent, meaningful Git commit messages
-slug: /blog/commit-lint
 ---
 
 ## Commit Lint

@@ -1,7 +1,6 @@
 ---
 title: Learning Platforms
 description: A curated list of recommended learning platforms
-slug: /blog/learning-platforms
 ---
 
 ## Learning Platforms

@@ -1,7 +1,6 @@
 ---
 title: UI Motion, Animation & Inspiration
 description: A curated collection of UI motion experiments, animation libraries, and creative inspiration
-slug: /blog/ui-motion-and-inspiration
 ---
 
 ## UI Motion, Animation & Inspiration

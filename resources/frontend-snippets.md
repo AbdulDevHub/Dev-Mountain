@@ -1,7 +1,6 @@
 ---
 title: Frontend Snippets
 description: Handy frontend snippets, visual effects, and asset references
-slug: /blog/frontend-snippets
 ---
 
 ## Frontend Snippets
@@ -67,11 +66,7 @@ Best used on:
 
 ## 🧭 Snap Scrolling Asset
 
-Reference image stored in the project:
-
-```
-src/assets/Snap Scrolling.png
-```
+<img src="/assets/Snap%20Scrolling.png" alt="Snap Scrolling" />
 
 Useful for:
 
