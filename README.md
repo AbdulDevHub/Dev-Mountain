@@ -2,6 +2,8 @@
 
 This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
 
+![Screenshot](Screenshot.png)
+
 ## About This Project
 
 Welcome! This project is a curated collection of resources, tutorials, UI/UX experiments, and motion design examples for developers and designers. The goal is to make it easier to explore and reference high-quality tools, libraries, and learning platforms.
