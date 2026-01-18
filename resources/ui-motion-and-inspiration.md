@@ -9,27 +9,6 @@ A curated list of **CodePen demos, animation libraries, motion tools, and visual
 
 ---
 
-## 🎨 CodePen UI & Motion Demos
-
-- [Hyperplexed – UI Motion Demo](https://codepen.io/Hyperplexed/pen/MWQeYLW)
-- [iCodeThis Challenge #319](https://icodethis.com/code/319)
-- [jh3y – Creative UI Animation](https://codepen.io/jh3y/pen/RwqZNKa)
-- [Gayane Gasparyan – UI Effect](https://codepen.io/gayane-gasparyan/pen/jOmaBQK)
-- [Katy Decorah – SVG / CSS Experiment](https://codepen.io/katydecorah/pen/nYLbEN)
-- [Zadvorsky – Canvas / Motion](https://codepen.io/zadvorsky/pen/PNXbGo)
-- [Ykadosh – Interactive UI](https://codepen.io/ykadosh/full/PxvbYQ)
-- [Bojan Krsmanovic – Motion UI](https://codepen.io/bojankrsmanovic/full/dpzeZm)
-- [Mr Alien – Visual Experiment](https://codepen.io/mr_alien/full/NWygPw)
-- [Ste-vg – Interactive Effect](https://codepen.io/ste-vg/full/OEbYqZ)
-- [Andrei Victor – UI Animation](https://codepen.io/andreivictor/pen/oNGXzwE)
-- [David Khourshid – State & Motion Demo](https://codepen.io/davidkpiano/pen/aqNZxX)
-- [Zain Zafar – UI Animation](https://codepen.io/zainzafar/pen/oNypoEr)
-- [Keral Patel – Motion UI](https://codepen.io/keralpatel/pen/BajqRWK)
-- [Wes Biazetto – Motion UI](https://codepen.io/wbiazetto/pen/MdMyjP)
-- [Andrei Victor – Motion UI](https://codepen.io/andreivictor/pen/oNGXzwE)
-
----
-
 ## 🧰 Animation & Motion Libraries
 
 - [Animate.css](https://animate.style/)
