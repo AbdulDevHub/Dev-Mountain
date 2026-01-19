@@ -4,6 +4,10 @@ const sidebars: SidebarsConfig = {
   resourcesSidebar: [
     {
       type: "doc",
+      id: "index",
+    }.
+    {
+      type: "doc",
       id: "learning-platforms",
     },
     {
@@ -26,6 +30,10 @@ const sidebars: SidebarsConfig = {
       type: "doc",
       id: "commit-lint-guide",
     },
+    {
+      type: "doc",
+      id: "pnpm-guide",
+    }
   ],
 }
 
