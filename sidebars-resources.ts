@@ -5,7 +5,7 @@ const sidebars: SidebarsConfig = {
     {
       type: "doc",
       id: "index",
-    }.
+    },
     {
       type: "doc",
       id: "learning-platforms",
