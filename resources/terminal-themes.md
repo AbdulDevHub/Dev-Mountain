@@ -16,7 +16,7 @@ This page serves as a visual reference for terminal customization, including:
 ### Blue Owl
 
 <img
-src="/assets/terminal-themes/Blue Owl.png"
+src="/terminal-themes/Blue Owl.png"
 alt="Blue Owl Oh My Posh Theme"
 style={{ maxWidth: "100%", borderRadius: "8px" }}
 />
@@ -26,7 +26,7 @@ style={{ maxWidth: "100%", borderRadius: "8px" }}
 ### Tokyo
 
 <img
-src="/assets/terminal-themes/Tokyo.png"
+src="/terminal-themes/Tokyo.png"
 alt="Tokyo Oh My Posh Theme"
 style={{ maxWidth: "100%", borderRadius: "8px" }}
 />
@@ -36,7 +36,7 @@ style={{ maxWidth: "100%", borderRadius: "8px" }}
 ### Unicorn
 
 <img
-src="/assets/terminal-themes/Unicorn.png"
+src="/terminal-themes/Unicorn.png"
 alt="Unicorn Oh My Posh Theme"
 style={{ maxWidth: "100%", borderRadius: "8px" }}
 />
@@ -50,7 +50,7 @@ The following screenshot contains additional Windows Terminal appearance and con
 ### Terminal Configuration
 
 <img
-src="/assets/terminal-themes/Terminal Configuration.png"
+src="/terminal-themes/Terminal Configuration.png"
 alt="Terminal Configuration Settings"
 style={{ maxWidth: "100%", borderRadius: "8px" }}
 />
