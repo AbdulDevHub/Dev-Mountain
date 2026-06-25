@@ -2,9 +2,9 @@
 sidebar_position: 2
 ---
 
-# Translate your site
+# Translate Your Site
 
-Let's translate `docs/intro.md` to French.
+Dev-Mountain currently runs in English only, but Docusaurus has built-in **i18n (internationalisation)** support if a multi-language version is ever needed. Below is the full reference for enabling it.
 
 ## Configure i18n
 

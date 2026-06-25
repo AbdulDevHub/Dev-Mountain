@@ -2,22 +2,25 @@
 sidebar_position: 6
 ---
 
-# Congratulations!
+# ✅ You're Up to Speed!
 
-You have just learned the **basics of Docusaurus** and made some changes to the **initial template**.
+You now understand how Dev-Mountain is structured and how to add content to each section. Here's a quick recap:
 
-Docusaurus has **much more to offer**!
+| What you want to do | Where to do it |
+|---|---|
+| Add a resource link / tool | `resources/*.md` |
+| Write a guide or how-to | `docs/*.md` |
+| Write a blog post / update | `blog/YYYY-MM-DD-*.md` |
+| Create a custom page | `src/pages/*.tsx` |
+| Change navbar / footer | `docusaurus.config.ts` |
 
-Have **5 more minutes**? Take a look at **[versioning](../tutorial-extras/manage-docs-versions.md)** and **[i18n](../tutorial-extras/translate-your-site.md)**.
+## What's Next?
 
-Anything **unclear** or **buggy** in this tutorial? [Please report it!](https://github.com/facebook/docusaurus/discussions/4610)
+- Explore **[Site Advanced](../tutorial-extras/manage-docs-versions.md)** for versioning and i18n options
+- Check the **[CONTRIBUTING.md](https://github.com/AbdulDevHub/Dev-Mountain/blob/main/CONTRIBUTING.md)** for the full content guide
+- Browse **[Resources](/resources/learning-platforms)** — that's the main content hub
+- Read the [Docusaurus official docs](https://docusaurus.io/) for anything not covered here
 
-## What's next?
-
-- Read the [official documentation](https://docusaurus.io/)
-- Modify your site configuration with [`docusaurus.config.js`](https://docusaurus.io/docs/api/docusaurus-config)
-- Add navbar and footer items with [`themeConfig`](https://docusaurus.io/docs/api/themes/configuration)
-- Add a custom [Design and Layout](https://docusaurus.io/docs/styling-layout)
-- Add a [search bar](https://docusaurus.io/docs/search)
-- Find inspirations in the [Docusaurus showcase](https://docusaurus.io/showcase)
-- Get involved in the [Docusaurus Community](https://docusaurus.io/community/support)
+:::tip
+The fastest way to add content is to copy an existing `.md` file from the same section, update the frontmatter, and replace the content. Docusaurus handles the rest automatically.
+:::

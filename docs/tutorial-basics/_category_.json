@@ -1,8 +1,8 @@
 {
-  "label": "Tutorial - Basics",
+  "label": "Site Basics",
   "position": 2,
   "link": {
     "type": "generated-index",
-    "description": "5 minutes to learn the most important Docusaurus concepts."
+    "description": "Core concepts for working with Dev-Mountain — how pages, docs, and the blog are created and organised."
   }
 }

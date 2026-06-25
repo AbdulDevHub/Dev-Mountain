@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Manage Docs Versions
 
-Docusaurus can manage multiple versions of your docs.
+Docusaurus supports **versioned documentation** — useful if the site ever needs to preserve a snapshot of resources at a point in time (e.g. "2025 Edition" vs "2026 Edition"). This is an advanced feature not currently used in Dev-Mountain, but documented here for reference.
 
 ## Create a docs version
 

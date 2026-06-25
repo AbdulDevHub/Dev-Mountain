@@ -1,45 +1,46 @@
 ---
 sidebar_position: 1
-# toc_min_heading_level: 2
-# toc_max_heading_level: 6
 ---
 
 # Create a Page
 
-Add **Markdown or React** files to `src/pages` to create a **standalone page**:
+Dev-Mountain has two kinds of **standalone pages**:
 
-- `src/pages/index.js` → `localhost:3000/`
-- `src/pages/foo.md` → `localhost:3000/foo`
-- `src/pages/foo/bar.js` → `localhost:3000/foo/bar`
+- **React/TSX pages** — full custom pages with components (e.g. the Home page and About page)
+- **Markdown pages** — quick standalone pages written in plain Markdown
 
-## Create your first React Page
+Both live in `src/pages/`. Any file here becomes a route automatically.
 
-Create a file at `src/pages/my-react-page.js`:
+## React Pages
 
-```jsx title="src/pages/my-react-page.js"
-import React from 'react';
+Custom pages like the homepage (`src/pages/index.tsx`) and About page (`src/pages/about.tsx`) are React components wrapped in the Docusaurus `<Layout>` component.
+
+```tsx title="src/pages/my-page.tsx"
 import Layout from '@theme/Layout';
 
-export default function MyReactPage() {
+export default function MyPage() {
   return (
-    <Layout>
-      <h1>My React page</h1>
-      <p>This is a React page</p>
+    <Layout title="My Page" description="A custom page">
+      <main>
+        <h1>Hello from my page!</h1>
+      </main>
     </Layout>
   );
 }
 ```
 
-A new page is now available at [http://localhost:3000/my-react-page](http://localhost:3000/my-react-page).
+This page is now available at `/my-page`.
 
-## Create your first Markdown Page
+## Markdown Pages
 
-Create a file at `src/pages/my-markdown-page.md`:
+For simpler pages, just drop a `.md` file in `src/pages/`:
 
-```mdx title="src/pages/my-markdown-page.md"
-# My Markdown page
+```md title="src/pages/my-page.md"
+# My Page
 
-This is a Markdown page
+Some content here.
 ```
 
-A new page is now available at [http://localhost:3000/my-markdown-page](http://localhost:3000/my-markdown-page).
+:::tip
+Use React pages when you need full control over layout, styles, or interactive components. Use Markdown pages for simple, content-only pages.
+:::

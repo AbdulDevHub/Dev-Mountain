@@ -1,7 +1,8 @@
 {
-  "label": "Tutorial - Extras",
+  "label": "Site Advanced",
   "position": 3,
   "link": {
-    "type": "generated-index"
+    "type": "generated-index",
+    "description": "Advanced Docusaurus features used in Dev-Mountain — versioning, translations, and customisation."
   }
 }

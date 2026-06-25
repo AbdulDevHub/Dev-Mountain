@@ -2,46 +2,52 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# Docusaurus Guide
 
-Let's discover **Docusaurus in less than 5 minutes**.
+> This section documents **how Dev-Mountain is built** using Docusaurus. It's kept here as a living reference so you (or any contributor) can quickly understand how the site works, how to add content, and how to customise things — without digging through the Docusaurus docs every time.
 
-## Getting Started
+## 🦕 What is Docusaurus?
 
-Get started by **creating a new site**.
+[Docusaurus](https://docusaurus.io/) is the static-site generator powering this project. It takes Markdown / MDX files and turns them into a fast, searchable documentation website. The core things to know:
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+- Content lives in **plain `.md` / `.mdx` files** — no database, no CMS.
+- The sidebar is **auto-generated** from the folder structure (or can be defined manually in `sidebars.ts`).
+- React components can be dropped into `.mdx` files for interactive content.
+- The dev server hot-reloads — edit a file and the browser refreshes instantly.
 
-### What you'll need
+## 🗂️ How This Site is Structured
 
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+| Section | Folder | Navbar Label | Purpose |
+|---|---|---|---|
+| Main docs | `docs/` | Docusaurus Guide | This guide — how the site works |
+| Resources | `resources/` | Resources | Curated tools, libraries, platforms |
+| Blog | `blog/` | Blog | Dev notes, updates, discoveries |
+| Pages | `src/pages/` | Home / About | Custom React/MDX pages |
 
-## Generate a new site
-
-Generate a new Docusaurus site using the **classic template**.
-
-The classic template will automatically be added to your project after you run the command:
-
-```bash
-npm init docusaurus@latest my-website classic
-```
-
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
+## 🚀 Running Locally
 
 ```bash
-cd my-website
-npm run start
+# Install dependencies (first time only)
+yarn
+
+# Start dev server at http://localhost:3000
+yarn start
 ```
 
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
+Changes in `docs/`, `resources/`, and `blog/` hot-reload automatically. Changes to `docusaurus.config.ts` or `sidebars.ts` require a server restart.
 
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
+## ➕ Adding Content
 
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+**New resource page** → add a `.md` file to `resources/`, it auto-appears in the sidebar.
+
+**New guide page** → add a `.md` file to `docs/`, it auto-appears here.
+
+**New blog post** → add a `.md` file to `blog/` with the date prefix (e.g. `2026-06-25-my-post.md`).
+
+See **Tutorial Basics** and **Tutorial Extras** in this section for detailed walkthroughs on creating pages, documents, blog posts, and more.
+
+## 📖 Further Reading
+
+- [Docusaurus official docs](https://docusaurus.io/docs) — full reference
+- [Markdown features](https://docusaurus.io/docs/markdown-features) — admonitions, tabs, code blocks
+- [MDX](https://mdxjs.com/) — using React components inside Markdown

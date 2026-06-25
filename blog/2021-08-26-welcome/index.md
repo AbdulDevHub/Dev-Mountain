@@ -1,27 +1,30 @@
 ---
-slug: welcome
-title: Welcome
-authors: [slorber, yangshun]
-tags: [facebook, hello, docusaurus]
+slug: welcome-to-dev-mountain
+title: Welcome to Dev-Mountain 🏔️
+authors: [abdul]
+tags: [meta, devtools, workflow]
 ---
 
-[Docusaurus blogging features](https://docusaurus.io/docs/blog) are powered by the [blog plugin](https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-blog).
+Dev-Mountain is a curated knowledge base for developers and designers who care about quality tooling, beautiful UIs, and efficient workflows.
 
 <!-- truncate -->
 
-Simply add Markdown files (or folders) to the `blog` directory.
+This blog is the informal layer of the site — a place for quick notes, resource spotlights, and developer discoveries that don't fit neatly into a reference doc.
 
-Regular blog authors can be added to `authors.yml`.
+## What You'll Find Here
 
-The blog post date can be extracted from filenames, such as:
+The site is organised into three main sections:
 
-- `2019-05-30-welcome.md`
-- `2019-05-30-welcome/index.md`
+- **Resources** — the main content hub. Tools, libraries, learning platforms, CLI references, and UI inspiration all live here.
+- **Docusaurus Guide** — documentation on how this site itself is built, so I can always remember how to add or change things.
+- **Blog** (you're here) — updates, discoveries, tips, and dev notes.
 
-A blog post folder can be convenient to co-locate blog post images:
+## Why I Built This
 
-![Docusaurus Plushie](./docusaurus-plushie-banner.jpeg)
+I kept bookmarking the same resources across multiple browsers, machines, and devices. Inevitably I'd forget where something was, or discover that my bookmarks weren't synced. Dev-Mountain is the fix for that — a single, searchable, version-controlled reference I can access from anywhere.
 
-The blog supports tags as well!
+If it's useful to you too, even better.
 
-**And if you don't want a blog**: just delete this directory, and use `blog: false` in your Docusaurus config.
+---
+
+Feel free to explore the **[Resources](/resources/learning-platforms)** section — that's where the real content lives.

@@ -1,69 +1,125 @@
 # ⛰️ Dev Mountain
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+> **Curated Dev Resources • Dynamic UI • T-Rex Energy**
+
+A curated knowledge base for developers and designers — tools, UI/UX inspiration, motion design examples, workflow references, and more. Built with [Docusaurus](https://docusaurus.io/).
 
 ![Screenshot](Screenshot.png)
 
-## About This Project
+---
 
-Welcome! This project is a curated collection of resources, tutorials, UI/UX experiments, and motion design examples for developers and designers. The goal is to make it easier to explore and reference high-quality tools, libraries, and learning platforms.
+## 🗺️ Site Sections
 
-### 🎯 Mission
-
-Our mission is to create a central hub where developers and designers can quickly find inspiration, tutorials, and ready-to-use frontend snippets, without having to dig through multiple sites.
-
-### 📚 Resources Included
-
-* Learning platforms for coding and AI
-* UI libraries, frameworks, and component systems
-* Frontend motion and animation experiments
-* Assets, SVGs, icons, and GIFs for prototyping
-* Commit conventions and productivity tips
-
-### 🤝 Contributing
-
-Feel free to suggest new resources, UI experiments, or motion examples. Contributions make this hub stronger and more useful for the community!
-
-### 📬 Contact
-
-You can reach out via the project repository, or submit suggestions directly through the blog pages for new resources.
+| Tab | Folder | What lives here |
+|---|---|---|
+| **Resources** | `resources/` | The main content hub — links, guides, snippets |
+| **Docusaurus Guide** | `docs/` | How this site is built and maintained |
+| **Blog** | `blog/` | Dev notes, discoveries, updates |
+| **About** | `src/pages/about.tsx` | Project info |
 
 ---
 
-## Installation
+## ➕ How to Add Content
+
+### Adding a Resource
+
+1. Drop a `.md` file in `resources/`:
+   ```md
+   ---
+   title: My Topic
+   description: Short description
+   ---
+
+   ## My Topic
+
+   - [Tool Name](https://example.com) — brief description
+   ```
+2. It auto-appears in the sidebar. No config changes needed.
+
+### Adding a Blog Post
+
+1. Create `blog/YYYY-MM-DD-my-post.md`:
+   ```md
+   ---
+   slug: my-post
+   title: My Post Title
+   authors: [abdul]
+   tags: [frontend, tools]
+   ---
+
+   Intro shown in the list view.
+
+   <!-- truncate -->
+
+   Full content here...
+   ```
+
+### Adding a Guide Page
+
+1. Drop a `.md` file in `docs/`:
+   ```md
+   ---
+   sidebar_position: 7
+   ---
+
+   # My Guide
+   ```
+
+### Editing the Navbar or Footer
+
+Edit `docusaurus.config.ts` → `themeConfig.navbar.items` or `themeConfig.footer.links`, then restart the dev server.
+
+> 📖 See [CONTRIBUTING.md](./CONTRIBUTING.md) for the full content guide.
+> 🤖 See [AGENTS.md](./AGENTS.md) for the AI agent / automation reference.
+
+---
+
+## 🚀 Local Development
 
 ```bash
+# Install dependencies
 yarn
-```
 
-## Local Development
-
-```bash
+# Start dev server at http://localhost:3000
 yarn start
 ```
 
-This command starts a local development server and opens a browser window. Most changes are reflected live without having to restart the server.
+Most changes hot-reload automatically. Config changes (`docusaurus.config.ts`, `sidebars.ts`) require a server restart.
 
-## Build
+## 📦 Build
 
 ```bash
 yarn build
 ```
 
-This command generates static content into the `build` directory and can be served using any static content hosting service.
+Generates static output in `build/`. Preview it with:
 
-## Deployment
+```bash
+yarn serve
+```
 
-**Using SSH:**
+## 🚢 Deploy
+
+**GitHub Pages via SSH:**
 
 ```bash
 USE_SSH=true yarn deploy
 ```
 
-**Not using SSH:**
+**GitHub Pages without SSH:**
 
 ```bash
 GIT_USER=<Your GitHub username> yarn deploy
 ```
 
-If you are using GitHub Pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+**Vercel / Netlify:** connect the repo, set build command to `yarn build`, output directory to `build`.
+
+---
+
+## 🤝 Contributing
+
+Feel free to suggest new resources, UI experiments, or motion examples. See [CONTRIBUTING.md](./CONTRIBUTING.md) for the full guide.
+
+## 📬 Contact
+
+Reach out via the [GitHub repository](https://github.com/AbdulDevHub/Dev-Mountain) or open an issue / PR.

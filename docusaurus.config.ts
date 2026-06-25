@@ -4,7 +4,7 @@ import type * as Preset from "@docusaurus/preset-classic"
 
 const config: Config = {
   title: "Dev Dino Mountain",
-  tagline: "Dinosaurs are cool",
+  tagline: "Curated Dev Resources • Dynamic UI • T-Rex Energy",
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
@@ -86,7 +86,7 @@ const config: Config = {
           type: "docSidebar",
           sidebarId: "tutorialSidebar",
           position: "left",
-          label: "Tutorial",
+          label: "Docusaurus Guide",
         },
         {
           type: "docSidebar",
@@ -111,7 +111,7 @@ const config: Config = {
           title: "Docs",
           items: [
             {
-              label: "Tutorial",
+              label: "Docusaurus Guide",
               to: "/docs/intro",
             },
             {
@@ -146,12 +146,12 @@ const config: Config = {
             },
             {
               label: "GitHub",
-              href: "https://github.com/AbdulDevHub/Docusaurus",
+              href: "https://github.com/AbdulDevHub/Dev-Mountain",
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Dev-Mountain by Abdul Khan. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,

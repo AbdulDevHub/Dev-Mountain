@@ -1,22 +1,39 @@
 ---
-slug: mdx-blog-post
-title: MDX Blog Post
-authors: [slorber]
-tags: [docusaurus]
+slug: writing-blog-posts-with-mdx
+title: Writing Blog Posts with MDX
+authors: [abdul]
+tags: [meta, docusaurus, mdx]
 ---
 
-Blog posts support [Docusaurus Markdown features](https://docusaurus.io/docs/markdown-features), such as [MDX](https://mdxjs.com/).
+Blog posts on this site support **MDX** — meaning you can embed React components directly inside Markdown. This post is a quick demo of what's possible.
 
 <!-- truncate -->
 
 :::tip
 
-Use the power of React to create interactive blog posts.
-
-```js
-<button onClick={() => alert("button clicked!")}>Click me!</button>
-```
-
-<button onClick={() => alert("button clicked!")}>Click me!</button>
+MDX is just Markdown + JSX. If you know Markdown, you already know 90% of it.
 
 :::
+
+## Interactive Elements
+
+You can drop React components inline. Here's a live example:
+
+```jsx
+<button onClick={() => alert("T-Rex approved! 🦕")}>
+  Click me!
+</button>
+```
+
+<button onClick={() => alert("T-Rex approved! 🦕")}>Click me!</button>
+
+## When to Use MDX vs MD
+
+Use **`.md`** for: resource pages, guides, anything that's just content.
+
+Use **`.mdx`** for: blog posts or pages where you want interactive demos, embedded components, or conditional rendering.
+
+## Further Reading
+
+- [MDX official docs](https://mdxjs.com/)
+- [Docusaurus Markdown Features](/docs/tutorial-basics/markdown-features) — full reference for admonitions, tabs, code blocks, and more

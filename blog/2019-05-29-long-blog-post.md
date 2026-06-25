@@ -1,44 +1,50 @@
 ---
-slug: long-blog-post
-title: Long Blog Post
-authors: endi
-tags: [hello, docusaurus]
+slug: terminal-setup-worth-copying
+title: Terminal Setup Worth Copying
+authors: [abdul]
+tags: [terminal, productivity, tooling, workflow]
 ---
 
-This is the summary of a very long blog post,
-
-Use a `<!-- truncate -->` comment to limit blog post size in the list view.
+A developer's terminal is their most-used tool. Here's what a solid setup looks like — themes, prompts, and a few commands that make daily work noticeably smoother.
 
 <!-- truncate -->
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet
+The full reference lives in [Terminal Commands](/resources/terminal-commands) and [Terminal Themes](/resources/terminal-themes), but this post is the opinionated "here's what I actually use" version.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet
+## Shell: Oh My Zsh + Starship
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet
+[Oh My Zsh](https://ohmyz.sh/) is the plugin ecosystem. [Starship](https://starship.rs/) is the cross-shell prompt. Together they cover 90% of what you need.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet
+```bash
+# Install Oh My Zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet
+# Install Starship
+curl -sS https://starship.rs/install.sh | sh
+```
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet
+Starship's prompt is fast, shows git branch/status, language versions (Node, Python, Rust), and works identically on macOS, Linux, and WSL.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet
+## Three Plugins That Change Daily Use
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet
+```bash
+# Add to plugins=() in ~/.zshrc
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+```
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet
+- **git** — adds 60+ git aliases (`gst` for status, `gco` for checkout, `gcmsg` for commit -m, etc.)
+- **zsh-autosuggestions** — grey completions from history, accept with →
+- **zsh-syntax-highlighting** — commands turn green when valid, red when not
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet
+## One Alias to Rule Them All
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet
+```bash
+# ~/.zshrc
+alias dev="cd ~/code && ls"
+```
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet
+Simple. Works. Change the path to wherever your projects live.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet
+---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet
+The [Terminal Commands](/resources/terminal-commands) resource page has a broader reference — git tricks, file navigation, process management, and more.

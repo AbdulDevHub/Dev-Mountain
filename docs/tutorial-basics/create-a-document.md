@@ -4,54 +4,66 @@ sidebar_position: 2
 
 # Create a Document
 
-Documents are **groups of pages** connected through:
+Documents are the Markdown/MDX files that make up the **Docusaurus Guide** (`docs/`) and **Resources** (`resources/`) sections. They're connected via:
 
-- a **sidebar**
-- **previous/next navigation**
-- **versioning**
+- An **auto-generated sidebar** (from folder structure)
+- **Previous / Next** navigation at the bottom of each page
+- Optional **version** support
 
-## Create your first Doc
+## Adding a Resource Page
 
-Create a Markdown file at `docs/hello.md`:
+Drop a new `.md` file into the `resources/` folder:
 
-```md title="docs/hello.md"
-# Hello
+```md title="resources/my-new-resource.md"
+---
+title: My New Resource
+description: A short description shown in search results and meta tags
+---
 
-This is my **first Docusaurus document**!
+## My New Resource
+
+Content goes here...
 ```
 
-A new document is now available at [http://localhost:3000/docs/hello](http://localhost:3000/docs/hello).
+The file auto-appears in the Resources sidebar. No config changes needed.
 
-## Configure the Sidebar
+## Adding a Guide Page
 
-Docusaurus automatically **creates a sidebar** from the `docs` folder.
+Same idea — drop a `.md` file into `docs/` (or a subfolder like `docs/tutorial-basics/`):
 
-Add metadata to customize the sidebar label and position:
-
-```md title="docs/hello.md" {1-4}
+```md title="docs/my-guide.md"
 ---
-sidebar_label: 'Hi!'
+sidebar_position: 5
+---
+
+# My Guide
+
+Content goes here...
+```
+
+## Controlling Sidebar Order
+
+Use `sidebar_position` in the frontmatter to control the order:
+
+```md
+---
 sidebar_position: 3
 ---
-
-# Hello
-
-This is my **first Docusaurus document**!
 ```
 
-It is also possible to create your sidebar explicitly in `sidebars.js`:
+Lower numbers appear higher in the sidebar.
 
-```js title="sidebars.js"
-export default {
-  tutorialSidebar: [
-    'intro',
-    // highlight-next-line
-    'hello',
-    {
-      type: 'category',
-      label: 'Tutorial',
-      items: ['tutorial-basics/create-a-document'],
-    },
-  ],
-};
+## Category Folders
+
+To group pages under a collapsible section, create a folder and add a `_category_.json` file:
+
+```json title="docs/my-section/_category_.json"
+{
+  "label": "My Section",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "Description shown on the category index page."
+  }
+}
 ```
