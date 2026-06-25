@@ -34,7 +34,14 @@ A curated knowledge base for developers and designers — tools, UI/UX inspirati
 
    - [Tool Name](https://example.com) — brief description
    ```
-2. It auto-appears in the sidebar. No config changes needed.
+2. Add the page to the sidebar by editing `sidebars-resources.ts`:
+   ```ts
+   {
+     type: "doc",
+     id: "my-topic",
+   },
+   ```
+   Place it in the desired position within the `resourcesSidebar` array.
 
 ### Adding a Blog Post
 

@@ -116,7 +116,7 @@ tags: [frontend, tools]
 | Goal                         | File(s) to edit                                       |
 | ---------------------------- | ----------------------------------------------------- |
 | Add a resource link          | `resources/*.md`                                      |
-| Add a new resource page      | New file in `resources/`                              |
+| Add a new resource page      | New file in `resources/` + edit `sidebars-resources.ts`    |
 | Change site title or tagline | `docusaurus.config.ts` → `title`, `tagline`           |
 | Add a navbar item            | `docusaurus.config.ts` → `themeConfig.navbar.items`   |
 | Add a footer link            | `docusaurus.config.ts` → `themeConfig.footer.links`   |

@@ -45,7 +45,16 @@ Resources are the core of this site. Each `.md` file in `resources/` becomes a p
 
 3. Write your content. Organise links by category using `###` headings.
 
-4. The page auto-appears in the Resources sidebar — no config change needed.
+4. Add the page to the Resources sidebar by editing `sidebars-resources.ts`:
+
+   ```ts
+   {
+     type: "doc",
+     id: "my-new-topic",
+   },
+   ```
+
+   Add it in the desired position within the `resourcesSidebar` array.
 
 ### Existing Resource Files
 
