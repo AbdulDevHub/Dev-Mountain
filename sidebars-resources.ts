@@ -49,6 +49,10 @@ const sidebars: SidebarsConfig = {
     {
       type: "doc",
       id: "terminal-themes",
+    },
+    {
+      type: "doc",
+      id: "agent-skills",
     }
   ],
 }
