@@ -16,7 +16,7 @@ export default function About() {
       <div
         style={{ maxWidth: "800px", margin: "2rem auto", padding: "0 1rem" }}
       >
-        <h1 style={{ color: "#e63946", marginBottom: "1rem" }}>
+        <h1 style={{ color: "#25c2a0", marginBottom: "1rem" }}>
           About This Project
         </h1>
 
