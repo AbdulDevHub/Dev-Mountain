@@ -33,6 +33,22 @@ const sidebars: SidebarsConfig = {
     {
       type: "doc",
       id: "pnpm-guide",
+    },
+    {
+      type: "doc",
+      id: "terminal-commands",
+    },
+    {
+      type: "doc",
+      id: "vscode-setup",
+    },
+    {
+      type: "doc",
+      id: "python-scripts",
+    },
+    {
+      type: "doc",
+      id: "terminal-themes",
     }
   ],
 }

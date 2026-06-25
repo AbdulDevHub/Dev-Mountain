@@ -1,5 +1,5 @@
 ---
-title: pnpm – Fast, Disk-Efficient Package Manager
+title: PNPM – Fast, Disk-Efficient Package Manager
 description: Learn what pnpm is, why it’s useful, and how to migrate from npm or Yarn
 ---
 
