@@ -1,0 +1,243 @@
+{
+  "version": 3,
+  "skills": {
+    "impeccable": {
+      "source": "pbakaus/impeccable",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/pbakaus/impeccable.git",
+      "skillPath": ".agents/skills/impeccable/SKILL.md",
+      "skillFolderHash": "91c1b07a98067914f5342e400e8ebd0afe0da26d",
+      "installedAt": "2026-06-18T00:01:06.640Z",
+      "updatedAt": "2026-06-18T00:01:06.640Z"
+    },
+    "find-skills": {
+      "source": "vercel-labs/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vercel-labs/skills.git",
+      "skillPath": "skills/find-skills/SKILL.md",
+      "skillFolderHash": "3013fdeb8a11b10b1eb795ec3ae8bfca38f7c26d",
+      "installedAt": "2026-06-18T00:01:13.773Z",
+      "updatedAt": "2026-06-23T19:29:50.575Z"
+    },
+    "ui-ux-pro-max": {
+      "source": "nextlevelbuilder/ui-ux-pro-max-skill",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill.git",
+      "skillPath": ".claude/skills/ui-ux-pro-max/SKILL.md",
+      "skillFolderHash": "75e1acaafe8b08e59d4b86fc253ac7873aff6bba",
+      "pluginName": "ui-ux-pro-max",
+      "installedAt": "2026-06-18T00:03:12.182Z",
+      "updatedAt": "2026-06-18T00:04:24.460Z"
+    },
+    "agent-browser": {
+      "source": "vercel-labs/agent-browser",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vercel-labs/agent-browser.git",
+      "skillPath": "skills/agent-browser/SKILL.md",
+      "skillFolderHash": "c1470a475a0472fceda2401ea6763708a91680a8",
+      "installedAt": "2026-06-18T00:04:03.116Z",
+      "updatedAt": "2026-06-18T00:04:03.116Z"
+    },
+    "web-design-guidelines": {
+      "source": "vercel-labs/agent-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vercel-labs/agent-skills.git",
+      "skillPath": "skills/web-design-guidelines/SKILL.md",
+      "skillFolderHash": "3116f3e62dbd02b44a598b1aa690d2a8938e8f89",
+      "installedAt": "2026-06-18T00:05:16.697Z",
+      "updatedAt": "2026-06-18T00:05:16.697Z"
+    },
+    "vercel-react-best-practices": {
+      "source": "vercel-labs/agent-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vercel-labs/agent-skills.git",
+      "skillPath": "skills/react-best-practices/SKILL.md",
+      "skillFolderHash": "343db72180d05814949fef7d46be96b5c6ee86b3",
+      "installedAt": "2026-06-18T00:05:39.788Z",
+      "updatedAt": "2026-06-18T00:05:39.788Z"
+    },
+    "frontend-design": {
+      "source": "anthropics/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/anthropics/skills.git",
+      "skillPath": "skills/frontend-design/SKILL.md",
+      "skillFolderHash": "0d5b74a14bdf3ebcd64f352d06376a2ef05ed296",
+      "pluginName": "example-skills",
+      "installedAt": "2026-06-18T00:06:01.301Z",
+      "updatedAt": "2026-06-18T00:06:01.301Z"
+    },
+    "architect": {
+      "source": "JavaScript-Mastery-Pro/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/JavaScript-Mastery-Pro/skills.git",
+      "skillPath": "skills/architect/SKILL.md",
+      "skillFolderHash": "130d344ca6db1938f6a28c03fa3b3a4e45573042",
+      "installedAt": "2026-06-18T00:06:40.253Z",
+      "updatedAt": "2026-06-18T00:06:40.253Z"
+    },
+    "imprint": {
+      "source": "JavaScript-Mastery-Pro/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/JavaScript-Mastery-Pro/skills.git",
+      "skillPath": "skills/imprint/SKILL.md",
+      "skillFolderHash": "7ae49f698d537fae7c25326576eefae1614ca8c1",
+      "installedAt": "2026-06-18T00:06:40.318Z",
+      "updatedAt": "2026-06-18T00:06:40.318Z"
+    },
+    "recover": {
+      "source": "JavaScript-Mastery-Pro/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/JavaScript-Mastery-Pro/skills.git",
+      "skillPath": "skills/recover/SKILL.md",
+      "skillFolderHash": "0b3373ddee0324350e0fc62eaf1d19c24f785266",
+      "installedAt": "2026-06-18T00:06:40.359Z",
+      "updatedAt": "2026-06-18T00:06:40.359Z"
+    },
+    "remember": {
+      "source": "JavaScript-Mastery-Pro/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/JavaScript-Mastery-Pro/skills.git",
+      "skillPath": "skills/remember/SKILL.md",
+      "skillFolderHash": "6c23b6dac774bad83c6dd306a3484451703d984b",
+      "installedAt": "2026-06-18T00:06:40.396Z",
+      "updatedAt": "2026-06-18T00:06:40.396Z"
+    },
+    "review": {
+      "source": "JavaScript-Mastery-Pro/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/JavaScript-Mastery-Pro/skills.git",
+      "skillPath": "skills/review/SKILL.md",
+      "skillFolderHash": "de0b94d9684eafa09cab041b059ce24727bfedee",
+      "installedAt": "2026-06-18T00:06:40.435Z",
+      "updatedAt": "2026-06-18T00:06:40.435Z"
+    },
+    "grill-me": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/mattpocock/skills.git",
+      "skillPath": "skills/productivity/grill-me/SKILL.md",
+      "skillFolderHash": "8320e7b87f7b208f50ce165b1dd43d1e93c8e801",
+      "pluginName": "mattpocock-skills",
+      "installedAt": "2026-06-18T16:13:26.781Z",
+      "updatedAt": "2026-06-18T16:13:26.781Z"
+    },
+    "insforge": {
+      "source": "insforge/agent-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/insforge/agent-skills.git",
+      "skillPath": "skills/insforge/SKILL.md",
+      "skillFolderHash": "96160d6b797152f5331e0e4a3ee47d27d928ed7a",
+      "installedAt": "2026-06-23T19:29:46.373Z",
+      "updatedAt": "2026-06-23T19:29:46.373Z"
+    },
+    "insforge-cli": {
+      "source": "insforge/agent-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/insforge/agent-skills.git",
+      "skillPath": "skills/insforge-cli/SKILL.md",
+      "skillFolderHash": "5e08266afaf4c74341dc74c9e3d7dcacb5ea400f",
+      "installedAt": "2026-06-23T19:29:46.416Z",
+      "updatedAt": "2026-06-23T19:29:46.416Z"
+    },
+    "insforge-debug": {
+      "source": "insforge/agent-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/insforge/agent-skills.git",
+      "skillPath": "skills/insforge-debug/SKILL.md",
+      "skillFolderHash": "a2d67f1ce4182e58f0c2d7275ff9e49e0e210f43",
+      "installedAt": "2026-06-23T19:29:46.455Z",
+      "updatedAt": "2026-06-23T19:29:46.455Z"
+    },
+    "insforge-integrations": {
+      "source": "insforge/agent-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/insforge/agent-skills.git",
+      "skillPath": "skills/insforge-integrations/SKILL.md",
+      "skillFolderHash": "987011ac7ba31913698d784fd407b951f0455f8c",
+      "installedAt": "2026-06-23T19:29:46.489Z",
+      "updatedAt": "2026-06-23T19:29:46.489Z"
+    },
+    "brainstorming": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/obra/superpowers.git",
+      "skillPath": "skills/brainstorming/SKILL.md",
+      "skillFolderHash": "27e73ef7b83994e913cba378081b587412d2e9cb",
+      "installedAt": "2026-06-24T19:21:13.658Z",
+      "updatedAt": "2026-06-24T19:21:13.658Z"
+    },
+    "drawio-skill": {
+      "source": "Agents365-ai/drawio-skill",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/Agents365-ai/drawio-skill.git",
+      "skillPath": "skills/drawio-skill/SKILL.md",
+      "skillFolderHash": "fa2175136f4d25ee698689e5721fcf5f5ac4c91e",
+      "installedAt": "2026-06-24T19:23:52.684Z",
+      "updatedAt": "2026-06-24T19:23:52.684Z"
+    },
+    "image-generation": {
+      "source": "bytedance/deer-flow",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/bytedance/deer-flow.git",
+      "skillPath": "skills/public/image-generation/SKILL.md",
+      "skillFolderHash": "0e3ac4246e2124a46d91b43c99d9749f9df079eb",
+      "installedAt": "2026-06-24T19:24:25.020Z",
+      "updatedAt": "2026-06-24T19:24:25.020Z"
+    },
+    "humanizer": {
+      "source": "NousResearch/hermes-agent",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/NousResearch/hermes-agent.git",
+      "skillPath": "skills/creative/humanizer/SKILL.md",
+      "skillFolderHash": "bf06df3e223f24d6f16b2304810c7df280f4b13d",
+      "installedAt": "2026-06-24T19:25:40.811Z",
+      "updatedAt": "2026-06-24T19:25:40.811Z"
+    },
+    "code-reviewer": {
+      "source": "Shubhamsaboo/awesome-llm-apps",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/Shubhamsaboo/awesome-llm-apps.git",
+      "skillPath": "awesome_agent_skills/code-reviewer/SKILL.md",
+      "skillFolderHash": "b6c13d36248ab1a1942d8ca690233eabf414b7b2",
+      "installedAt": "2026-06-24T19:26:34.174Z",
+      "updatedAt": "2026-06-24T19:26:34.174Z"
+    },
+    "git-commit": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/git-commit/SKILL.md",
+      "skillFolderHash": "883a6a7466f55a9cd9f22cf1cce2d9333fc9b998",
+      "installedAt": "2026-06-24T19:27:40.647Z",
+      "updatedAt": "2026-06-24T19:27:40.647Z"
+    },
+    "diagram-maker": {
+      "source": "openclaw/openclaw",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/openclaw/openclaw.git",
+      "skillPath": "skills/diagram-maker/SKILL.md",
+      "skillFolderHash": "2e6f6de8eb973004ab86c5d480a60463c6bfe6f6",
+      "installedAt": "2026-06-24T19:32:29.817Z",
+      "updatedAt": "2026-06-24T19:32:29.817Z"
+    }
+  },
+  "dismissed": {
+    "findSkillsPrompt": true
+  },
+  "lastSelectedAgents": [
+    "amp",
+    "antigravity",
+    "antigravity-cli",
+    "cline",
+    "codex",
+    "cursor",
+    "deepagents",
+    "gemini-cli",
+    "github-copilot",
+    "kimi-code-cli",
+    "opencode",
+    "warp",
+    "zed",
+    "claude-code"
+  ]
+}
