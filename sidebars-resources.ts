@@ -53,6 +53,10 @@ const sidebars: SidebarsConfig = {
     {
       type: "doc",
       id: "agent-skills",
+    },
+    {
+      type: "doc",
+      id: "github-label-setup",
     }
   ],
 }
