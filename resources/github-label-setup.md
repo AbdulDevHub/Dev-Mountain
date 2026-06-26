@@ -63,6 +63,7 @@ Two scripts handle the full lifecycle. Both require the [GitHub CLI](https://cli
 ### How the scripts work
 
 - **Renames** the 8 matching GitHub defaults (`bug` → `Type: Bug`, `enhancement` → `Type: Enhancement`, etc.) using `gh label edit`. Because it's a rename — not a delete — every issue already tagged with the old label silently upgrades to the new name with zero data loss. This applies to both open and closed issues.
+- **Deletes** the `question` label, which has no equivalent in the new scheme. Any issues tagged with it will lose that label, but the issues themselves are unaffected.
 - **Creates** the 11 new labels (`Status:*`, `Priority:*`, `Type: Feature`, `Type: Maintenance`) using `--force`, so if a label already exists with the right name but the wrong color it gets corrected.
 - **Never touches** any other labels you've created yourself.
 
@@ -148,7 +149,13 @@ apply_labels() {
   local existing_labels
   existing_labels=$(gh label list --repo "$repo" --limit 200 --json name -q '.[].name' 2>/dev/null || true)
 
-  # 1. Rename matching defaults
+  # 1. Delete labels with no equivalent in the new scheme
+  if str_contains_icase "$existing_labels" "question"; then
+    echo "  🗑️  Deleting \"question\""
+    gh label delete "question" --repo "$repo" --yes 2>/dev/null || true
+  fi
+
+  # 2. Rename matching defaults
   local i
   for i in "${!RENAME_OLDS[@]}"; do
     local old_name="${RENAME_OLDS[$i]}"
@@ -166,7 +173,7 @@ apply_labels() {
     fi
   done
 
-  # 2. Create / force-update new labels
+  # 3. Create / force-update new labels
   for i in "${!NEW_NAMES[@]}"; do
     local name="${NEW_NAMES[$i]}"
     local color="${NEW_COLORS[$i]}"
@@ -281,7 +288,13 @@ echo "━━━━━━━━━━━━━━━━━━━━━━━━�
 # Fetch existing labels once
 existing_labels=$(gh label list --repo "$REPO" --limit 200 --json name -q '.[].name' 2>/dev/null || true)
 
-# 1. Rename matching defaults
+# 1. Delete labels with no equivalent in the new scheme
+if str_contains_icase "$existing_labels" "question"; then
+  echo "  🗑️  Deleting \"question\""
+  gh label delete "question" --repo "$REPO" --yes 2>/dev/null || true
+fi
+
+# 2. Rename matching defaults
 for i in "${!RENAME_OLDS[@]}"; do
   old_name="${RENAME_OLDS[$i]}"
   new_name="${RENAME_NEWS[$i]}"
@@ -298,7 +311,7 @@ for i in "${!RENAME_OLDS[@]}"; do
   fi
 done
 
-# 2. Create / force-update new labels
+# 3. Create / force-update new labels
 for i in "${!NEW_NAMES[@]}"; do
   name="${NEW_NAMES[$i]}"
   color="${NEW_COLORS[$i]}"
