@@ -7,61 +7,47 @@ const sidebars: SidebarsConfig = {
       id: "index",
     },
     {
-      type: "doc",
-      id: "learning-platforms",
+      type: "category",
+      label: "Design & UI",
+      collapsed: false,
+      items: [
+        { type: "doc", id: "ui-libraries-and-animation" },
+        { type: "doc", id: "ui-motion-and-inspiration" },
+      ],
     },
     {
-      type: "doc",
-      id: "ui-libraries-and-animation",
+      type: "category",
+      label: "Scripting & Automation",
+      collapsed: false,
+      items: [
+        { type: "doc", id: "frontend-snippets" },
+        { type: "doc", id: "python-scripts" },
+        { type: "doc", id: "browser-console-scripts" },
+        { type: "doc", id: "terminal-commands" },
+      ],
     },
     {
-      type: "doc",
-      id: "ui-motion-and-inspiration",
+      type: "category",
+      label: "Tools & Setup",
+      collapsed: false,
+      items: [
+        { type: "doc", id: "vscode-setup" },
+        { type: "doc", id: "pnpm-guide" },
+        { type: "doc", id: "terminal-themes" },
+        { type: "doc", id: "commit-lint-guide" },
+        { type: "doc", id: "github-label-setup" },
+      ],
     },
     {
-      type: "doc",
-      id: "frontend-snippets",
+      type: "category",
+      label: "References",
+      collapsed: false,
+      items: [
+        { type: "doc", id: "learning-platforms" },
+        { type: "doc", id: "asset-filenames" },
+        { type: "doc", id: "agent-skills" },
+      ],
     },
-    {
-      type: "doc",
-      id: "asset-filenames",
-    },
-    {
-      type: "doc",
-      id: "commit-lint-guide",
-    },
-    {
-      type: "doc",
-      id: "pnpm-guide",
-    },
-    {
-      type: "doc",
-      id: "terminal-commands",
-    },
-    {
-      type: "doc",
-      id: "vscode-setup",
-    },
-    {
-      type: "doc",
-      id: "python-scripts",
-    },
-    {
-      type: "doc",
-      id: "terminal-themes",
-    },
-    {
-      type: "doc",
-      id: "agent-skills",
-    },
-    {
-      type: "doc",
-      id: "github-label-setup",
-    },
-    {
-      type: "doc",
-      id: "browser-console-scripts",
-    }
   ],
 }
 
