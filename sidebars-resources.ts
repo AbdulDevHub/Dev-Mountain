@@ -57,6 +57,10 @@ const sidebars: SidebarsConfig = {
     {
       type: "doc",
       id: "github-label-setup",
+    },
+    {
+      type: "doc",
+      id: "browser-console-scripts",
     }
   ],
 }
