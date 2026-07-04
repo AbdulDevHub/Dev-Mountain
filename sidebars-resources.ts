@@ -6,15 +6,53 @@ const sidebars: SidebarsConfig = {
       type: "doc",
       id: "index",
     },
+
+    // =========================
+    // Getting Started
+    // =========================
     {
       type: "category",
-      label: "Design & UI",
+      label: "Getting Started",
       collapsed: true,
       items: [
-        { type: "doc", id: "ui-libraries-and-animation" },
-        { type: "doc", id: "ui-motion-and-inspiration" },
+        { type: "doc", id: "docusaurus-syntax-reference" },
+        { type: "doc", id: "docusaurus-react-mdx-reference" },
       ],
     },
+
+    // =========================
+    // Web Fundamentals
+    // =========================
+    {
+      type: "category",
+      label: "Web Fundamentals",
+      collapsed: true,
+      items: [
+        { type: "doc", id: "html-quick-reference" },
+        { type: "doc", id: "css-quick-reference" },
+        { type: "doc", id: "javascript-quick-reference" },
+        { type: "doc", id: "typescript-quick-reference" },
+        { type: "doc", id: "tailwind-cheatsheet" },
+      ],
+    },
+
+    // =========================
+    // Programming Languages
+    // =========================
+    {
+      type: "category",
+      label: "Programming Languages",
+      collapsed: true,
+      items: [
+        { type: "doc", id: "markdown-cheatsheet" },
+        { type: "doc", id: "python-quick-reference" },
+        { type: "doc", id: "java-quick-reference" },
+      ],
+    },
+
+    // =========================
+    // Scripting & Automation
+    // =========================
     {
       type: "category",
       label: "Scripting & Automation",
@@ -26,9 +64,13 @@ const sidebars: SidebarsConfig = {
         { type: "doc", id: "terminal-commands" },
       ],
     },
+
+    // =========================
+    // Tools & Workflow
+    // =========================
     {
       type: "category",
-      label: "Tools & Setup",
+      label: "Tools & Workflow",
       collapsed: true,
       items: [
         { type: "doc", id: "vscode-setup" },
@@ -36,34 +78,49 @@ const sidebars: SidebarsConfig = {
         { type: "doc", id: "terminal-themes" },
         { type: "doc", id: "commit-lint-guide" },
         { type: "doc", id: "github-label-setup" },
+        { type: "doc", id: "wsl-dev-setup" },
       ],
     },
+
+    // =========================
+    // Design & UI
+    // =========================
     {
       type: "category",
-      label: "References",
+      label: "Design & UI",
+      collapsed: true,
+      items: [
+        { type: "doc", id: "ui-libraries-and-animation" },
+        { type: "doc", id: "ui-motion-and-inspiration" },
+      ],
+    },
+
+    // =========================
+    // AI & Systems
+    // =========================
+    {
+      type: "category",
+      label: "AI & Systems",
+      collapsed: true,
+      items: [
+        { type: "doc", id: "ai-architecture-workflow" },
+        { type: "doc", id: "agent-skills" },
+      ],
+    },
+
+    // =========================
+    // References & Knowledge
+    // =========================
+    {
+      type: "category",
+      label: "References & Knowledge",
       collapsed: true,
       items: [
         { type: "doc", id: "learning-platforms" },
         { type: "doc", id: "asset-filenames" },
-        { type: "doc", id: "agent-skills" },
+        { type: "doc", id: "learn-cybersecurity" },
       ],
     },
-    {
-      type: "doc",
-      id: "docusaurus-syntax-reference",
-    },
-    {
-      type: "doc",
-      id: "docusaurus-react-mdx-reference",
-    },
-    {
-      type: "doc",
-      id: "learn-cybersecurity",
-    },
-    {
-      type: "doc",
-      id: "python-quick-reference",
-    }
   ],
 }
 
