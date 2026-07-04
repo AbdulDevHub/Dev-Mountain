@@ -9,7 +9,7 @@ const sidebars: SidebarsConfig = {
     {
       type: "category",
       label: "Design & UI",
-      collapsed: false,
+      collapsed: true,
       items: [
         { type: "doc", id: "ui-libraries-and-animation" },
         { type: "doc", id: "ui-motion-and-inspiration" },
@@ -18,7 +18,7 @@ const sidebars: SidebarsConfig = {
     {
       type: "category",
       label: "Scripting & Automation",
-      collapsed: false,
+      collapsed: true,
       items: [
         { type: "doc", id: "frontend-snippets" },
         { type: "doc", id: "python-scripts" },
@@ -29,7 +29,7 @@ const sidebars: SidebarsConfig = {
     {
       type: "category",
       label: "Tools & Setup",
-      collapsed: false,
+      collapsed: true,
       items: [
         { type: "doc", id: "vscode-setup" },
         { type: "doc", id: "pnpm-guide" },
@@ -41,7 +41,7 @@ const sidebars: SidebarsConfig = {
     {
       type: "category",
       label: "References",
-      collapsed: false,
+      collapsed: true,
       items: [
         { type: "doc", id: "learning-platforms" },
         { type: "doc", id: "asset-filenames" },
