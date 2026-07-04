@@ -1,0 +1,167 @@
+---
+# --- Front Matter ---
+# id: unique identifier for this doc.
+id: docusaurus-react-mdx-reference
+
+# title: the page's <h1> and browser tab title.
+title: React & MDX Capabilities
+
+# sidebar_label: text shown in the sidebar nav.
+sidebar_label: React & MDX Capabilities
+
+# sidebar_position: ordering among sibling pages.
+sidebar_position: 2
+
+# description: used for the page's meta description tag.
+description: A reference for using React components and JSX/MDX expressions directly inside Docusaurus pages.
+---
+
+# React & MDX Capabilities
+
+This page is the companion to
+[Docusaurus Syntax Reference](./docusaurus-syntax-reference.md). Where that
+page covers Markdown/MDX _syntax extensions_ (admonitions, tabs, code
+blocks, etc.), this page covers Docusaurus's ability to use **actual React**
+inside a doc — importing your own components, inline JS expressions, and
+Docusaurus's own built-in themed components.
+
+This file uses the `.mdx` extension rather than `.md`. Both are compiled
+through the same MDX pipeline, but naming it `.mdx` makes explicit that the
+file relies on real JSX/React, not just Markdown extensions.
+
+---
+
+## Custom React Components
+
+Any React component can be imported into an MDX file and used like a normal
+JSX tag. The component itself lives as a separate file under
+`src/components/` — it is **not** defined inline in the MDX file — and is
+imported at the top of the doc.
+
+### Static example (props + children)
+
+Assume a component exists at `src/components/Highlight.js` that accepts a
+`color` prop and renders its children with that background color.
+
+**MDX source (import + usage):**
+
+```mdx
+import Highlight from "@site/src/components/Highlight"
+
+<Highlight color="#25c2a0">Docusaurus green</Highlight> is the brand color.
+```
+
+**Rendered:**
+
+import Highlight from "@site/src/components/Highlight"
+
+<Highlight color="#25c2a0">Docusaurus green</Highlight> is the brand color.
+
+### Interactive example (stateful)
+
+Assume a second component exists at `src/components/Counter.js` that uses
+`useState` internally to track and increment a click count. Because MDX
+pages are real React under the hood, the component stays interactive — no
+special configuration needed.
+
+**MDX source (import + usage):**
+
+```mdx
+import Counter from "@site/src/components/Counter"
+
+<Counter />
+```
+
+**Rendered:**
+
+import Counter from "@site/src/components/Counter"
+
+<Counter />
+
+---
+
+## MDX Inline JS Expressions
+
+Inside an MDX file, `{...}` lets you drop arbitrary JavaScript expressions
+directly into prose, the same way you would inside JSX.
+
+**Source:**
+
+```mdx
+Two plus two is {2 + 2}.
+
+Today's year is {new Date().getFullYear()}.
+```
+
+**Rendered:**
+
+Two plus two is {2 + 2}.
+
+Today's year is {new Date().getFullYear()}.
+
+:::note
+This works for any valid JS expression — arithmetic, function calls,
+ternaries, or values pulled from an imported module (e.g. site config).
+Statements (like `if` blocks or variable declarations) are not allowed
+inline this way; only expressions are.
+:::
+
+---
+
+## Passing Props & Children
+
+Components used in MDX accept props exactly like they would in any JSX
+file, and can also receive rich children — not just plain strings.
+
+**Source:**
+
+```mdx
+import Highlight from "@site/src/components/Highlight"
+
+<Highlight color="#ff6b6b">
+  This highlight wraps **bold Markdown** and even a [link](/).
+</Highlight>
+```
+
+**Rendered:**
+
+<Highlight color="#ff6b6b">
+  This highlight wraps **bold Markdown** and even a [link](/).
+</Highlight>
+
+:::info
+Markdown syntax inside a component's children (like `**bold**` above) is
+still parsed by MDX before being passed down — you're not limited to plain
+text just because it's inside a JSX tag.
+:::
+
+---
+
+## Docusaurus Built-in Components
+
+Beyond your own custom components, Docusaurus's classic theme ships several
+ready-made React components you can import directly with `@theme/...`.
+
+### CodeBlock
+
+The same code-block renderer used under the hood for fenced code blocks is
+also usable directly as a component — useful when the code content is
+dynamic (e.g. built from a variable) rather than static text.
+
+**Source:**
+
+```mdx
+import CodeBlock from "@theme/CodeBlock"
+
+<CodeBlock language="jsx" title="Dynamic example">
+  {`function hello() {\n  console.log('Hi!');\n}`}
+</CodeBlock>
+```
+
+**Rendered:**
+
+import CodeBlock from "@theme/CodeBlock"
+
+<CodeBlock language="jsx" title="Dynamic example">
+  {`function hello() {\n  console.log('Hi!');\n}`}
+</CodeBlock>

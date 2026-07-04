@@ -10,7 +10,7 @@
 - **Type**: Docusaurus static documentation site
 - **Purpose**: Curated collection of developer resources, UI/UX inspiration, motion design examples, and workflow references
 - **Maintainer**: Abdul Khan ([@AbdulDevHub](https://github.com/AbdulDevHub))
-- **GitHub**: https://github.com/AbdulDevHub/Dev-Mountain
+- **GitHub**: <https://github.com/AbdulDevHub/Dev-Mountain>
 
 ---
 
@@ -28,6 +28,8 @@
 
 ## Directory Map
 
+Note: May not be fully up-to-date.
+
 ```
 Dev-Mountain/
 ├── resources/               ← PRIMARY CONTENT — curated links & reference docs
@@ -43,7 +45,9 @@ Dev-Mountain/
 │   ├── commit-lint-guide.md
 │   ├── python-scripts.md
 │   ├── agent-skills.md
-│   └── asset-filenames.mdx
+│   ├── asset-filenames.mdx
+│   ├── docusaurus-syntax-reference.md
+│   └── docusaurus-react-mdx-reference.mdx
 │
 ├── docs/                    ← DOCUSAURUS GUIDE TAB — how the site is built
 │   ├── intro.md             ← Entry point for the Guide section
@@ -59,8 +63,10 @@ Dev-Mountain/
 │   │   ├── index.tsx        ← Homepage (hero + features section)
 │   │   └── about.tsx        ← About page
 │   ├── components/
-│   │   ├── HomepageFeatures/ ← Feature cards shown on homepage
-│   │   └── Tag.js           ← Tag component
+│   ├── HomepageFeatures/ ← Feature cards shown on homepage
+│   ├── Tag.js            ← Tag component
+│   ├── Highlight.js      ← Highlight component
+│   └── Counter.js        ← Counter component
 │   └── css/custom.css       ← Global CSS overrides + theme variables
 │
 ├── static/img/              ← Static images (SVGs, logos, social card)

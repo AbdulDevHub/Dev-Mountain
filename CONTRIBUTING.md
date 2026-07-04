@@ -72,6 +72,8 @@ Resources are the core of this site. Each `.md` file in `resources/` becomes a p
 | `python-scripts.md`             | Useful Python scripts and snippets              |
 | `agent-skills.md`               | AI agent prompts and skill patterns             |
 | `asset-filenames.mdx`           | Naming conventions for assets                   |
+| `docusaurus-syntax-reference.md`     | Docusaurus Markdown/MDX syntax reference (admonitions, tabs, code blocks) |
+| `docusaurus-react-mdx-reference.mdx` | React/MDX capabilities reference (custom components, JS expressions)     |
 
 ---
 

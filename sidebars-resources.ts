@@ -48,6 +48,14 @@ const sidebars: SidebarsConfig = {
         { type: "doc", id: "agent-skills" },
       ],
     },
+    {
+      type: "doc",
+      id: "docusaurus-syntax-reference",
+    },
+    {
+      type: "doc",
+      id: "docusaurus-react-mdx-reference",
+    }
   ],
 }
 
