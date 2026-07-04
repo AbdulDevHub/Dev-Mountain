@@ -55,6 +55,14 @@ const sidebars: SidebarsConfig = {
     {
       type: "doc",
       id: "docusaurus-react-mdx-reference",
+    },
+    {
+      type: "doc",
+      id: "learn-cybersecurity",
+    },
+    {
+      type: "doc",
+      id: "python-quick-reference",
     }
   ],
 }
