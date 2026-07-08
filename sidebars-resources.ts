@@ -121,6 +121,22 @@ const sidebars: SidebarsConfig = {
         { type: "doc", id: "learn-cybersecurity" },
       ],
     },
+    {
+      type: "doc",
+      id: "software-testing",
+    },
+    {
+      type: "doc",
+      id: "accessibility-tools",
+    },
+    {
+      type: "doc",
+      id: "swe-roles-and-specializations",
+    },
+    {
+      type: "doc",
+      id: "rag-mcp-fundamentals",
+    }
   ],
 }
 
