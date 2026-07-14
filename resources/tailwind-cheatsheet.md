@@ -12,6 +12,51 @@ A no-fluff cheatsheet for when you've been away from Tailwind for a while and ju
 Classes generally follow the pattern `{property}-{value}` and most accept a `{screen}:` or `{state}:` prefix, e.g. `md:flex`, `hover:bg-blue-500`.
 :::
 
+## Directives (CSS-first config, v4)
+
+Tailwind v4 dropped `tailwind.config.js` and `@tailwind` in favor of plain CSS, driven by `@import` plus a handful of at-rules:
+
+```css
+@import "tailwindcss";
+```
+
+```
+@import "tailwindcss";      loads Tailwind (replaces @tailwind base/components/utilities)
+@theme { ... }               define design tokens (colors, spacing, fonts, breakpoints) as CSS vars
+@source "path";              add extra file paths for class detection
+@source not "path";          exclude a path from detection
+@utility { ... }             define a custom utility class
+@variant hover { ... }       apply a variant inside a CSS rule
+@custom-variant name (...)   define your own variant/modifier
+@apply text-lg font-bold;    inline existing utilities into custom CSS
+@plugin "pkg-name";          load a legacy JS plugin
+@config "./tailwind.config.js";   load a legacy JS config file (v3 migration)
+@layer theme, base, components, utilities;   declare/reorder cascade layers
+@reference "./app.css";      pull in theme values for @apply in scoped contexts (Vue/Svelte SFCs)
+```
+
+Example `@theme` block:
+
+```css
+@import "tailwindcss";
+
+@theme {
+  --color-brand: #1da1f2;
+  --spacing-128: 32rem;
+  --breakpoint-3xl: 1920px;
+}
+```
+
+Custom dark-mode variant (v4 removed `darkMode` from the JS config):
+
+```css
+@custom-variant dark (&:where(.dark, .dark *));
+```
+
+:::note
+`@tailwind base/components/utilities` and `tailwind.config.js` still work in v3 projects — the directives above are the v4 way.
+:::
+
 ## Spacing (margin & padding)
 
 | Class | CSS |
@@ -97,6 +142,36 @@ whitespace-nowrap/pre/pre-wrap
 break-words / break-all
 ```
 
+Shorthand line-height: `text-lg/7` sets `font-size` + `line-height: 1.75rem` in one class.
+
+### Fluid text (viewport-scaling font sizes)
+
+Tailwind has no dedicated "fluid" utility, but the arbitrary-value escape hatch takes a two- or three-argument `clamp()` directly, so text can scale smoothly between a min and max size instead of jumping at breakpoints:
+
+```html
+<h1 class="text-[clamp(1.75rem,5vw,3rem)]">Fluid headline</h1>
+```
+
+```
+text-[clamp(min,preferred,max)]     smoothly scales font-size with the viewport
+```
+
+For reusable fluid sizes, define them once as theme tokens and use them like any other size:
+
+```css
+@theme {
+  --text-fluid-h1: clamp(2rem, 4vw + 1rem, 4rem);
+}
+```
+
+```html
+<h1 class="text-fluid-h1">Scales across breakpoints</h1>
+```
+
+:::note
+True fluid *type scales* (multiple coordinated sizes with min/max viewports) usually come from a small plugin (e.g. `fluid-tailwindcss`, `tailwind-clamp`) — the pattern above covers one-off fluid values with core Tailwind only.
+:::
+
 ## Colors
 
 Pattern: `{property}-{color}-{shade}` where shade is `50, 100, 200 ... 900, 950`.
@@ -110,11 +185,28 @@ divide-{color}-{shade}      border color of divide-x/y
 ring-{color}-{shade}        box-shadow ring color
 fill-{color}-{shade}        SVG fill
 stroke-{color}-{shade}      SVG stroke
+accent-{color}-{shade}      accent-color (checkboxes, radios, range, progress)
+caret-{color}-{shade}       caret-color (text input cursor)
 ```
 
 Palette names: `slate gray zinc neutral stone red orange amber yellow lime green emerald teal cyan sky blue indigo violet purple fuchsia pink rose`.
 
-Opacity modifier: `bg-black/50`, `text-white/75`.
+Opacity modifier: `bg-black/50`, `text-white/75`, `accent-blue-500/50`.
+
+**Accent color example** — restyle native checkboxes/radios/range sliders without extra markup:
+
+```html
+<input type="checkbox" class="accent-pink-500" checked />
+<input type="range" class="accent-pink-500" />
+```
+
+`accent-inherit`, `accent-current`, and `accent-transparent` are also available, and it takes state/responsive prefixes like any other utility: `hover:accent-pink-500`, `md:accent-pink-500`.
+
+**Caret color example** — color just the text-input cursor:
+
+```html
+<textarea class="caret-pink-500 focus:caret-rose-600"></textarea>
+```
 
 ## Backgrounds
 
@@ -214,6 +306,30 @@ select-none / select-text / select-all
 pointer-events-none / pointer-events-auto
 ```
 
+### Pseudo-element & state variant prefixes
+
+```
+file:mr-4 file:rounded-full file:border-0 file:bg-blue-50   ::file-selector-button (styles the "Choose file" button on <input type="file">)
+selection:bg-pink-300 selection:text-pink-900               ::selection (styles user-highlighted text)
+open:bg-gray-100                                              [open] attribute on <details>/<dialog>/<summary> when expanded
+```
+
+```html
+<!-- Styled file input button -->
+<input type="file" class="file:mr-4 file:rounded-full file:border-0 file:bg-violet-50 file:px-4 file:py-2 file:text-violet-700 hover:file:bg-violet-100" />
+
+<!-- Custom text selection color -->
+<p class="selection:bg-pink-300 selection:text-pink-900">Select some of this text.</p>
+
+<!-- Style a <details> element when open -->
+<details class="open:bg-gray-100 [&_summary]:cursor-pointer">
+  <summary>Toggle me</summary>
+  <p class="mt-2">Revealed content.</p>
+</details>
+```
+
+Like other variants, these can be stacked and combined with breakpoints/dark mode: `dark:file:bg-gray-800`, `md:open:bg-gray-50`.
+
 ## Responsive Design (mobile-first)
 
 Prefix a utility with a breakpoint to apply it **from that width up**:
@@ -235,7 +351,7 @@ dark:bg-gray-900
 dark:text-white
 ```
 
-Requires `darkMode: 'class'` (or `'media'`) in `tailwind.config.js`. With `'class'`, toggle by adding `class="dark"` to `<html>`.
+Requires `darkMode: 'class'` (v3, in `tailwind.config.js`) or, in v4, a `@custom-variant dark (&:where(.dark, .dark *));` declaration. Toggle by adding `class="dark"` to `<html>`.
 
 ## Arbitrary Values (escape hatch)
 
@@ -247,26 +363,31 @@ bg-[#1da1f2]
 top-[calc(100%-2rem)]
 grid-cols-[repeat(auto-fill,minmax(200px,1fr))]
 text-[15px]
+text-[clamp(1rem,2vw,1.5rem)]
 ```
 
 ## Handy Combos / Patterns
 
 **Center a div both ways:**
+
 ```html
 <div class="flex items-center justify-center h-screen">...</div>
 ```
 
 **Card:**
+
 ```html
 <div class="rounded-xl border border-gray-200 shadow-sm p-6 bg-white">...</div>
 ```
 
 **Responsive grid of cards:**
+
 ```html
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">...</div>
 ```
 
 **Button with states:**
+
 ```html
 <button class="px-4 py-2 rounded-md bg-blue-600 text-white hover:bg-blue-700 active:scale-95 disabled:opacity-50 transition">
   Click me
@@ -274,11 +395,13 @@ text-[15px]
 ```
 
 **Truncated text with tooltip fallback:**
+
 ```html
 <p class="truncate max-w-xs" title="Full text here">Full text here</p>
 ```
 
 **Sticky header:**
+
 ```html
 <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b">...</header>
 ```

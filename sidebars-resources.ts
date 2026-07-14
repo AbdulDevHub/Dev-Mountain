@@ -136,7 +136,19 @@ const sidebars: SidebarsConfig = {
     {
       type: "doc",
       id: "rag-mcp-fundamentals",
-    }
+    },
+    {
+      type: "doc",
+      id: "recursion-fundamentals",
+    },
+    {
+      type: "doc",
+      id: "seo-performance-basics",
+    },
+    {
+      type: "doc",
+      id: "uml-diagrams",
+    },
   ],
 }
 

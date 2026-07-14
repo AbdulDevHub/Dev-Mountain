@@ -95,8 +95,55 @@ s.find("World")                        # index of first match, -1 if not found
 s.startswith("Hello")
 s.endswith("ld")
 "world" in s.lower()                     # substring/membership check
+s.isalpha()                                # True only if all chars are letters AND string is non-empty
+                                            # "" -> False, "abc123" -> False, "abc" -> True
 
-f"{s} has {len(s)} chars"                  # f-string formatting
+f"{s} has {len(s)} chars"                  # f-string formatting - embed expressions directly in a string
+```
+
+### f-strings
+
+```python
+name = "Ada"
+score = 91.567
+
+f"Hi {name}"                     # "Hi Ada"                - drop any expression in {}
+f"{name} scored {score:.1f}"       # "Ada scored 91.6"        - format spec after a colon
+f"{score:.2%}"                       # "9156.70%"                - percentage formatting
+f"{1 + 2}"                             # "3"                        - expressions work, not just variables
+f"{name!r}"                              # "'Ada'"                     - !r calls repr() on the value
+
+# multi-line f-string / string, built with triple quotes (see "Multi-line strings" below)
+msg = f"""
+Name: {name}
+Score: {score}
+"""
+```
+
+### Multi-line comments and strings
+
+```python
+# Python has no real "block comment" syntax - # only comments a single line.
+# The common workaround is a triple-quoted string used as a "comment":
+
+"""
+This whole block is technically a string literal,
+not a real comment - but if it isn't assigned to
+anything and isn't the first line of a function/class
+(where it would become a docstring), it's effectively
+ignored at runtime and reads like a multi-line comment.
+"""
+
+# Triple quotes are also the normal way to build an actual
+# multi-line STRING value (this one IS meant to be used):
+paragraph = """Line one.
+Line two.
+Line three."""
+
+def greet(name):
+    """This one IS a docstring - first statement in a function/class,
+    used by help(greet) and tooling. Not just a comment."""
+    return f"Hello, {name}"
 ```
 
 ## Type conversion
@@ -113,6 +160,24 @@ set([1, 1, 2])              # {1, 2}
 
 int(True)               # 1
 bool(0)                  # False - 0, "", [], {}, None are all falsy
+```
+
+## Assertions
+
+```python
+price = 10
+assert price >= 0                        # passes silently, does nothing if True
+assert price >= 0, "price cannot be negative"   # raises AssertionError with this message if False
+
+# assert <condition>, <optional message>
+# - used to sanity-check assumptions / invariants (fail fast + loud if something is impossible)
+# - NOT for validating user input in production - asserts can be stripped out
+#   entirely if Python is run with the -O (optimize) flag, so don't rely on
+#   them for logic your program actually needs to run correctly
+# - handy in LeetCode/debugging to double-check an assumption mid-function:
+def divide(a, b):
+    assert b != 0, "division by zero"
+    return a / b
 ```
 
 ---
@@ -232,6 +297,29 @@ sorted(points, key=lambda p: p[1])                    # sort by 2nd element
 words.sort(key=len)
 ```
 
+### Sorting with a comparator (`cmp_to_key`)
+
+Sometimes `key=` isn't enough - you need to compare two elements *against each other* to decide order (classic example: arrange numbers to form the largest possible concatenated result).
+
+```python
+from functools import cmp_to_key
+
+nums = ["3", "30", "34", "5", "9"]
+
+def compare(n1, n2):
+    if n1 + n2 > n2 + n1:
+        return -1   # n1 should come BEFORE n2
+    else:
+        return 1    # n1 should come AFTER n2
+
+nums = sorted(nums, key=cmp_to_key(compare))
+
+# comparator function rules:
+#   return negative -> n1 comes first
+#   return positive -> n2 comes first
+#   return 0        -> leave order unchanged
+```
+
 ### Set operations
 
 ```python
@@ -247,6 +335,49 @@ a.add(5)
 a.remove(5)          # KeyError if missing
 a.discard(5)           # no error if missing
 5 in a                    # O(1) membership check - much faster than list
+```
+
+**Comparing two lists with sets** (e.g. "which elements are only in each list"):
+
+```python
+nums1 = [1, 2, 3]
+nums2 = [2, 3, 4]
+
+set1 = set(nums1)
+set2 = set(nums2)
+[list(set1 - set2), list(set2 - set1)]   # [[1], [4]] - unique-to-each side, in one line
+```
+
+### random
+
+```python
+import random
+
+random.randint(1, 100)     # random INT between 1 and 100, INCLUSIVE on both ends
+random.choice(some_list)     # random single element from a non-empty sequence (list/tuple/string)
+random.choice(list(some_set))  # sets aren't indexable/sequenced, so convert to a list first
+random.shuffle(some_list)        # shuffles a list in place, returns None
+```
+
+### Bitwise tricks in conditionals
+
+`^` (XOR) is handy for combining two boolean-ish conditions where you want the result to be true only when exactly one of them is true - a common shortcut in wiggle-sort / alternating-pattern problems:
+
+```python
+# True only when parity of i and the "is ascending" check disagree
+if (i % 2) ^ (nums[i] > nums[i - 1]):
+    ...
+```
+
+### min/max over a slice
+
+```python
+# picks the smallest value from everything before index i on odd i,
+# or the largest value from everything before index i on even i
+smallLargeIndex = min(nums[:i]) if i % 2 else max(nums[:i])
+
+# watch your slice direction - nums[i:0] is EMPTY (start after end),
+# you almost always want nums[:i] (everything up to i) here instead
 ```
 
 ---
@@ -276,33 +407,136 @@ print(p)                        # Point(3, 4) - thanks to __repr__
 - `self` refers to the specific instance - always the first parameter of instance methods, but you never pass it explicitly (`p.distance_from_origin()` not `p.distance_from_origin(p)`)
 - Attributes set in `__init__` (`self.x = x`) belong to that instance only
 
-### Common dunder (magic) methods
+### Default / optional constructor args
 
 ```python
-__init__(self, ...)     # constructor
-__repr__(self)            # developer-facing string, used by print() and in lists/debuggers
-__str__(self)               # user-facing string (falls back to __repr__ if not defined)
-__eq__(self, other)           # ==
-__lt__(self, other)             # <  (needed if you sort a list of custom objects)
-__len__(self)                     # len(obj)
-__hash__(self)                      # needed if you want instances usable in a set/dict key
+class Node:
+    def __init__(self, val: int = None):    # val defaults to None if not passed
+        self.val = val
+        self.next = None
+
+Node()          # val = None
+Node(5)         # val = 5
 ```
 
-### Class variable vs instance variable
+The `: int` is a type hint (documentation for humans/tools, not enforced at runtime) - since the default is `None`, the more precise hint is `Optional[int]` from the `typing` module, but plenty of code (and LeetCode starter templates) leaves it as a plain `int` hint for brevity.
+
+### Magic (dunder) methods
+
+"Magic methods" are methods surrounded by double underscores (`__like_this__`, hence "dunder") that Python calls automatically for you in response to built-in syntax or functions - you rarely call them directly yourself.
+
+```python
+__init__(self, ...)     # constructor - runs automatically when you write ClassName(...)
+__repr__(self)            # developer-facing string, used by print() and in lists/debuggers
+__str__(self)               # user-facing string (falls back to __repr__ if not defined)
+__eq__(self, other)           # controls ==
+__lt__(self, other)             # controls <  (needed if you sort a list of custom objects)
+__len__(self)                     # controls len(obj)
+__hash__(self)                      # needed if you want instances usable in a set/dict key
+__dict__                              # not a method - an attribute every instance has,
+                                       # a dict of all its instance attributes: p.__dict__
+                                       # -> {'x': 3, 'y': 4}, handy for quickly inspecting an object
+```
+
+`__init__` is the one you'll write constantly; the rest you implement only when you need that specific built-in behavior (e.g. implement `__lt__` so `sorted()` knows how to compare your objects).
+
+### Instance attribute vs. class attribute
 
 ```python
 class Counter:
-    total_created = 0        # CLASS variable - shared across all instances
+    total_created = 0        # CLASS attribute - lives on the class, shared across ALL instances
 
     def __init__(self):
-        Counter.total_created += 1
-        self.count = 0          # INSTANCE variable - unique per object
+        Counter.total_created += 1   # modify via the class, not an instance
+        self.count = 0                  # INSTANCE attribute - unique per object, set in __init__
 
 a = Counter()
 b = Counter()
-Counter.total_created       # 2 - shared
+Counter.total_created       # 2 - shared, both instances see the same value
 a.count                       # 0 - only belongs to `a`
+b.count                        # 0 - only belongs to `b`, changing a.count won't affect b.count
 ```
+
+- **Class attribute:** defined directly in the class body (not inside `__init__`), one copy shared by every instance and the class itself. Good for constants/counters/defaults.
+- **Instance attribute:** defined with `self.name = ...`, usually inside `__init__`, a separate copy per object. This is what you'll use 95% of the time for an object's actual data.
+- Reading `a.total_created` also works (Python looks up the instance first, then falls back to the class) - but *assigning* `a.total_created = 5` creates a brand-new instance attribute on `a` that shadows the class one, it does NOT change the shared value. Assign through the class name when you mean to change the shared value.
+
+### Decorators
+
+A decorator is a function that wraps another function/method to add behavior without changing its source code - written with `@` on the line above a `def`.
+
+```python
+def shout(func):
+    def wrapper(*args, **kwargs):
+        result = func(*args, **kwargs)
+        return result.upper()
+    return wrapper
+
+@shout
+def greet(name):
+    return f"hello, {name}"
+
+greet("ada")     # "HELLO, ADA" - shout() wrapped greet() automatically
+```
+
+Inside classes, decorators are how you mark special kinds of methods (see `@property`, `@classmethod`, `@staticmethod` below). `@decorator_name` right above a `def` is just shorthand for `func = decorator_name(func)`.
+
+```python
+class Item:
+    def __init__(self, price):
+        self._price = price
+
+    @property                    # lets you call it like an attribute: item.price (no parens)
+    def price(self):
+        return self._price
+
+    @price.setter                 # enables item.price = 50 while still running validation
+    def price(self, value):
+        assert value >= 0, "price cannot be negative"
+        self._price = value
+
+item = Item(100)
+item.price          # 100 - looks like a plain attribute access
+item.price = 50        # runs the validation in the setter
+item.price = -10        # raises AssertionError
+```
+
+### Class method vs. static method vs. instance method
+
+```python
+class Item:
+    all_items = []
+
+    def __init__(self, name, price):
+        self.name = name
+        self.price = price
+        Item.all_items.append(self)
+
+    def apply_discount(self, percent):        # INSTANCE method - takes `self`,
+        self.price -= self.price * percent      # needs a specific instance's data
+        return self.price
+
+    @classmethod
+    def instantiate_from_csv(cls, name, price_str):   # CLASS method - takes `cls`,
+        return cls(name, float(price_str))               # works with the class itself,
+                                                           # often used as an alternate constructor
+
+    @staticmethod
+    def is_valid_price(price):                # STATIC method - takes neither self nor cls,
+        return price >= 0                        # just lives inside the class namespace
+                                                   # because it's logically related to it
+
+item = Item("Phone", 500)
+item.apply_discount(0.1)                       # needs `self` -> call on an instance
+Item.instantiate_from_csv("Laptop", "999.99")    # needs `cls` -> call on the class (or instance)
+Item.is_valid_price(-5)                            # needs neither -> call on the class (or instance)
+```
+
+| | first param | called on | typical use |
+|---|---|---|---|
+| instance method | `self` | an instance | reads/writes that instance's data |
+| `@classmethod` | `cls` | class or instance | alternate constructors, anything touching the class itself |
+| `@staticmethod` | neither | class or instance | a utility function that's related but doesn't need `self`/`cls` |
 
 ### Inheritance
 
@@ -322,6 +556,8 @@ d = Dog("Rex")
 d.speak()          # "Rex barks"
 isinstance(d, Animal)    # True
 ```
+
+Use `super()` inside a child class to call the parent's version of a method (e.g. `super().__init__(name)`) instead of duplicating its logic - common when a subclass needs everything the parent's `__init__` does, plus a bit more.
 
 ### Why this matters for LeetCode
 
@@ -347,3 +583,14 @@ def traverse(node):
 ```
 
 You're usually just reading `.val`, `.next`, `.left`, `.right` off objects someone else defined - you rarely need to write `__init__` yourself in these problems, just recognize the shape.
+
+### Recommended: OOP course
+
+A course by *FreeCodeCamp* covers Python OOP in depth using a practical, step-by-step build of a store management system. Rough outline of what it covers:
+
+- **Fundamentals of classes** - why classes exist, moving from plain variables to custom data types
+- **Constructors and attributes** - `__init__`, assigning attributes dynamically, inspecting objects via `__dict__`
+- **Instance vs. class vs. static methods** - the role of `self` and `cls`
+- **Inheritance** - building a child class (e.g. `Phone`) from a parent (`Item`) using `super()`
+- **Getters/setters** - `@property` for read-only attributes and validation/encapsulation
+- **The four pillars of OOP** - Encapsulation, Abstraction, Inheritance, Polymorphism
