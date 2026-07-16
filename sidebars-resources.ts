@@ -17,6 +17,7 @@ const sidebars: SidebarsConfig = {
       items: [
         { type: "doc", id: "docusaurus-syntax-reference" },
         { type: "doc", id: "docusaurus-react-mdx-reference" },
+        { type: "doc", id: "markdown-cheatsheet" },
       ],
     },
 
@@ -30,6 +31,7 @@ const sidebars: SidebarsConfig = {
       items: [
         { type: "doc", id: "html-quick-reference" },
         { type: "doc", id: "css-quick-reference" },
+        { type: "doc", id: "sass-cheatsheet" },
         { type: "doc", id: "javascript-quick-reference" },
         { type: "doc", id: "typescript-quick-reference" },
         { type: "doc", id: "tailwind-cheatsheet" },
@@ -44,9 +46,23 @@ const sidebars: SidebarsConfig = {
       label: "Programming Languages",
       collapsed: true,
       items: [
-        { type: "doc", id: "markdown-cheatsheet" },
         { type: "doc", id: "python-quick-reference" },
         { type: "doc", id: "java-quick-reference" },
+        { type: "doc", id: "c-pointers" },
+      ],
+    },
+
+    // =========================
+    // Computer Science Concepts
+    // =========================
+    {
+      type: "category",
+      label: "Computer Science Concepts",
+      collapsed: true,
+      items: [
+        { type: "doc", id: "recursion-fundamentals" },
+        { type: "doc", id: "uml-diagrams" },
+        { type: "doc", id: "regex-cheatsheet" },
       ],
     },
 
@@ -79,6 +95,8 @@ const sidebars: SidebarsConfig = {
         { type: "doc", id: "commit-lint-guide" },
         { type: "doc", id: "github-label-setup" },
         { type: "doc", id: "wsl-dev-setup" },
+        { type: "doc", id: "git-cheatsheet" },
+        { type: "doc", id: "tooling-config-cheatsheet" },
       ],
     },
 
@@ -105,6 +123,34 @@ const sidebars: SidebarsConfig = {
       items: [
         { type: "doc", id: "ai-architecture-workflow" },
         { type: "doc", id: "agent-skills" },
+        { type: "doc", id: "rag-mcp-fundamentals" },
+      ],
+    },
+
+    // =========================
+    // Quality, Testing & Performance
+    // =========================
+    {
+      type: "category",
+      label: "Quality, Testing & Performance",
+      collapsed: true,
+      items: [
+        { type: "doc", id: "software-testing" },
+        { type: "doc", id: "accessibility-tools" },
+        { type: "doc", id: "seo-performance-basics" },
+      ],
+    },
+
+    // =========================
+    // Security & Privacy
+    // =========================
+    {
+      type: "category",
+      label: "Security & Privacy",
+      collapsed: true,
+      items: [
+        { type: "doc", id: "learn-cybersecurity" },
+        { type: "doc", id: "ubol-custom-filters" },
       ],
     },
 
@@ -118,36 +164,8 @@ const sidebars: SidebarsConfig = {
       items: [
         { type: "doc", id: "learning-platforms" },
         { type: "doc", id: "asset-filenames" },
-        { type: "doc", id: "learn-cybersecurity" },
+        { type: "doc", id: "swe-roles-and-specializations" },
       ],
-    },
-    {
-      type: "doc",
-      id: "software-testing",
-    },
-    {
-      type: "doc",
-      id: "accessibility-tools",
-    },
-    {
-      type: "doc",
-      id: "swe-roles-and-specializations",
-    },
-    {
-      type: "doc",
-      id: "rag-mcp-fundamentals",
-    },
-    {
-      type: "doc",
-      id: "recursion-fundamentals",
-    },
-    {
-      type: "doc",
-      id: "seo-performance-basics",
-    },
-    {
-      type: "doc",
-      id: "uml-diagrams",
     },
   ],
 }
