@@ -167,6 +167,30 @@ const sidebars: SidebarsConfig = {
         { type: "doc", id: "swe-roles-and-specializations" },
       ],
     },
+    {
+      type: "doc",
+      id: "home-directory-map",
+    },
+    {
+      type: "doc",
+      id: "chmod-and-file-mode-basics",
+    },
+    {
+      type: "doc",
+      id: "windows-file-attributes",
+    },
+    {
+      type: "doc",
+      id: "scrum",
+    },
+    {
+      type: "doc",
+      id: "nginx",
+    },
+    {
+      type: "doc",
+      id: "agile",
+    }
   ],
 }
 
