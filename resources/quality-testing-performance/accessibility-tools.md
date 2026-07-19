@@ -13,7 +13,7 @@ Accessibility tooling splits into two families that are easy to conflate but ser
 1. **Assistive technology (AT)** — what disabled users actually use to interact with your product (screen readers, magnifiers, voice control). Testing with these is the closest you get to the real user experience.
 2. **Developer/QA tooling** — linters, browser extensions, and automated test libraries that catch a *subset* of accessibility issues automatically, early, and repeatedly.
 
-Neither family is a substitute for the other — see the [recommended workflow](#recommended-accessibility-testing-workflow) below.
+Neither family is a substitute for the other — see the [recommended workflow](#4-recommended-accessibility-testing-workflow) below.
 :::
 
 ---
