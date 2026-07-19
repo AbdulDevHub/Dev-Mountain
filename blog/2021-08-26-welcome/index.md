@@ -27,4 +27,4 @@ If it's useful to you too, even better.
 
 ---
 
-Feel free to explore the **[Resources](/resources/learning-platforms)** section — that's where the real content lives.
+Feel free to explore the **[Resources](/resources/references-knowledge/learning-platforms)** section — that's where the real content lives.

@@ -7,7 +7,7 @@ tags: [linux, cli, sysadmin, devops]
 Personal reference notes on Linux: core concepts, the filesystem, permissions, and the commands I actually reach for day to day.
 
 :::tip Related
-Working on Windows instead? See [PowerShell](./powershell.md) for the shell fundamentals, or [Terminal Commands](./terminal-commands.md) for ready-to-use PowerShell / Node.js scripts (project linting, file management, duplicate detection, etc.).
+Working on Windows instead? See [PowerShell](../infrastructure-devops/powershell.md) for the shell fundamentals, or [Terminal Commands](../scripting-automation/terminal-commands.md) for ready-to-use PowerShell / Node.js scripts (project linting, file management, duplicate detection, etc.).
 :::
 
 ## Core Concepts

@@ -130,7 +130,7 @@ const config: Config = {
             },
             {
               label: "Resources",
-              to: "/resources/learning-platforms",
+              to: "/resources/references-knowledge/learning-platforms",
             },
           ],
         },

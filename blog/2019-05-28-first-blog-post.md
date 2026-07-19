@@ -9,7 +9,7 @@ A quick rundown of animation and motion libraries that have been consistently us
 
 <!-- truncate -->
 
-These aren't reviews, just honest notes from actual use. The full curated list lives in the [UI Motion & Inspiration](/resources/ui-motion-and-inspiration) resource page.
+These aren't reviews, just honest notes from actual use. The full curated list lives in the [UI Motion & Inspiration](/resources/design-ui/ui-motion-and-inspiration) resource page.
 
 ## The Go-Tos
 

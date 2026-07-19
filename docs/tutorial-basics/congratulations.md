@@ -18,7 +18,7 @@ You now understand how Dev-Mountain is structured and how to add content to each
 
 - Explore **[Site Advanced](../tutorial-extras/manage-docs-versions.md)** for versioning and i18n options
 - Check the **[CONTRIBUTING.md](https://github.com/AbdulDevHub/Dev-Mountain/blob/main/CONTRIBUTING.md)** for the full content guide
-- Browse **[Resources](/resources/learning-platforms)** — that's the main content hub
+- Browse **[Resources](/resources)** — that's the main content hub
 - Read the [Docusaurus official docs](https://docusaurus.io/) for anything not covered here
 
 :::tip

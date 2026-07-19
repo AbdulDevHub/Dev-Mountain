@@ -8,7 +8,7 @@ tags: [powershell, windows, cli, nodejs, file-management]
 A collection of terminal commands I frequently use for project maintenance, file management, dependency analysis, and PowerShell automation.
 
 :::tip Related
-For PowerShell syntax, variables, and pipeline concepts, see [PowerShell](./powershell.md). For the Unix/bash equivalents, see [Linux](./linux.md). For git-specific commands, see [Git Commands](./git-commands.md).
+For PowerShell syntax, variables, and pipeline concepts, see [PowerShell](../infrastructure-devops/powershell.md). For the Unix/bash equivalents, see [Linux](../infrastructure-devops/linux.md). For git-specific commands, see [Git Commands](../infrastructure-devops/git-commands.md).
 :::
 
 ---
