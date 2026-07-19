@@ -35,6 +35,8 @@ sudo apt install tmux
 - Optional but common pairing: swap default bash for `zsh` + a framework like Oh My Zsh, or keep bash and just add a solid `.bashrc`/`.tmux.conf`. This is taste, not necessity.
 - Basic `~/.tmux.conf` tweaks people usually want: mouse mode on, saner prefix key, maybe `tpm` (tmux plugin manager) if you want persistent sessions across reboots.
 
+> 💡 **Note on [cmux](https://cmux.com/):** If you ever work across platforms or pair your WSL environment with a macOS host machine, check out `cmux`. It is a modern, UI-driven alternative built on Ghostty that functions like a visual multiplexer with native tabs and status alerts—ideal for tracking multiple parallel terminal sessions or running AI coding agents simultaneously. While it's macOS-only for now, it supports natively attaching to remote `tmux` sessions running on your Linux environments.
+
 ## 5. VS Code — no reinstall needed
 
 - Install the **WSL extension** (`ms-vscode-remote.remote-wsl`) in your *existing* Windows VS Code.

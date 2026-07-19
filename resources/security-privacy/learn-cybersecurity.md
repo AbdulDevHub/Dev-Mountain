@@ -108,6 +108,51 @@ There's no universally "best" option — the right choice depends on whether you
 
 ---
 
+## OAuth 2.0: Delegated Authorization
+
+OAuth 2.0 solves a different problem than the session/token models above: instead of *your* app verifying a password, it lets a user grant your app limited access to their data on another service — without ever handing your app their password for that service. It's how "Sign in with Google" or "Connect your GitHub account" buttons work.
+
+The key word is **authorization**, not authentication. OAuth was designed to answer "can this app do X on my behalf?", not "who is this user?" (that distinction matters — see the OpenID Connect note below).
+
+### The four roles
+
+| Role | Who it is | Example |
+| --- | --- | --- |
+| **Resource Owner** | The user granting access | You, logging into a third-party app |
+| **Client** | The app requesting access | The third-party app itself |
+| **Authorization Server** | Issues tokens after the user approves | Google's/GitHub's OAuth server |
+| **Resource Server** | Hosts the protected data | Google Drive API, GitHub API |
+
+### The Authorization Code flow (the one you'll use most)
+
+This is the standard flow for a server-side web app:
+
+1. Your app redirects the user to the authorization server's login/consent screen, including your `client_id`, a `redirect_uri`, and the `scope` (what permissions you're asking for).
+2. The user logs in (on the *authorization server's* site, not yours) and approves the requested scopes.
+3. The authorization server redirects back to your `redirect_uri` with a short-lived **authorization code**.
+4. Your server exchanges that code — plus your `client_secret` — for an **access token** (and often a **refresh token**) via a direct server-to-server request.
+5. Your app uses the access token to call the resource server's API on the user's behalf.
+
+The reason step 4 happens server-to-server rather than in the browser: the authorization code alone is useless without the `client_secret`, so even if it leaks in a browser redirect, an attacker can't complete the exchange.
+
+### PKCE: the fix for public clients
+
+Mobile apps and single-page apps can't safely hold a `client_secret` — anything shipped to the client can be extracted. **PKCE** (Proof Key for Code Exchange, pronounced "pixy") fixes this: the client generates a random secret (`code_verifier`) before the flow starts, sends a hashed version (`code_challenge`) with the initial request, then proves it holds the original secret when exchanging the code for a token. This binds the code exchange to the same client that started the flow, without needing a stored secret at all. PKCE is now recommended for *all* clients, not just public ones.
+
+### Scopes and tokens
+
+- **Scopes** limit what the access token can do (e.g. `repo:read` vs `repo:write`) — always request the minimum your app actually needs.
+- **Access tokens** are typically short-lived and are what you attach to API calls (see the Opaque vs. JWT comparison above — OAuth access tokens can be either format depending on the provider).
+- **Refresh tokens** are long-lived and stored securely server-side; they're used to get a new access token without asking the user to log in again. A leaked refresh token is far more dangerous than a leaked access token, since it can mint new access indefinitely until revoked.
+
+### OAuth vs. OpenID Connect (OIDC)
+
+OAuth alone tells you nothing about *who* the user is — only that your app was granted some access. **OpenID Connect** is a thin identity layer built on top of OAuth 2.0 that adds an `id_token` (a JWT containing the user's identity claims). If you see "Sign in with Google" actually logging you in — not just granting access to your Google data — that's OIDC, not bare OAuth.
+
+**Common mistake:** using a bare OAuth access token as proof of identity. An access token proves the bearer has some delegated permission; it doesn't prove who that bearer is. Use the OIDC `id_token` for authentication, and reserve OAuth access tokens for authorization to APIs.
+
+---
+
 ## Defending Against Denial-of-Service
 
 A **denial-of-service (DoS)** attack tries to make a system unavailable to legitimate users — by overwhelming it with traffic, exhausting a resource, or exploiting a slow code path. A **distributed** denial-of-service (DDoS) attack does the same thing from many sources at once, making it much harder to block by simply banning one IP address.

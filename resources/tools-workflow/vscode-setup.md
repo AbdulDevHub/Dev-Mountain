@@ -293,6 +293,148 @@ Bitbucket Pipelines schema:
 
 ---
 
+## Installed Extensions
+
+Full list via `code --list-extensions`:
+
+```text
+anthropic.claude-code
+bradlc.vscode-tailwindcss
+catppuccin.catppuccin-vsc
+codeium.codeium
+coderabbit.coderabbit-vscode
+davidanson.vscode-markdownlint
+dbaeumer.vscode-eslint
+dsznajder.es7-react-js-snippets
+esbenp.prettier-vscode
+formulahendry.auto-rename-tag
+github.codespaces
+github.remotehub
+mechatroner.rainbow-csv
+ms-azuretools.vscode-containers
+ms-python.debugpy
+ms-python.python
+ms-python.vscode-pylance
+ms-python.vscode-python-envs
+ms-vscode-remote.remote-containers
+ms-vscode-remote.remote-ssh
+ms-vscode-remote.remote-ssh-edit
+ms-vscode.remote-explorer
+ms-vscode.remote-repositories
+ms-vsliveshare.vsliveshare
+pkief.material-icon-theme
+pkief.material-product-icons
+postman.postman-for-vscode
+ritwickdey.liveserver
+saoudrizwan.claude-dev
+snyk-security.snyk-vulnerability-scanner
+streetsidesoftware.code-spell-checker
+tomoki1207.pdf
+usernamehw.errorlens
+```
+
+To restore on a new machine:
+
+```powershell
+code --list-extensions | % { code --install-extension $_ }
+```
+
+(On macOS/Linux, save the list to a file and loop over it with `xargs -n 1 code --install-extension`.)
+
+---
+
+## Keybindings
+
+Custom overrides in `keybindings.json`:
+
+```json
+[
+  {
+    "key": "ctrl+m",
+    "command": "editor.emmet.action.balanceOut"
+  },
+  {
+    "key": "ctrl+shift+u",
+    "command": "editor.action.transformToUppercase",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+l",
+    "command": "editor.action.transformToLowercase",
+    "when": "editorTextFocus"
+  }
+]
+```
+
+---
+
+## MCP Servers
+
+### Claude Code (`~/.claude.json`)
+
+| Server | Type | Notes |
+| --- | --- | --- |
+| wmux | local (node) | bundled with wmux app install |
+| context7 | http | needs `CONTEXT7_API_KEY` env var — stored separately, not here |
+| github | stdio (npx) | needs `GITHUB_PERSONAL_ACCESS_TOKEN` env var — stored separately, not here |
+| chrome-devtools | stdio (npx) | `chrome-devtools-mcp@latest` |
+| playwright | stdio (npx) | `@playwright/mcp@latest` |
+
+> Secrets for context7 and github were rotated after being pasted into chat on 2026-07-18 — re-generate fresh ones and store in a password manager, not in this doc.
+
+### VS Code (`%APPDATA%\Code\User\mcp.json`)
+
+| Server | Type | Version |
+| --- | --- | --- |
+| context7 (Upstash) | stdio (npx) | 1.0.31 |
+| chrome-devtools | stdio (npx) | 1.6.0 |
+| github-mcp-server | http | 1.6.0 |
+| playwright | stdio (npx) | latest |
+
+---
+
+## Git Config
+
+```text
+user.name=Abdul Khan
+user.email=ahkn63@gmail.com
+filter.lfs.required=true
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+init.defaultbranch=main
+```
+
+---
+
+## SSH Config
+
+```text
+Host cs.utm.utoronto.ca
+  HostName cs.utm.utoronto.ca
+  User khanab72
+```
+
+---
+
+## Node / Package Managers
+
+* **Node:** v22.22.3 (via nvm) — other versions installed: 22.0.0, 18.14.2
+* **uv:** 0.11.21
+* Python: not installed as a standalone binary (Store alias only)
+
+---
+
+## GitHub CLI
+
+```text
+Logged in to github.com as AbdulDevHub
+Protocol: https
+Scopes: gist, read:org, repo, workflow
+```
+
+---
+
 ## Full settings.json
 
 <details>

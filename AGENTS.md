@@ -32,22 +32,81 @@ Note: May not be fully up-to-date.
 
 ```
 Dev-Mountain/
-├── resources/               ← PRIMARY CONTENT — curated links & reference docs
-│   ├── index.md             ← Resources section landing page
-│   ├── learning-platforms.md
-│   ├── ui-libraries-and-animation.md
-│   ├── ui-motion-and-inspiration.md
-│   ├── frontend-snippets.md
-│   ├── terminal-commands.md
-│   ├── terminal-themes.md
-│   ├── vscode-setup.md
-│   ├── pnpm-guide.md
-│   ├── commit-lint-guide.md
-│   ├── python-scripts.md
-│   ├── agent-skills.md
-│   ├── asset-filenames.mdx
-│   ├── docusaurus-syntax-reference.md
-│   └── docusaurus-react-mdx-reference.mdx
+├── resources/                          ← PRIMARY CONTENT — curated links & reference docs
+│   ├── index.md                        ← Resources section landing page
+│   ├── getting-started/
+│   │   ├── docusaurus-syntax-reference.md
+│   │   ├── docusaurus-react-mdx-reference.mdx
+│   │   └── markdown-cheatsheet.md
+│   ├── web-fundamentals/
+│   │   ├── html-quick-reference.md
+│   │   ├── css-quick-reference.md
+│   │   ├── sass-cheatsheet.md
+│   │   ├── javascript-quick-reference.md
+│   │   ├── typescript-quick-reference.md
+│   │   └── tailwind-cheatsheet.md
+│   ├── programming-languages/
+│   │   ├── python-quick-reference.md
+│   │   ├── java-quick-reference.md
+│   │   ├── c-pointers.md
+│   │   ├── sql.md
+│   │   └── uv-python.md
+│   ├── frameworks-libraries/
+│   │   ├── react.md
+│   │   ├── nestjs.md
+│   │   ├── electronjs.md
+│   │   ├── threejs.md
+│   │   ├── gsap.md
+│   │   ├── frontend-frameworks-comparison.md
+│   │   └── backend-frameworks-comparison.md
+│   ├── cs-concepts/
+│   │   ├── recursion-fundamentals.md
+│   │   ├── uml-diagrams.md
+│   │   ├── regex-cheatsheet.md
+│   │   └── design-patterns.md
+│   ├── scripting-automation/
+│   │   ├── frontend-snippets.md
+│   │   ├── python-scripts.md
+│   │   ├── browser-console-scripts.md
+│   │   └── terminal-commands.md
+│   ├── tools-workflow/
+│   │   ├── vscode-setup.md
+│   │   ├── pnpm-guide.md
+│   │   ├── terminal-themes.md
+│   │   ├── commit-lint-guide.md
+│   │   ├── github-label-setup.md
+│   │   ├── wsl-dev-setup.md
+│   │   ├── git-cheatsheet.md
+│   │   ├── tooling-config-cheatsheet.md
+│   │   ├── home-directory-map.md
+│   │   ├── chmod-and-file-mode-basics.md
+│   │   └── windows-file-attributes.md
+│   ├── design-ui/
+│   │   ├── ui-libraries-and-animation.md
+│   │   └── ui-motion-and-inspiration.md
+│   ├── infrastructure-devops/
+│   │   ├── linux.md
+│   │   ├── nginx.md
+│   │   └── aws.md
+│   ├── ai-systems/
+│   │   ├── ai-architecture-workflow.md
+│   │   ├── agent-skills.md
+│   │   └── rag-mcp-fundamentals.md
+│   ├── quality-testing-performance/
+│   │   ├── software-testing.md
+│   │   ├── accessibility-tools.md
+│   │   └── seo-performance-basics.md
+│   ├── security-privacy/
+│   │   ├── learn-cybersecurity.md
+│   │   └── ubol-custom-filters.md
+│   ├── project-management/
+│   │   ├── scrum.md
+│   │   └── agile.md
+│   └── references-knowledge/
+│       ├── learning-platforms.md
+│       ├── asset-filenames.mdx
+│       ├── swe-roles-and-specializations.md
+│       └── web-monetization.md
 │
 ├── docs/                    ← DOCUSAURUS GUIDE TAB — how the site is built
 │   ├── intro.md             ← Entry point for the Guide section
@@ -56,7 +115,7 @@ Dev-Mountain/
 │
 ├── blog/                    ← BLOG TAB — dev notes, posts, updates
 │   ├── authors.yml          ← Blog author definitions
-│   └── *.md / *.mdx         ← Blog posts (date-prefixed filenames)
+│   └── *.md /*.mdx         ← Blog posts (date-prefixed filenames)
 │
 ├── src/
 │   ├── pages/
@@ -75,6 +134,7 @@ Dev-Mountain/
 ├── sidebars-resources.ts    ← Sidebar config for resources/
 ├── CONTRIBUTING.md          ← Full content guide for humans and agents
 └── AGENTS.md                ← This file
+
 ```
 
 ---
@@ -119,20 +179,21 @@ tags: [frontend, tools]
 
 ## Where to Make Changes
 
-| Goal                         | File(s) to edit                                       |
-| ---------------------------- | ----------------------------------------------------- |
-| Add a resource link          | `resources/*.md`                                      |
-| Add a new resource page      | New file in `resources/` + edit `sidebars-resources.ts`    |
-| Change site title or tagline | `docusaurus.config.ts` → `title`, `tagline`           |
-| Add a navbar item            | `docusaurus.config.ts` → `themeConfig.navbar.items`   |
-| Add a footer link            | `docusaurus.config.ts` → `themeConfig.footer.links`   |
-| Add a blog post              | New `.md` in `blog/` with `YYYY-MM-DD-slug.md` format |
-| Add an author                | `blog/authors.yml`                                    |
-| Change homepage hero         | `src/pages/index.tsx`                                 |
-| Change feature cards         | `src/components/HomepageFeatures/index.tsx`           |
-| Update about page            | `src/pages/about.tsx`                                 |
-| Change theme colors          | `src/css/custom.css`                                  |
-| Add a guide page             | New `.md` in `docs/`                                  |
+| Goal                          | File(s) to edit                                                                     |
+| ----------------------------- | ------------------------------------------------------------------------------------|
+| Add a resource link           | Relevant `.md` file inside the matching `resources/<category>/` subfolder           |
+| Add a new resource page       | New file inside the matching `resources/<category>/` subfolder + edit `sidebars-resources.ts` (id must be `category-folder/filename`)  |
+| Add a new resource category   | New subfolder in `resources/` + new category block in `sidebars-resources.ts`       |
+| Change site title or tagline  | `docusaurus.config.ts` → `title`, `tagline`                                         |
+| Add a navbar item             | `docusaurus.config.ts` → `themeConfig.navbar.items`                                 |
+| Add a footer link             | `docusaurus.config.ts` → `themeConfig.footer.links`                                 |
+| Add a blog post               | New `.md` in `blog/` with `YYYY-MM-DD-slug.md` format                               |
+| Add an author                 | `blog/authors.yml`                                                                  |
+| Change homepage hero          | `src/pages/index.tsx`                                                               |
+| Change feature cards          | `src/components/HomepageFeatures/index.tsx`                                         |
+| Update about page             | `src/pages/about.tsx`                                                               |
+| Change theme colors           | `src/css/custom.css`                                                                |
+| Add a guide page              | New `.md` in `docs/`                                                                |
 
 ---
 
@@ -173,6 +234,9 @@ This is why `resources/` has its own `sidebars-resources.ts` — it's a separate
 
 - Do NOT delete docs from `docs/tutorial-basics/` or `docs/tutorial-extras/` — they are intentional reference material
 - Do NOT change `onBrokenLinks: "throw"` — broken links will fail the build
+- `resources/` content is organized into topical subfolders (e.g. `web-fundamentals/`, `tools-workflow/`) — always place new pages in the matching subfolder rather than the `resources/` root
+- Doc `id`s in `sidebars-resources.ts` must include the subfolder prefix (e.g. `id: "frameworks-libraries/react"`), since Docusaurus derives ids from file path once files live in nested folders
+- If a resource page's URL must stay stable regardless of folder location, add a `slug:` field to its frontmatter
 - When adding resource links, group them by category using `###` headings
 - Always add `title` and `description` frontmatter to new resource pages
 - Blog posts MUST have an `authors` field that matches a key in `blog/authors.yml`

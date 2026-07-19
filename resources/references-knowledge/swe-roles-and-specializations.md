@@ -15,7 +15,7 @@ All figures below are **rough national averages** at time of writing, not a guar
 
 ## 1. Quality & Testing
 
-The roles most directly responsible for the testing practices covered in [Software Testing](./software-testing.md) and [Accessibility Tools](./accessibility-tools.md).
+The roles most directly responsible for the testing practices covered in [Software Testing](../quality-testing-performance/software-testing.md) and [Accessibility Tools](../quality-testing-performance/accessibility-tools.md).
 
 | Role | Focus | Key Skills/Tools | Avg. Salary |
 | :--- | :--- | :--- | :--- |

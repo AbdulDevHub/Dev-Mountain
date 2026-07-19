@@ -12,12 +12,19 @@ Here you’ll find focused references across frontend development, scripting, to
 
 ## How to use this hub
 
+- **Getting Started** → Docusaurus syntax, MDX, and markdown basics for this site
 - **Web Fundamentals** → Core building blocks (HTML, CSS, JavaScript, TypeScript, Tailwind)
 - **Programming Languages** → Language-specific references and quick lookups
+- **Frameworks & Libraries** → React, NestJS, Three.js, GSAP, and framework comparisons
+- **Computer Science Concepts** → Recursion, UML, regex, and design patterns
 - **Scripting & Automation** → Small tools, snippets, and automation patterns
 - **Tools & Workflow** → Environment setup, CLI tools, and developer productivity
 - **Design & UI** → Motion, UI systems, and visual inspiration
+- **Infrastructure & DevOps** → Linux, Nginx, AWS, and system-level references
 - **AI & Systems** → Architecture thinking, agent workflows, and higher-level patterns
+- **Quality, Testing & Performance** → Testing practices, accessibility, and SEO
+- **Security & Privacy** → Cybersecurity fundamentals and filtering tools
+- **Project Management** → Scrum, agile, and team workflow references
 - **References & Knowledge** → General knowledge, platforms, and supporting material
 
 ---

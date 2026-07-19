@@ -397,6 +397,36 @@ Docusaurus is built on React.[^1] It also supports MDX.[^2]
 
 ---
 
+## Mermaid Diagrams
+
+If the `@docusaurus/theme-mermaid` plugin is enabled, fenced code blocks
+labeled `mermaid` render as diagrams instead of plain code.
+
+**Source:**
+
+````md
+```mermaid
+graph LR
+  A[Write Markdown] --> B[Docusaurus Build]
+  B --> C[Static Site]
+```
+````
+
+**Rendered (requires the Mermaid plugin to be installed and enabled):**
+
+```mermaid
+graph LR
+  A[Write Markdown] --> B[Docusaurus Build]
+  B --> C[Static Site]
+```
+
+:::warning Requires setup
+Same caveat as npm2yarn and KaTeX above — needs `theme-mermaid` enabled in
+config, and `markdown.mermaid: true` set.
+:::
+
+---
+
 ## Keyboard Keys
 
 The `<kbd>` HTML tag is supported and styled by the theme — handy for

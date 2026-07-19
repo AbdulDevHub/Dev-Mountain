@@ -1,9 +1,15 @@
 ---
 title: Useful Terminal Commands
 description: Collection of useful PowerShell, Node.js, and file management commands.
+sidebar_label: Terminal Commands (PowerShell)
+tags: [powershell, windows, cli, nodejs, file-management]
 ---
 
 A collection of terminal commands I frequently use for project maintenance, file management, dependency analysis, and PowerShell automation.
+
+:::tip Related
+Looking for the Unix/bash equivalents? See [Linux](../infrastructure-devops/linux.md) for filesystem structure, permissions, and general-purpose Linux commands.
+:::
 
 ---
 

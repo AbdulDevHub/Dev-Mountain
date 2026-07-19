@@ -167,6 +167,7 @@ Note: `git cz` fails silently-ish with "No files added to staging! Did you forge
 
 ## 🔗 Related Tools
 
+- [Gitmoji](https://gitmoji.dev/) — An interactive guide to using emojis on git commit messages
 - commitlint
 - Commitizen (`cz-cli` + `cz-git`)
 - Husky
