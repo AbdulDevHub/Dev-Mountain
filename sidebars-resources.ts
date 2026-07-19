@@ -200,6 +200,7 @@ const sidebars: SidebarsConfig = {
       items: [
         { type: "doc", id: "security-privacy/learn-cybersecurity" },
         { type: "doc", id: "security-privacy/ubol-custom-filters" },
+        { type: "doc", id: "security-privacy/network-chuck-hacking-guide" },
       ],
     },
 
