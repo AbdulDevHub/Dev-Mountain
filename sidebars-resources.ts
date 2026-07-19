@@ -153,6 +153,7 @@ const sidebars: SidebarsConfig = {
       items: [
         { type: "doc", id: "infrastructure-devops/linux" },
         { type: "doc", id: "infrastructure-devops/powershell" },
+        { type: "doc", id: "infrastructure-devops/git-commands" },
         { type: "doc", id: "infrastructure-devops/nginx" },
         { type: "doc", id: "infrastructure-devops/aws" },
       ],

@@ -8,7 +8,7 @@ tags: [powershell, windows, cli, nodejs, file-management]
 A collection of terminal commands I frequently use for project maintenance, file management, dependency analysis, and PowerShell automation.
 
 :::tip Related
-For PowerShell syntax, variables, and pipeline concepts, see [PowerShell](./powershell.md). For the Unix/bash equivalents, see [Linux](./linux.md).
+For PowerShell syntax, variables, and pipeline concepts, see [PowerShell](./powershell.md). For the Unix/bash equivalents, see [Linux](./linux.md). For git-specific commands, see [Git Commands](./git-commands.md).
 :::
 
 ---
@@ -38,6 +38,30 @@ npx depcheck
 ```
 
 Identify dependencies that are not being used.
+
+---
+
+## Package Manager Maintenance
+
+### Update Global Package Managers
+
+```powershell
+npm install -g npm@latest pnpm@latest yarn; bun upgrade
+```
+
+Updates npm, pnpm, and yarn to their latest versions globally, then upgrades Bun itself.
+
+---
+
+## Running Bash Scripts from PowerShell
+
+### Run a Bash Script Using Git's Bundled Bash
+
+```powershell
+"C:\Program Files\Git\bin\bash.exe" update-all-labels.sh
+```
+
+Runs a `.sh` script from PowerShell using the bash executable bundled with Git for Windows. Useful when a script relies on bash-only syntax that PowerShell can't interpret natively.
 
 ---
 
@@ -121,6 +145,53 @@ Get-ChildItem -Directory | ForEach-Object {
 ```
 
 Output top-level directories and their immediate subdirectories.
+
+---
+
+## Feeding Project Structure to AI
+
+Handy for grabbing a clean snapshot of a project's file/folder structure — e.g. to paste into an AI prompt — while excluding noise like `node_modules`, `.git`, and build output.
+
+### List All Files Recursively, Excluding Common Junk Folders
+
+```powershell
+Get-ChildItem -Recurse -File -Exclude node_modules |
+Where-Object { $_.FullName -notmatch '\\(node_modules|\.git|dist|build|\.next|\.cache)\\' } |
+Select-Object -ExpandProperty FullName
+```
+
+Recursively lists every file's full path, filtering out anything inside `node_modules`, `.git`, `dist`, `build`, `.next`, or `.cache`.
+
+### Same, but Relative Paths Only
+
+```powershell
+Get-ChildItem -Recurse -File |
+Where-Object { $_.FullName -notmatch '\\(node_modules|\.git|dist|build|\.next|\.cache)\\' } |
+Resolve-Path -Relative
+```
+
+Same filtering, but outputs paths relative to the current directory — cleaner for pasting into a prompt.
+
+### Save the Filtered Structure to a File
+
+```powershell
+Get-ChildItem -Recurse -File |
+Where-Object { $_.FullName -notmatch '\\(node_modules|\.git|dist|build|\.next|\.cache)\\' } |
+Resolve-Path -Relative |
+Out-File structure.txt
+```
+
+Writes the filtered file list to `structure.txt` for easy copy-pasting.
+
+### Tree View Excluding node_modules
+
+```powershell
+Get-ChildItem -Recurse -Directory |
+Where-Object { $_.FullName -notmatch '\\(node_modules|\.git|dist|build|\.next|\.cache)\\' } |
+Select-Object -ExpandProperty FullName
+```
+
+Lists only directories (not files), still excluding common junk folders — useful for a quick high-level structure overview.
 
 ---
 
