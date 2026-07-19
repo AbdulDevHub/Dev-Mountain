@@ -9,7 +9,7 @@ A developer's terminal is their most-used tool. Here's what a solid setup looks 
 
 <!-- truncate -->
 
-The full reference lives in [Terminal Commands](/resources/terminal-commands) and [Terminal Themes](/resources/terminal-themes), but this post is the opinionated "here's what I actually use" version.
+The full reference lives in [Terminal Commands](/resources/scripting-automation/terminal-commands) and [Terminal Themes](/resources/tools-workflow/terminal-themes), but this post is the opinionated "here's what I actually use" version.
 
 ## Shell: Oh My Zsh + Starship
 
