@@ -47,4 +47,4 @@ Simple. Works. Change the path to wherever your projects live.
 
 ---
 
-The [Terminal Commands](/resources/terminal-commands) resource page has a broader reference — git tricks, file navigation, process management, and more.
+The [Terminal Commands](/resources/scripting-automation/terminal-commands) resource page has a broader reference — git tricks, file navigation, process management, and more.
