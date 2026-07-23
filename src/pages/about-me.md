@@ -1,3 +1,8 @@
+---
+title: Abdul Hadi Khan — About Me
+description: Single source of truth for resume generation, cover letter drafting, portfolio copy, interview prep, and AI-assisted career tooling.
+---
+
 # Abdul Hadi Khan — About Me
 
 > **Purpose of this file:** Single source of truth for resume generation, cover letter drafting, portfolio copy, interview prep, and AI-assisted career tooling. Keep this updated as new skills, projects, and experiences are added.
@@ -6,15 +11,15 @@
 
 ## Contact & Links
 
-| | |
-|---|---|
-| **Email** | <ahkn63@gmail.com> |
-| **LinkedIn** | [in/abdul-hadi-khan](https://www.linkedin.com/in/abdul-hadi-khan) |
-| **Location** | Mississauga, Ontario, Canada |
-| **YouTube** | [@learningexpressway](https://www.youtube.com/@learningexpressway/) |
-| **GitHub** | [AbdulDevHub](https://github.com/AbdulDevHub/) |
-| **Portfolio** | [AbdulHadiKhan](https://abdulhadikhan.vercel.app/) |
-| **Shopify Store** | [learningexpressway.com](https://learningexpressway.com/) |
+|                   |                                                                     |
+| ----------------- | ------------------------------------------------------------------- |
+| **Email**         | [ahkn63@gmail.com](mailto:ahkn63@gmail.com)                         |
+| **LinkedIn**      | [in/abdul-hadi-khan](https://www.linkedin.com/in/abdul-hadi-khan)   |
+| **Location**      | Mississauga, Ontario, Canada                                        |
+| **YouTube**       | [@learningexpressway](https://www.youtube.com/@learningexpressway/) |
+| **GitHub**        | [AbdulDevHub](https://github.com/AbdulDevHub/)                      |
+| **Portfolio**     | [AbdulHadiKhan](https://abdulhadikhan.vercel.app/)                  |
+| **Shopify Store** | [learningexpressway.com](https://learningexpressway.com/)           |
 
 ---
 
@@ -31,7 +36,7 @@
 
 ### University of Toronto — HBSc Computer Science
 
-*August 2021 – April 2027 (expected)*
+_August 2021 – April 2027 (expected)_
 
 **Skills developed:**
 
@@ -45,60 +50,60 @@
 
 **Completed coursework:**
 
-| Code | Course |
-| --- | --- |
-| CCT109H5 | Contemporary Communication Technologies |
-| CSC108H5 | Introduction to Computer Programming |
-| ISP100H5 | Writing for University and Beyond |
-| MAT102H5 | Introduction to Mathematical Proofs |
-| MAT135H5 | Differential Calculus |
-| CCT110H5 | Rhetoric and Media |
-| CCT111H5 | Critical Coding |
-| CSC148H5 | Introduction to Computer Science |
-| MAT136H5 | Integral Calculus |
+| Code     | Course                                                                        |
+| -------- | ----------------------------------------------------------------------------- |
+| CCT109H5 | Contemporary Communication Technologies                                       |
+| CSC108H5 | Introduction to Computer Programming                                          |
+| ISP100H5 | Writing for University and Beyond                                             |
+| MAT102H5 | Introduction to Mathematical Proofs                                           |
+| MAT135H5 | Differential Calculus                                                         |
+| CCT110H5 | Rhetoric and Media                                                            |
+| CCT111H5 | Critical Coding                                                               |
+| CSC148H5 | Introduction to Computer Science                                              |
+| MAT136H5 | Integral Calculus                                                             |
 | EDS285H5 | The Future of Ed Tech: Active Learning Classrooms and Artificial Intelligence |
-| CCT208H5 | Communications Research Methods |
-| CSC207H5 | Software Design |
-| CSC236H5 | Introduction to the Theory of Computation |
-| EDS100H5 | Introduction to Education Studies |
-| CCT211H5 | Fundamentals of User Interface Programming |
-| CCT212H5 | Hacker Culture |
-| CSC209H5 | Software Tools and Systems Programming |
-| MAT223H5 | Linear Algebra I |
-| CCT380H5 | Human-Computer Interaction and Communication |
-| CCT270H5 | Principles in Game Design |
-| CCT285H5 | Immersive Environment Design |
-| CCT320H5 | Communication, Technology, and Social Change |
-| MAT232H5 | Calculus of Several Variables |
-| STA256H5 | Probability and Statistics I |
-| CCT286H5 | Interactive Media Design |
-| CCT416H5 | Social Data Analytics |
-| CCT478H5 | UX Design — Prototyping and Evaluation |
-| CSC301H5 | Introduction to Software Engineering |
-| PEY400Y1 | Professional Experience Year Co-op |
-| CCT205H5 | Digital Innovation and Cultural Transformation |
-| CCT477H5 | UX Design — Understanding Users |
-| CCT382H5 | Prototyping Digital Games |
-| CCT432H5 | Ethics and Code |
-| CSC258H5 | Computer Organization |
-| CSC263H5 | Data Structures and Analysis |
-| CSC311H5 | Introduction to Machine Learning |
-| CSC363H5 | Computational Complexity and Computability |
-| CSC343H5 | Introduction to Databases *(in progress)* |
+| CCT208H5 | Communications Research Methods                                               |
+| CSC207H5 | Software Design                                                               |
+| CSC236H5 | Introduction to the Theory of Computation                                     |
+| EDS100H5 | Introduction to Education Studies                                             |
+| CCT211H5 | Fundamentals of User Interface Programming                                    |
+| CCT212H5 | Hacker Culture                                                                |
+| CSC209H5 | Software Tools and Systems Programming                                        |
+| MAT223H5 | Linear Algebra I                                                              |
+| CCT380H5 | Human-Computer Interaction and Communication                                  |
+| CCT270H5 | Principles in Game Design                                                     |
+| CCT285H5 | Immersive Environment Design                                                  |
+| CCT320H5 | Communication, Technology, and Social Change                                  |
+| MAT232H5 | Calculus of Several Variables                                                 |
+| STA256H5 | Probability and Statistics I                                                  |
+| CCT286H5 | Interactive Media Design                                                      |
+| CCT416H5 | Social Data Analytics                                                         |
+| CCT478H5 | UX Design — Prototyping and Evaluation                                        |
+| CSC301H5 | Introduction to Software Engineering                                          |
+| PEY400Y1 | Professional Experience Year Co-op                                            |
+| CCT205H5 | Digital Innovation and Cultural Transformation                                |
+| CCT477H5 | UX Design — Understanding Users                                               |
+| CCT382H5 | Prototyping Digital Games                                                     |
+| CCT432H5 | Ethics and Code                                                               |
+| CSC258H5 | Computer Organization                                                         |
+| CSC263H5 | Data Structures and Analysis                                                  |
+| CSC311H5 | Introduction to Machine Learning                                              |
+| CSC363H5 | Computational Complexity and Computability                                    |
+| CSC343H5 | Introduction to Databases _(in progress)_                                     |
 
 **Upcoming coursework:**
 
-| Code | Course |
-| --- | --- |
-| CSC367H5 | Parallel Programming |
-| CSC373H5 | Algorithm Design and Analysis |
+| Code     | Course                                  |
+| -------- | --------------------------------------- |
+| CSC367H5 | Parallel Programming                    |
+| CSC373H5 | Algorithm Design and Analysis           |
 | CSC384H5 | Introduction to Artificial Intelligence |
-| CSC413H5 | Neural Networks and Deep Learning |
-| CSC309H5 | Programming on the Web |
+| CSC413H5 | Neural Networks and Deep Learning       |
+| CSC309H5 | Programming on the Web                  |
 
 ### Scrimba — Programming & Web Development
 
-*December 2020 – Present*
+_December 2020 – Present_
 
 Interactive code-learning platform with over a million users worldwide, featuring hands-on courses in programming and web development.
 
@@ -118,7 +123,7 @@ Interactive code-learning platform with over a million users worldwide, featurin
 
 ### InsideDesk — Junior Software Engineer
 
-*May 2024 – April 2025 (1 year) | Canada*
+_May 2024 – April 2025 (1 year) | Canada_
 
 **Impact metrics (use these in every relevant story):**
 
@@ -144,13 +149,13 @@ Interactive code-learning platform with over a million users worldwide, featurin
 
 **Recommendation from Stewart McKinlay (Team Lead / Supervisor), May 1, 2025:**
 
-*"Supervising Abdul during his co-op term was an absolute pleasure. He made significant contributions to our team, primarily focused on maintaining our microservices through diligent bug fixing and strategic rewrites. Abdul brought fantastic energy and a proactive mindset to the role. His 'get things done' attitude meant he didn't wait to be assigned tasks; he actively sought out challenges and developed creative, effective solutions. His reliability was outstanding, particularly in code reviews where he was often the first to respond and could always be counted on for critical PRs. Moreover, Abdul left a lasting impact by elevating our documentation practices to a new level. He's a proactive, dependable, and innovative engineer, and it was a privilege to mentor him. I highly recommend Abdul."*
+_"Supervising Abdul during his co-op term was an absolute pleasure. He made significant contributions to our team, primarily focused on maintaining our microservices through diligent bug fixing and strategic rewrites. Abdul brought fantastic energy and a proactive mindset to the role. His 'get things done' attitude meant he didn't wait to be assigned tasks; he actively sought out challenges and developed creative, effective solutions. His reliability was outstanding, particularly in code reviews where he was often the first to respond and could always be counted on for critical PRs. Moreover, Abdul left a lasting impact by elevating our documentation practices to a new level. He's a proactive, dependable, and innovative engineer, and it was a privilege to mentor him. I highly recommend Abdul."_
 
 ---
 
 ### Studica — Robotics Programmer
 
-*February 2020 – March 2020 (2 months) | Mississauga, ON*
+_February 2020 – March 2020 (2 months) | Mississauga, ON_
 
 - Collaborated in a team to build robots for assembly and customer use
 - Tested functionality of robotic products to ensure customer satisfaction
@@ -247,7 +252,7 @@ Interactive code-learning platform with over a million users worldwide, featurin
 - **OpenRouter** — multi-model API access
 - **Cline** — AI coding assistant in VSCode
 - **OpenCode** — agentic coding CLI
-- **Prompt engineering** — system prompts, structured output, tool definitions *(deepen this)*
+- **Prompt engineering** — system prompts, structured output, tool definitions _(deepen this)_
 
 ### Auth & Security
 
@@ -264,7 +269,7 @@ Interactive code-learning platform with over a million users worldwide, featurin
 ### Background Jobs
 
 - **BullMQ** — job queues, workers, retries, concurrency, failure handling (built on Redis)
-- *Maps directly to production Lambda + SQS experience from InsideDesk*
+- _Maps directly to production Lambda + SQS experience from InsideDesk_
 
 ### Validation & API Patterns
 
@@ -367,21 +372,21 @@ Interactive code-learning platform with over a million users worldwide, featurin
 
 **Problems completed:** [LeetCode](https://leetcode.com/u/HelionImperion/)
 
-> *Note: The first number reflects total problems completed in that category (including practice from **NeetCode All**), while the second is the targeted count from the **NeetCode 250** roadmap.*
+> _Note: The first number reflects total problems completed in that category (including practice from **NeetCode All**), while the second is the targeted count from the **NeetCode 250** roadmap._
 
-| NeetCode 250 Topic | Status |
-| --- | --- |
-| Arrays & Hashing | ✅ Completed (87/22 solved via NeetCode All) |
-| Two Pointers | ✅ Completed (22/13) solved via NeetCode All |
-| Sliding Window | 🔄 In progress (0/9) |
-| Stack | Upcoming (0/14) |
-| Binary Search | Upcoming (0/14) |
-| Linked List | Upcoming (0/14) |
-| Trees (BFS, DFS) | Upcoming (0/23) |
-| Heap / Priority Queue | Upcoming (0/12) |
-| Tries | Upcoming (0/4) |
-| Graphs (BFS, DFS) | Upcoming (0/21) |
-| Dynamic Programming | Upcoming |
+| NeetCode 250 Topic    | Status                                       |
+| --------------------- | -------------------------------------------- |
+| Arrays & Hashing      | ✅ Completed (87/22 solved via NeetCode All) |
+| Two Pointers          | ✅ Completed (22/13) solved via NeetCode All |
+| Sliding Window        | 🔄 In progress (0/9)                         |
+| Stack                 | Upcoming (0/14)                              |
+| Binary Search         | Upcoming (0/14)                              |
+| Linked List           | Upcoming (0/14)                              |
+| Trees (BFS, DFS)      | Upcoming (0/23)                              |
+| Heap / Priority Queue | Upcoming (0/12)                              |
+| Tries                 | Upcoming (0/4)                               |
+| Graphs (BFS, DFS)     | Upcoming (0/21)                              |
+| Dynamic Programming   | Upcoming                                     |
 
 **Language used:** Python, TypeScript
 
@@ -391,7 +396,7 @@ Interactive code-learning platform with over a million users worldwide, featurin
 
 ### Acme De La Vie App Wireframe
 
-*Associated with University of Toronto* | [View on Figma](https://www.figma.com/design/kADx4p9ZRCVGOGD0eeHWUJ/Acme-De-La-Vie-App-Design)
+_Associated with University of Toronto_ | [View on Figma](https://www.figma.com/design/kADx4p9ZRCVGOGD0eeHWUJ/Acme-De-La-Vie-App-Design)
 
 A Figma wireframe for a mobile app based on the Acme De La Vie clothing store website. Built in a group of 4, grounded in extensive background and user research.
 
@@ -401,7 +406,7 @@ A Figma wireframe for a mobile app based on the Acme De La Vie clothing store we
 
 ### Car Dashboard Wireframe
 
-*Associated with University of Toronto* | [View on Figma](https://www.figma.com/design/rijactiaEXwzbgVDGUCeh7/CCT478-PROJECT-1---Safety-Critical-Systems-Design)
+_Associated with University of Toronto_ | [View on Figma](https://www.figma.com/design/rijactiaEXwzbgVDGUCeh7/CCT478-PROJECT-1---Safety-Critical-Systems-Design)
 
 A Figma wireframe for a Car Infotainment Dashboard — an enhanced version of current solutions prioritizing practical, safe usage and superior aesthetics. Designed collaboratively with my sister (CCT478: UX Design — Prototyping and Evaluation).
 
@@ -409,7 +414,7 @@ A Figma wireframe for a Car Infotainment Dashboard — an enhanced version of cu
 
 ---
 
-*(Add more projects here — include: what it does, tech stack, link, anything notable about scale or design decisions)*
+_(Add more projects here — include: what it does, tech stack, link, anything notable about scale or design decisions)_
 
 ---
 
@@ -695,10 +700,10 @@ A curated collection of notable academic software projects from UofT, spanning J
 
 **Sub-projects:**
 
-**Shadow In The Dark** *(flagship — ~1,000 lines of RISC-V assembly)*
+**Shadow In The Dark** _(flagship — ~1,000 lines of RISC-V assembly)_
 A full-featured turn-based survival horror game written entirely in RISC-V assembly. Features: procedural map generation using a Park-Miller LCG seeded with system time, Manhattan distance AI pathfinding for the shadow monster, Chebyshev distance proximity detection, an unlimited undo stack (4KB buffer, 512 states × 8 bytes), dynamic heap allocation via `sbrk` for multiplayer mode, and a bubble-sort leaderboard. 13 modular subroutines with proper caller/callee register conventions and nested calls up to 4 levels deep.
 
-**Inventory Server** *(distributed microservices — team project)*
+**Inventory Server** _(distributed microservices — team project)_
 A distributed inventory management backend with 5 services (OrderService, UserService, ProductService, ISCS router, nginx load balancer). Features: async REST APIs with FastAPI + asyncpg, Redis caching with automatic invalidation, PostgreSQL row-level locking for race condition protection, Docker Compose orchestration, and LAN multi-machine deployment support.
 
 **Boggle Game** — Full Java implementation with OOP design, file I/O persistence, dictionary validation, unit tests
@@ -808,7 +813,7 @@ Custom GitHub profile README featuring animated coding GIF, language/tools icon 
 - **Handle:** [@learningexpressway](https://www.youtube.com/@learningexpressway/)
 - **Shopify Store:** [learningexpressway.com](https://learningexpressway.com/)
 - **Content focus:** AI tools, learning strategies, and practical technology — helping others level up their skills
-- *(Add: approximate subscriber count, number of videos, any notable videos or series)*
+- _(Add: approximate subscriber count, number of videos, any notable videos or series)_
 
 ---
 
@@ -817,20 +822,20 @@ Custom GitHub profile README featuring animated coding GIF, language/tools icon 
 ### Volunteering
 
 **Activity Leader — STEM1**
-*May 2019 – June 2019 (2 months) | Education*
+_May 2019 – June 2019 (2 months) | Education_
 
 - Completed 3 days of object-oriented programming training
 - Prepared and set up equipment on event day
 - Taught and led student STEM-centred activities for participants
 
 **Link Crew Student Leader — Rick Hansen Secondary School**
-*September 2019 – June 2020 (10 months) | Education*
+_September 2019 – June 2020 (10 months) | Education_
 
 - Discussed and planned social events for students
 - Advertised events and social gatherings using flyers and online posts
 - Led assigned student group through various social and fun activities
 
-*(Add anything else relevant: hackathons, open source contributions, awards, extracurriculars, etc.)*
+_(Add anything else relevant: hackathons, open source contributions, awards, extracurriculars, etc.)_
 
 ---
 
@@ -894,4 +899,4 @@ Custom GitHub profile README featuring animated coding GIF, language/tools icon 
 - System design fundamentals (ByteByteGo)
 - OpenTelemetry
 - STAR story polish + mock interviews
-- AWS Developer Associate cert *(optional but high-value)*
+- AWS Developer Associate cert _(optional but high-value)_

@@ -110,7 +110,7 @@ const config: Config = {
           label: "Resources",
         },
         { to: "/blog", label: "Blog", position: "left" },
-        { to: "about", label: "About", position: "left" },
+        { to: "/about", label: "About", position: "left" },
         {
           href: "https://github.com/AbdulDevHub/Dev-Mountain",
           label: "GitHub",
@@ -157,6 +157,10 @@ const config: Config = {
             {
               label: "Blog",
               to: "/blog",
+            },
+            {
+              label: "About Me",
+              to: "/about-me",
             },
             {
               label: "GitHub",
