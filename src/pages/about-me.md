@@ -716,13 +716,17 @@ A distributed inventory management backend with 5 services (OrderService, UserSe
 
 **Stack (combined):** Java, Python, RISC-V Assembly, FastAPI, asyncpg, aiohttp, PostgreSQL, Redis, Docker, nginx, Twine, HTML
 
+**Linked submodules:** _(external repos tracked as Git submodules, not native code — each already has its own full entry elsewhere in this file, linked here for reference)_
+
+[Opal Labs Frontend](https://github.com/AbdulDevHub/Opal-Labs-Frontend) · [Opal Labs Backend](https://github.com/AbdulDevHub/Opal-Labs-Backend) · [UTM Student Portal](https://github.com/AbdulDevHub/UTM-Student-Portal) · [Space Invaders](https://github.com/AbdulDevHub/Space-Invaders) · [Shadow of a Doubt](https://github.com/AbdulDevHub/Shadow-of-a-Doubt) · [SurfNTurf](https://github.com/AbdulDevHub/SurfNTurf) · [Sunken Secrets](https://github.com/AbdulDevHub/Sunken-Secrets) · [Console Wars](https://github.com/AbdulDevHub/Console-Wars) · [Huffman Zip](https://github.com/AbdulDevHub/Huffman-Zip) · [Reddit Data Scrapping](https://github.com/AbdulDevHub/Reddit-Data-Scrapping) · [Todoist](https://github.com/AbdulDevHub/Todoist)
+
 ---
 
 ### Framework Mountain
 
 **GitHub:** [AbdulDevHub/Framework-Mountain](https://github.com/AbdulDevHub/Framework-Mountain)
 
-A monorepo tracking 45+ web and desktop development projects organized into seven themed Valleys — Backend, Component, Data Scrape, Game, Portfolio, Tech Experiments, and App — for hands-on learning across diverse frameworks, architecture paradigms, and DevOps strategies. Implements both Git submodules (Filmverse, CaseCobra, Glisten AI, Modern AliExpress, NoteMark) and squashed Git subtrees (Git-Practice, Screen Recorder, Image Resizer) to manage multi-repository architectures locally.
+A monorepo tracking 45+ web and desktop development projects organized into seven themed Valleys — Backend, Component, Data Scrape, Game, Portfolio, Tech Experiments, and App — for hands-on learning across diverse frameworks, architecture paradigms, and DevOps strategies. Implements both Git submodules and squashed Git subtrees to manage multi-repository architectures locally.
 
 **Valley Highlights:**
 
@@ -732,9 +736,13 @@ A monorepo tracking 45+ web and desktop development projects organized into seve
 - **Game Valley** — A browser-based Flappy Bird clone built with vanilla JavaScript and Canvas, including sound effects and sprite animation.
 - **Portfolio Valley** — A range of personal-site architectures: a Three.js 3D solar-system portfolio, a CMS-driven SvelteKit portfolio, a Next.js portfolio with motion/video backgrounds, and Tailwind-based React + Vite concepts.
 - **Tech Experiments** — Custom Model Context Protocol (MCP) server development using TypeScript/Zod; automated workflows with n8n; a from-scratch RAG implementation (Ollama, PostgreSQL, pgvector, Python); production email queues with BullMQ + Redis; GitHub Actions CI/CD pipelines with type-checking, testing, and Docker builds; GitHub OAuth via Auth.js; a terminal-based streaming chat CLI for Ollama and Anthropic; Stripe webhook verification with HMAC-SHA256; repository hygiene and security tooling (Husky, Dependabot, Snyk); and hands-on environments with Bun, LangChain/Streamlit, and GSAP.
-- **App Valley** — Full web and desktop application. Includes Vercel AI Chat (Next.js 16, Vercel AI SDK v6, tool calling, local Ollama/OpenAI streaming); Job Pilot (AI job-matching leveraging BrowserBase and PostHog); Angular and Vue 3 e-commerce/CRUD apps; a Netflix UI clone; a 3D Apple-style homepage; GSAP Drinks, a scroll-driven animation showcase; and Screen Recorder and Image Resizer, two Electron.js desktop utilities migrated in via Git subtree. Also hosts Filmverse, CaseCobra, Glisten AI, Modern AliExpress, and NoteMark as Git submodules — see their dedicated project/repo entries above for details.
+- **App Valley** — Full web and desktop applications. Includes Vercel AI Chat (Next.js 16, Vercel AI SDK v6, tool calling, local Ollama/OpenAI streaming); Job Pilot (AI job-matching leveraging BrowserBase and PostHog); Angular and Vue 3 e-commerce/CRUD apps; a Netflix UI clone; a 3D Apple-style homepage; GSAP Drinks, a scroll-driven animation showcase; and Screen Recorder and Image Resizer, two Electron.js desktop utilities migrated in via squashed Git subtree (along with Git-Practice in Tech Experiments).
 
 **Stack:** React, Next.js, Angular, Vue, Svelte, SvelteKit, TypeScript, JavaScript, Node.js, Bun, Hono, NestJS, FastAPI, Python, PostgreSQL, Redis, pgvector, BullMQ, Puppeteer, Docker, GitHub Actions, MCP SDK, Zod, Husky, Dependabot, Snyk, n8n, LangChain, Streamlit, GSAP, Three.js, Tailwind CSS, SCSS, Vuetify, Prisma, Supabase, Vitest, Auth.js, Stripe CLI, Ollama, OpenAI, Claude, Open Router, InsForge, PostHog, Adzuna, BrowserBase
+
+**Linked submodules:** _(external repos tracked as Git submodules, not native code — each already has its own full entry elsewhere in this file, linked here for reference)_
+
+[Filmverse](https://github.com/AbdulDevHub/Filmverse) · [CaseCobra](https://github.com/AbdulDevHub/Case-Cobra) · [Glisten AI](https://github.com/AbdulDevHub/Glisten-AI) · [Modern AliExpress](https://github.com/AbdulDevHub/Modern-AliExpress) · [NoteMark](https://github.com/AbdulDevHub/NoteMark)
 
 ---
 
@@ -749,9 +757,13 @@ A living archive of 50+ frontend experiments, UI concepts, and interactive web u
 - **Awesome Websites** — Complete standalone projects including a Pokédex encyclopedia, classic card games (UNO, War), a whack-a-mole reaction game (Face Bomp), a Bootstrap portfolio template, a dynamic QR code generator, a mock email generator, a bookmark link generator, and batch file utilities (renaming, redownloading, duplicate detection).
 - **UI Experiments** — Concept interfaces exploring layout and interaction design: a food delivery app (Skynet Eats), a drone product showcase, a nature photography gallery, a minimalist productivity dashboard (Momentum), and an immersive video-background landing page.
 - **Awesome Effects** — 30+ interactive visual effects spanning WebGL fluid and flame simulations, GPU-accelerated ink dispersion (GPU.js), Anime.js-powered 3D spheres, particle systems, eye-tracking and cursor-follow effects, 3D cube loaders and image transitions, mouse-tracking spotlights, shine/hover animations, touch-enabled and split-screen sliders, and a custom Video.js player implementation.
-- **Chrome Extensions** — A Gallery Bookmark Viewer extension providing visual, customizable bookmark management directly in the browser.
+- **Chrome Extensions** — Five browser extensions, four of which are linked as Git submodules (see below); Gallery Bookmark Viewer is native to this repo, providing visual, customizable bookmark management directly in the browser.
 
 **Stack:** HTML5, CSS3, JavaScript (ES6+), Anime.js, WebGL, GPU.js, Canvas API, SVG, jQuery, Bootstrap, dat.GUI, Materialize, Video.js, CSS Grid, Flexbox
+
+**Linked submodules:** _(external repos tracked as Git submodules, not native code — each already has its own full entry elsewhere in this file, linked here for reference)_
+
+[Gallery Viewer](https://github.com/AbdulDevHub/Gallery-Viewer) · [Linkest](https://github.com/AbdulDevHub/Linkest) · [Hydration Hero](https://github.com/AbdulDevHub/Hydration-Hero) · [Local Video Player](https://github.com/AbdulDevHub/Local-Video-Player) · [DhikrForest](https://github.com/AbdulDevHub/DhikrForest)
 
 ---
 
