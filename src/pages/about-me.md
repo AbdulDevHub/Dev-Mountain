@@ -1,13 +1,9 @@
 ---
 title: Abdul Hadi Khan — About Me
-description: Single source of truth for resume generation, cover letter drafting, portfolio copy, interview prep, and AI-assisted career tooling.
+description: Single source of truth for resume generation, cover letter drafting, portfolio copy, interview prep, and AI-assisted career tooling. Keep this updated as new skills, projects, and experiences are added.
 ---
 
 # Abdul Hadi Khan — About Me
-
-> **Purpose of this file:** Single source of truth for resume generation, cover letter drafting, portfolio copy, interview prep, and AI-assisted career tooling. Keep this updated as new skills, projects, and experiences are added.
-
----
 
 ## Contact & Links
 

@@ -120,7 +120,8 @@ Dev-Mountain/
 ├── src/
 │   ├── pages/
 │   │   ├── index.tsx        ← Homepage (hero + features section)
-│   │   └── about.tsx        ← About page
+│   │   ├── about.tsx        ← About page (Dev-Mountain project overview)
+│   │   └── about-me.md      ← About Me page (Abdul's master bio, resume, skills & portfolio reference)
 │   ├── components/
 │   ├── HomepageFeatures/ ← Feature cards shown on homepage
 │   ├── Tag.js            ← Tag component
@@ -179,21 +180,21 @@ tags: [frontend, tools]
 
 ## Where to Make Changes
 
-| Goal                          | File(s) to edit                                                                     |
-| ----------------------------- | ------------------------------------------------------------------------------------|
-| Add a resource link           | Relevant `.md` file inside the matching `resources/<category>/` subfolder           |
-| Add a new resource page       | New file inside the matching `resources/<category>/` subfolder + edit `sidebars-resources.ts` (id must be `category-folder/filename`)  |
-| Add a new resource category   | New subfolder in `resources/` + new category block in `sidebars-resources.ts`       |
-| Change site title or tagline  | `docusaurus.config.ts` → `title`, `tagline`                                         |
-| Add a navbar item             | `docusaurus.config.ts` → `themeConfig.navbar.items`                                 |
-| Add a footer link             | `docusaurus.config.ts` → `themeConfig.footer.links`                                 |
-| Add a blog post               | New `.md` in `blog/` with `YYYY-MM-DD-slug.md` format                               |
-| Add an author                 | `blog/authors.yml`                                                                  |
-| Change homepage hero          | `src/pages/index.tsx`                                                               |
-| Change feature cards          | `src/components/HomepageFeatures/index.tsx`                                         |
-| Update about page             | `src/pages/about.tsx`                                                               |
-| Change theme colors           | `src/css/custom.css`                                                                |
-| Add a guide page              | New `.md` in `docs/`                                                                |
+| Goal                         | File(s) to edit                                                                                                                       |
+| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| Add a resource link          | Relevant `.md` file inside the matching `resources/<category>/` subfolder                                                             |
+| Add a new resource page      | New file inside the matching `resources/<category>/` subfolder + edit `sidebars-resources.ts` (id must be `category-folder/filename`) |
+| Add a new resource category  | New subfolder in `resources/` + new category block in `sidebars-resources.ts`                                                         |
+| Change site title or tagline | `docusaurus.config.ts` → `title`, `tagline`                                                                                           |
+| Add a navbar item            | `docusaurus.config.ts` → `themeConfig.navbar.items`                                                                                   |
+| Add a footer link            | `docusaurus.config.ts` → `themeConfig.footer.links`                                                                                   |
+| Add a blog post              | New `.md` in `blog/` with `YYYY-MM-DD-slug.md` format                                                                                 |
+| Add an author                | `blog/authors.yml`                                                                                                                    |
+| Change homepage hero         | `src/pages/index.tsx`                                                                                                                 |
+| Change feature cards         | `src/components/HomepageFeatures/index.tsx`                                                                                           |
+| Update about page            | `src/pages/about.tsx` (project overview) or `src/pages/about-me.md` (author bio, resume & skills)                                     |
+| Change theme colors          | `src/css/custom.css`                                                                                                                  |
+| Add a guide page             | New `.md` in `docs/`                                                                                                                  |
 
 ---
 
@@ -241,3 +242,4 @@ This is why `resources/` has its own `sidebars-resources.ts` — it's a separate
 - Always add `title` and `description` frontmatter to new resource pages
 - Blog posts MUST have an `authors` field that matches a key in `blog/authors.yml`
 - The `<!-- truncate -->` comment in blog posts controls what shows in the list view
+- `src/pages/about-me.md` is the single source of truth for Abdul's personal bio, work experience, technical skills, DSA progress, and project portfolio. It renders at `/about-me` and serves as a master reference for external and future career/AI tooling — preserve its markdown structure when updating

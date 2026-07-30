@@ -90,6 +90,7 @@ const sidebars: SidebarsConfig = {
         { type: "doc", id: "cs-concepts/uml-diagrams" },
         { type: "doc", id: "cs-concepts/regex-cheatsheet" },
         { type: "doc", id: "cs-concepts/design-patterns" },
+        { type: "doc", id: "system-design-fundamentals" },
       ],
     },
 
@@ -127,6 +128,7 @@ const sidebars: SidebarsConfig = {
         { type: "doc", id: "tools-workflow/home-directory-map" },
         { type: "doc", id: "tools-workflow/chmod-and-file-mode-basics" },
         { type: "doc", id: "tools-workflow/windows-file-attributes" },
+        { type: "doc", id: "chainner-batch-upscaling" },
       ],
     },
 
@@ -170,6 +172,7 @@ const sidebars: SidebarsConfig = {
         { type: "doc", id: "ai-systems/ai-architecture-workflow" },
         { type: "doc", id: "ai-systems/agent-skills" },
         { type: "doc", id: "ai-systems/rag-mcp-fundamentals" },
+        { type: "doc", id: "prompt-engineering-fundamentals" },
       ],
     },
 
