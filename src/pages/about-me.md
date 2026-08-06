@@ -372,10 +372,10 @@ _February 2020 – March 2020 (2 months) | Mississauga, ON_
 
 | NeetCode 250 Topic    | Status                                       |
 | --------------------- | -------------------------------------------- |
-| Arrays & Hashing      | ✅ Completed (87/22 solved via NeetCode All) |
+| Arrays & Hashing      | ✅ Completed (87/22) solved via NeetCode All |
 | Two Pointers          | ✅ Completed (22/13) solved via NeetCode All |
-| Sliding Window        | 🔄 In progress (0/9)                         |
-| Stack                 | Upcoming (0/14)                              |
+| Sliding Window        | ✅ Completed (20/9) solved via NeetCode All  |
+| Stack                 | 🔄 In progress (8/14)                        |
 | Binary Search         | Upcoming (0/14)                              |
 | Linked List           | Upcoming (0/14)                              |
 | Trees (BFS, DFS)      | Upcoming (0/23)                              |
@@ -722,7 +722,7 @@ A distributed inventory management backend with 5 services (OrderService, UserSe
 
 **GitHub:** [AbdulDevHub/Framework-Mountain](https://github.com/AbdulDevHub/Framework-Mountain)
 
-A monorepo tracking 45+ web and desktop development projects organized into seven themed Valleys — Backend, Component, Data Scrape, Game, Portfolio, Tech Experiments, and App — for hands-on learning across diverse frameworks, architecture paradigms, and DevOps strategies. Implements both Git submodules and squashed Git subtrees to manage multi-repository architectures locally.
+A monorepo tracking 48+ web and desktop development projects organized into seven themed Valleys — Backend, Component, Data Scrape, Game, Portfolio, Tech Experiments, and App — for hands-on learning across diverse frameworks, architecture paradigms, and DevOps strategies. Implements both Git submodules and squashed Git subtrees to manage multi-repository architectures locally.
 
 **Valley Highlights:**
 
@@ -730,11 +730,11 @@ A monorepo tracking 45+ web and desktop development projects organized into seve
 - **Component Valley** — Reusable, framework-diverse UI: an animated Svelte/Rollup login form, an interactive live-preview credit card component, and a Vuetify-powered responsive image gallery with sidebar navigation.
 - **Data Scrape Valley** — Puppeteer-driven scraping tools in TypeScript, spanning bookstore data extraction, blog scraping with JSON dataset output, and specialized comparison scrapers for dental PMS platforms.
 - **Game Valley** — A browser-based Flappy Bird clone built with vanilla JavaScript and Canvas, including sound effects and sprite animation.
-- **Portfolio Valley** — A range of personal-site architectures: a Three.js 3D solar-system portfolio, a CMS-driven SvelteKit portfolio, a Next.js portfolio with motion/video backgrounds, and Tailwind-based React + Vite concepts.
-- **Tech Experiments** — Custom Model Context Protocol (MCP) server development using TypeScript/Zod; automated workflows with n8n; a from-scratch RAG implementation (Ollama, PostgreSQL, pgvector, Python); production email queues with BullMQ + Redis; GitHub Actions CI/CD pipelines with type-checking, testing, and Docker builds; GitHub OAuth via Auth.js; a terminal-based streaming chat CLI for Ollama and Anthropic; Stripe webhook verification with HMAC-SHA256; repository hygiene and security tooling (Husky, Dependabot, Snyk); and hands-on environments with Bun, LangChain/Streamlit, and GSAP.
-- **App Valley** — Full web and desktop applications. Includes Vercel AI Chat (Next.js 16, Vercel AI SDK v6, tool calling, local Ollama/OpenAI streaming); Job Pilot (AI job-matching leveraging BrowserBase and PostHog); Angular and Vue 3 e-commerce/CRUD apps; a Netflix UI clone; a 3D Apple-style homepage; GSAP Drinks, a scroll-driven animation showcase; and Screen Recorder and Image Resizer, two Electron.js desktop utilities migrated in via squashed Git subtree (along with Git-Practice in Tech Experiments).
+- **Portfolio Valley** — Five personal-site architectures: a Three.js 3D solar-system portfolio, a CMS-driven SvelteKit portfolio, a Next.js portfolio with motion/video backgrounds, a clean React + Vite concept (Fancy Green), and a high-energy animated Next.js portfolio (Techno Explosion).
+- **Tech Experiments** — Custom Model Context Protocol (MCP) server development using TypeScript/Zod; automated workflows with n8n; a from-scratch RAG implementation (Ollama, PostgreSQL, pgvector, Python); production email queues with BullMQ + Redis; GitHub Actions CI/CD pipelines with type-checking, testing, and Docker builds; GitHub OAuth via Auth.js; a terminal-based streaming chat CLI for Ollama and Anthropic; Stripe webhook verification with HMAC-SHA256; repository hygiene and security tooling (Husky, Dependabot, Snyk); hands-on environments with Bun, LangChain/Streamlit, and GSAP; a colorful ASCII-art terminal video player (OpenCV, NumPy, Python); and an OpenTelemetry tracing demo built with Hono and Jaeger.
+- **App Valley** — Full web and desktop applications. Includes Vercel AI Chat (Next.js 16, Vercel AI SDK v6, tool calling, local Ollama/OpenAI streaming); Job Pilot (AI job-matching leveraging BrowserBase and PostHog); Angular and Vue 3 e-commerce/CRUD apps; a Netflix UI clone; a 3D Apple-style homepage; GSAP Drinks, a scroll-driven animation showcase; Screen Recorder and Image Resizer, two Electron.js desktop utilities migrated in via squashed Git subtree (along with Git-Practice in Tech Experiments); and CareerFlow, the tRPC/Prisma/BullMQ/OpenTelemetry job-tracker capstone.
 
-**Stack:** React, Next.js, Angular, Vue, Svelte, SvelteKit, TypeScript, JavaScript, Node.js, Bun, Hono, NestJS, FastAPI, Python, PostgreSQL, Redis, pgvector, BullMQ, Puppeteer, Docker, GitHub Actions, MCP SDK, Zod, Husky, Dependabot, Snyk, n8n, LangChain, Streamlit, GSAP, Three.js, Tailwind CSS, SCSS, Vuetify, Prisma, Supabase, Vitest, Auth.js, Stripe CLI, Ollama, OpenAI, Claude, Open Router, InsForge, PostHog, Adzuna, BrowserBase
+**Stack:** React, Next.js, Angular, Vue, Svelte, SvelteKit, TypeScript, JavaScript, Node.js, Bun, Hono, NestJS, FastAPI, Python, PostgreSQL, Redis, pgvector, BullMQ, Puppeteer, Docker, GitHub Actions, MCP SDK, Zod, Husky, Dependabot, Snyk, n8n, LangChain, Streamlit, GSAP, Three.js, Tailwind CSS, SCSS, Vuetify, Prisma, Supabase, Vitest, Auth.js, Stripe CLI, Ollama, OpenAI, Claude, Open Router, InsForge, PostHog, Adzuna, BrowserBase, OpenCV, NumPy, OpenTelemetry, Jaeger, tRPC
 
 **Linked submodules:** _(external repos tracked as Git submodules, not native code — each already has its own full entry elsewhere in this file, linked here for reference)_
 
@@ -750,7 +750,7 @@ A living archive of 50+ frontend experiments, UI concepts, and interactive web u
 
 **Category Highlights:**
 
-- **Awesome Websites** — Complete standalone projects including a Pokédex encyclopedia, classic card games (UNO, War), a whack-a-mole reaction game (Face Bomp), a Bootstrap portfolio template, a dynamic QR code generator, a mock email generator, a bookmark link generator, and batch file utilities (renaming, redownloading, duplicate detection).
+- **Awesome Websites** — Complete standalone projects including a Pokédex encyclopedia, classic card games (UNO, War), a whack-a-mole reaction game (Face Bomp), a Bootstrap portfolio template, a dynamic QR code generator, a mock email generator, a bookmark link generator, batch file utilities (renaming, redownloading, duplicate detection), an offline-first dhikr counter that visualizes worship as a growing forest with Laylatul Qadr mode (DhikrForest), and a fully local Gitmoji/Conventional Commit matcher that uses vector embeddings and ONNX/WASM cosine similarity to suggest commit types from plain-English descriptions (Gitmoji Helper).
 - **UI Experiments** — Concept interfaces exploring layout and interaction design: a food delivery app (Skynet Eats), a drone product showcase, a nature photography gallery, a minimalist productivity dashboard (Momentum), and an immersive video-background landing page.
 - **Awesome Effects** — 30+ interactive visual effects spanning WebGL fluid and flame simulations, GPU-accelerated ink dispersion (GPU.js), Anime.js-powered 3D spheres, particle systems, eye-tracking and cursor-follow effects, 3D cube loaders and image transitions, mouse-tracking spotlights, shine/hover animations, touch-enabled and split-screen sliders, and a custom Video.js player implementation.
 - **Chrome Extensions** — Five browser extensions, four of which are linked as Git submodules (see below); Gallery Bookmark Viewer is native to this repo, providing visual, customizable bookmark management directly in the browser.
@@ -876,35 +876,113 @@ _(Add anything else relevant: hackathons, open source contributions, awards, ext
 
 ---
 
-## Learning Roadmap — Completed & Upcoming
+## Review — Interview-Me Roster
 
-### Completed (as of June 2026)
+_How to use this: when I say "interview me on X," pull from the list below and ask me the highest-signal interview questions for that topic — core concepts, tradeoffs, gotchas, not trivia. If my answer is vague, tell me directly what's missing or wrong rather than fishing for me to land on it myself — the goal is catching gaps before an interview does, not making me sweat for the answer. If I'm flat wrong or blank, just give me the correct answer with a short explanation and move on; I can go deeper on the job later, I just can't afford to say "I don't know" to something fundamental in an interview. Add new items here whenever a project leaned on AI to do the heavy lifting, or a skill's gone stale from disuse. This list should keep growing — never shrink it without me saying so._
 
-- SQL fundamentals — two FCC courses + W3Schools + CSC343
-- PostgreSQL — setup, queries, schema design, ERDs
-- Docker — Dockerfile, layers, docker-compose, multi-service environments
-- Vitest — unit tests, integration tests, mocking, coverage
-- GitHub Actions — CI/CD pipelines wired with type-check, tests, lint, Docker build
-- Hono REST API — routing, middleware, status codes, error handling
-- Prisma ORM — schema, migrations, relations, Hono + PostgreSQL integration
-- JWT + bcrypt — manual auth implementation
-- Auth.js / NextAuth v5 — OAuth, session management, protected routes
-- Redis (direct) — ioredis, caching, rate limiting, session storage
-- API security — CORS, Helmet, env validation, pagination patterns
-- Local AI dev environment — Ollama, OpenRouter, Cline, OpenCode, Claude.ai
-- Anthropic SDK — direct API, streaming, messages format
-- Vercel AI SDK — useChat, streaming UI, tool calling
-- RAG basics — embeddings, pgvector, similarity search
-- BullMQ — queues, workers, retries, concurrency
-- pino — structured logging
-- Webhooks — HMAC-SHA256 signature verification
-- DSA: Arrays & Hashing, Two Pointers (in progress)
+### Tier 1 — Core Interview Topics
 
-### Upcoming (next)
+> Topics I should be able to answer confidently in almost any full-stack interview.
 
-- tRPC
-- Prompt engineering (formalized)
-- System design fundamentals (ByteByteGo)
-- OpenTelemetry
-- STAR story polish + mock interviews
-- AWS Developer Associate cert _(optional but high-value)_
+| Topic | Review Areas |
+| --- | --- |
+| TypeScript | Type system, generics, unions/intersections, utility types, interface vs type, structural typing, narrowing, avoiding `any`, compilation model |
+| JavaScript | Closures, `this`, prototypes, event loop, microtasks/macrotasks, promises, async/await, equality, arrays/objects |
+| React | Hooks, composition, state management, controlled/uncontrolled inputs, reconciliation, keys, rendering behavior, memoization |
+| Next.js | App Router, layouts, routing, Server Components, Client Components, Server Actions, data fetching, caching, streaming, Suspense |
+| Node.js | Event loop, async I/O, streams, modules (CJS/ESM), built-in APIs |
+| SQL / PostgreSQL | Joins, aggregation, normalization, indexes, query planning, EXPLAIN ANALYZE, transactions, isolation levels |
+| HTML / CSS | Semantic HTML, box model, flex/grid, cascade, specificity, accessibility |
+| Tailwind CSS | Utility workflow, variants, configuration, component library tradeoffs |
+| Git | Branching, merging, rebasing, conflicts, workflows, recovery strategies |
+| REST / HTTP | Status codes, idempotency, pagination, versioning, error handling, statelessness |
+| Testing | Unit/integration/e2e, mocks, spies, test quality, TDD concepts |
+
+### Tier 2 — Full-Stack Architecture
+
+> Topics commonly discussed when moving beyond junior-level interviews.
+
+| Topic | Review Areas |
+| --- | --- |
+| Auth & Security | JWT, OAuth, password hashing, CORS, XSS, CSRF, SQL injection prevention |
+| Auth.js / NextAuth | Providers, sessions, OAuth flow, JWT vs database sessions, route protection |
+| Prisma ORM | Schema design, migrations, relations, transactions, N+1 problems |
+| tRPC | Type safety model, routers, procedures, middleware, context, error handling |
+| Docker | Images, containers, Dockerfiles, Compose, networking, volumes, caching |
+| Redis | Data structures, caching, TTLs, pub/sub, eviction policies |
+| BullMQ | Queues, workers, retries, concurrency, idempotency |
+| System Design | Load balancing, caching, replication, sharding, CAP theorem, rate limiting |
+| AWS | Lambda, Fargate, IAM, S3, CloudWatch, InsideDesk architecture |
+| OpenTelemetry | Traces, spans, propagation, exporters, observability architecture |
+| RAG / Embeddings | Retrieval pipeline, embeddings, chunking, similarity search, pgvector vs vector DB |
+
+### Tier 3 — Project / Experience Topics
+
+> Technologies I have used but may need refreshing before discussing them.
+
+| Topic | Review Areas |
+| --- | --- |
+| Go | Syntax, structs, interfaces, goroutines, error handling |
+| Hono | Routing, middleware, context, validation, adapters, runtimes |
+| NestJS | Modules, controllers, providers, dependency injection, decorators, guards |
+| Linux / PowerShell | Shell, scripting, processes, permissions, SSH, environments |
+| Vitest | Setup, mocks, async testing, coverage, Vite integration |
+| Firebase | Firestore modeling, auth, storage, rules, functions, realtime features |
+
+---
+
+## Experience Inventory
+
+> Technologies I've used or learned. This is a quick reference only—the project details and experience are documented elsewhere.
+
+| Category | Technologies |
+| ---------- | -------------- |
+| **Core Languages** | TypeScript, JavaScript, Python, Go, Java, C, C#, Kotlin, SQL (PostgreSQL), Liquid |
+| **Frontend** | React, Next.js, HTML, CSS, Tailwind CSS, Vue.js / Nuxt.js, Svelte / SvelteKit, Angular, Vite, MUI, shadcn/ui, Vuetify, GSAP, Three.js, Anime.js, Storybook, Prismic, Plyr.js, Accessibility (W3C / ARIA), SCSS, jQuery, Bootstrap, Materialize, Video.js |
+| **Backend** | Node.js, Hono, Express, NestJS, FastAPI, Bun, REST APIs, tRPC, Prisma ORM, Supabase, Firebase, Stripe, BullMQ |
+| **Databases & Caching** | PostgreSQL, Redis |
+| **AI / LLM** | OpenAI API, Anthropic SDK, Vercel AI SDK, LangChain, Hugging Face, Ollama, OpenRouter, MCP (Model Context Protocol), Tool / Function Calling, Prompt Engineering, RAG / Embeddings, n8n, AI Coding Assistants (Cline, OpenCode) |
+| **Cloud & DevOps** | Docker, Docker Compose, AWS (Lambda, Fargate, IAM, S3, CloudWatch), AWS CLI, GitHub Actions, Cloudflare, nginx, Linux / WSL, PowerShell, Dependabot, Snyk, Serverless / Netlify Functions |
+| **Testing & Quality** | Vitest, Jest, Playwright, Puppeteer, Postman, Jasmine |
+| **Security & Auth** | Auth.js / NextAuth, JWT/OAuth, Kinde Auth, Helmet, Zod, Webhooks / HMAC Verification, Formspree |
+| **Observability** | OpenTelemetry, Jaeger, pino |
+| **Tooling & Workflow** | Git, GitHub, Bitbucket, Jira, Confluence, Slack, Husky, Chrome Extension Development (Manifest V3), Tampermonkey, pnpm, npm, Yarn, VSCode, IntelliJ IDEA, PyCharm, Vim, Jupyter, Chrome DevTools, Agile / Scrum |
+| **Design & UX** | Figma, UX Research, Human-Computer Interaction, UI / Web Design |
+| **Desktop / Mobile / Game Dev** | Unity, Maya, Jetpack Compose, Android Studio, Electron, Tkinter, Pygame |
+| **Data & Python** | Web Scraping, pandas, PRAW, nltk, gensim, matplotlib, pyLDAvis, OpenCV, NumPy |
+| **Systems & Graphics** | System Design, Computer Architecture, RISC-V Assembly, WebGL, Canvas API, SVG, GPU.js, Docusaurus, Twine, yt-dlp, FFmpeg, dat.GUI |
+| **Awareness / Familiarity** | Structured Vibe Coding Practices, Stagehand, Browserbase, PostHog |
+
+---
+
+## Learn Next
+
+> Technologies I want to properly learn or deepen my understanding of.
+
+| Priority | Technologies |
+| ---------- | -------------- |
+| **Highest** | Redux Toolkit, GraphQL, WebSockets / Real-time Systems, Kubernetes, AI Agent Orchestration & Evals, AI Security & LLM Security |
+| **Backend & Infrastructure** | Message Brokers (Kafka/RabbitMQ), Advanced API Design, Terraform, ElasticSearch / OpenSearch, gRPC, OpenAPI, AsyncAPI, Distributed Systems, Event-Driven Architecture |
+| **Cloud-Native Delivery** | Helm, Argo CD / GitOps, Kubernetes Operators, Platform Engineering, Infrastructure as Code, Cloud Networking, Secrets Management |
+| **AI Engineering** | LLMOps, Model Context Protocol in Production, AI Observability, Prompt-Injection Defense, Guardrails, Structured Outputs, AI Cost/Latency Optimization, Vector Databases / pgvector |
+| **Frontend** | TanStack Query, Zustand, Web Performance / Core Web Vitals, Modern CSS, Design Systems, Server-Driven UI |
+| **Security & Identity** | WebAuthn / Passkeys, OWASP Top 10, OWASP API Security, Supply-Chain Security, SAST/DAST, Threat Modeling |
+| **Cross-Platform** | React Native, Expo, Native Mobile Fundamentals |
+| **Languages** | Rust |
+| **Nice to Have** | Cloudflare Workers, Durable Objects, R2, D1, Queues, Workflows, WebAssembly, HTMX, Progressive Web Apps |
+| **Deprioritize Until Needed** | Service Meshes, Blockchain, Deep Kubernetes Internals, Additional Frontend Frameworks |
+
+---
+
+## Career Preparation
+
+> Everything needed to prepare for and execute a successful job search.
+
+| Category | Tasks |
+| ---------- | ------- |
+| **Application Materials** | Update resume, tailor applications, update LinkedIn, update GitHub profile README, clean/pin repositories, polish portfolio |
+| **Technical Interviews** | Review NeetCode 150 patterns, system design practice, quiz-me roster reviews, CS fundamentals refresh |
+| **Behavioral Interviews** | STAR stories, mock interviews, project storytelling, leadership/collaboration examples |
+| **Project Preparation** | Deep dives for major projects: architecture, technical decisions, tradeoffs, challenges, lessons learned |
+| **Networking** | LinkedIn presence, recruiter/alumni outreach, referrals |
+| **Certifications** | AWS Developer Associate — _on hold, optional, revisit only if time allows_ |
