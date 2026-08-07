@@ -166,7 +166,7 @@ _February 2020 – March 2020 (2 months) | Mississauga, ON_
 
 - **TypeScript** — primary language, production experience at scale
 - **JavaScript** — strong foundation
-- **Python** — CLI tooling, scripting; some rust since InsideDesk
+- **Python** — CLI tooling, scripting; used constantly for NeetCode
 - **SQL** — PostgreSQL; strong via formal coursework (CSC343) + self-study
 - **Go** — used in Opal Labs backend (team project); REST API, PostgreSQL, Redis, Go testing framework
 - **Java** — learned via UofT coursework (CSC207, CSC148)
@@ -178,8 +178,8 @@ _February 2020 – March 2020 (2 months) | Mississauga, ON_
 
 ### Frontend
 
-- **Next.js** — production-familiar; some rust, actively refreshing
-- **React** — component design, hooks; some rust, actively refreshing
+- **Next.js** — production-familiar; a bit stale, actively refreshing
+- **React** — component design, hooks; a bit stale, actively refreshing
 - **Redux Toolkit** — global state management; used in Filmverse
 - **Vue.js** — familiar
 - **Nuxt.js** — familiar
@@ -195,7 +195,9 @@ _February 2020 – March 2020 (2 months) | Mississauga, ON_
 - **Prismic** — headless CMS with page builder; used in Glisten AI project
 - **Storybook** — component development and documentation; used in Opal Labs
 - **Responsive Design** — practiced across web projects
-- **Accessibility (W3C)** — practiced via UofT coursework (CCT380, CCT478)
+- **Accessibility (W3C / ARIA)** — practiced via UofT coursework (CCT380, CCT478)
+- **Materialize CSS** — used in Portfolio Website V1 (ripple effects)
+- **Video.js** — custom video player implementation (Web Mountain)
 
 ### Backend
 
@@ -206,6 +208,8 @@ _February 2020 – March 2020 (2 months) | Mississauga, ON_
 - **Supabase** — familiar
 - **Firebase** — familiar
 - **Stripe** — payment integration; familiar (webhook HMAC verification pattern)
+- **NestJS** — modules, controllers, providers, dependency injection, decorators, guards; slightly familiar, refresh needed
+- **Bun** — JavaScript runtime; familiar
 
 ### Databases
 
@@ -225,6 +229,8 @@ _February 2020 – March 2020 (2 months) | Mississauga, ON_
 - **GitHub Actions** — CI/CD pipelines (type-check, test, lint, Docker build on push)
 - **Cloudflare** — familiar
 - **Linux / WSL** — familiar; used via UofT coursework and personal dev environment
+- **Dependabot** — automated dependency updates; familiar
+- **Snyk** — security vulnerability scanning; familiar
 
 ### Testing & Automation
 
@@ -237,8 +243,11 @@ _February 2020 – March 2020 (2 months) | Mississauga, ON_
 
 ### AI / LLM Integration
 
+- **OpenAI API** — direct API integration; familiar
 - **Anthropic SDK** — direct API calls, messages format, streaming with async iterators
 - **Vercel AI SDK** — useChat, streaming UI, tool/function calling
+- **MCP (Model Context Protocol)** — tool/server integration patterns; familiar (see also Structured vibe coding below)
+- **n8n** — workflow automation platform; familiar
 - **Tool calling / function calling** — understand the pattern deeply; how agents invoke real code
 - **RAG (Retrieval-Augmented Generation)** — embeddings, pgvector in Postgres, similarity search, chunking
 - **LangChain** — familiar
@@ -277,6 +286,7 @@ _February 2020 – March 2020 (2 months) | Mississauga, ON_
 
 - **pino** — structured JSON logging, log levels (info, warn, error)
 - **AWS CloudWatch** — production logging experience
+- **Jaeger** — distributed tracing backend/UI for OpenTelemetry; familiar
 
 ### Developer Tooling & Workflow
 
@@ -305,7 +315,7 @@ _February 2020 – March 2020 (2 months) | Mississauga, ON_
 - **Human-Computer Interaction** — studied formally via UofT (CCT380)
 - **Web Design** — responsive and accessible design
 
-### 3D & Creative Technologies
+### 3D, Graphics & Creative Technologies
 
 - **Unity** — built Sunken Secrets, a full 3D underwater game with AI enemies, dynamic audio, and a browser-playable build (UofT coursework + personal project)
 - **Three.js** — 3D web graphics; familiar
@@ -326,6 +336,8 @@ _February 2020 – March 2020 (2 months) | Mississauga, ON_
 - **gensim** — topic modelling and document similarity (LDA)
 - **matplotlib** — data visualization
 - **pyLDAvis** — interactive topic model visualization
+- **OpenCV** — computer vision library; familiar
+- **NumPy** — numerical computing; familiar
 - **Pygame** — Python game development library; used in Space Invaders project
 - **Electron** — cross-platform desktop app framework; used in NoteMark, Screen Recorder, and Image Resizer (all Framework Mountain App Valley)
 - **Tkinter** — Python GUI framework; used in Todoist desktop app
@@ -341,8 +353,9 @@ _February 2020 – March 2020 (2 months) | Mississauga, ON_
 - **Stagehand / Browserbase** — browser automation for AI agents
 - **PostHog** — product analytics and session tracking
 
-### Systems & Low-Level Programming
+### Systems, Architecture & Low-Level Programming
 
+- **System Design** — load balancing, caching, replication, sharding, CAP theorem, rate limiting concepts (see Tier 2 review roster)
 - **RISC-V Assembly** — written ~1,000-line survival horror game (Shadow In The Dark) in RISC-V assembly; covers pipelining, cache optimization, syscalls, LCG random number generation, Manhattan distance pathfinding, heap allocation via `sbrk`, and multiplayer with bubble-sort leaderboard; tools: CPU-Lator, Ripes
 - **Computer Architecture** — pipelining (5-stage: IF/ID/EX/MEM/WB), data hazards, forwarding, cache locality; via UofT CSC258
 
@@ -368,21 +381,19 @@ _February 2020 – March 2020 (2 months) | Mississauga, ON_
 
 **Problems completed:** [LeetCode](https://leetcode.com/u/HelionImperion/)
 
-> _Note: The first number reflects total problems completed in that category (including practice from **NeetCode All**), while the second is the targeted count from the **NeetCode 250** roadmap._
-
-| NeetCode 250 Topic    | Status                                       |
-| --------------------- | -------------------------------------------- |
-| Arrays & Hashing      | ✅ Completed (87/22) solved via NeetCode All |
-| Two Pointers          | ✅ Completed (22/13) solved via NeetCode All |
-| Sliding Window        | ✅ Completed (20/9) solved via NeetCode All  |
-| Stack                 | 🔄 In progress (8/14)                        |
-| Binary Search         | Upcoming (0/14)                              |
-| Linked List           | Upcoming (0/14)                              |
-| Trees (BFS, DFS)      | Upcoming (0/23)                              |
-| Heap / Priority Queue | Upcoming (0/12)                              |
-| Tries                 | Upcoming (0/4)                               |
-| Graphs (BFS, DFS)     | Upcoming (0/21)                              |
-| Dynamic Programming   | Upcoming                                     |
+| NeetCode 250 Topic    | Solved (NeetCode All) | Target (NeetCode 250) | Status         |
+| --------------------- | ---------------------- | ---------------------- | -------------- |
+| Arrays & Hashing      | 87                      | 22                      | ✅ Completed   |
+| Two Pointers          | 22                      | 13                      | ✅ Completed   |
+| Sliding Window        | 20                      | 9                       | ✅ Completed   |
+| Stack                 | 8                       | 14                      | 🔄 In progress |
+| Binary Search         | 0                       | 14                      | Upcoming       |
+| Linked List           | 0                       | 14                      | Upcoming       |
+| Trees (BFS, DFS)      | 0                       | 23                      | Upcoming       |
+| Heap / Priority Queue | 0                       | 12                      | Upcoming       |
+| Tries                 | 0                       | 4                       | Upcoming       |
+| Graphs (BFS, DFS)     | 0                       | 21                      | Upcoming       |
+| Dynamic Programming   | 0                       | —                       | Upcoming       |
 
 **Language used:** Python, TypeScript
 
@@ -912,7 +923,7 @@ _How to use this: when I say "interview me on X," pull from the list below and a
 | Redis | Data structures, caching, TTLs, pub/sub, eviction policies |
 | BullMQ | Queues, workers, retries, concurrency, idempotency |
 | System Design | Load balancing, caching, replication, sharding, CAP theorem, rate limiting |
-| AWS | Lambda, Fargate, IAM, S3, CloudWatch, InsideDesk architecture |
+| AWS | Lambda, Fargate, IAM, S3, CloudWatch |
 | OpenTelemetry | Traces, spans, propagation, exporters, observability architecture |
 | RAG / Embeddings | Retrieval pipeline, embeddings, chunking, similarity search, pgvector vs vector DB |
 
@@ -931,42 +942,18 @@ _How to use this: when I say "interview me on X," pull from the list below and a
 
 ---
 
-## Experience Inventory
-
-> Technologies I've used or learned. This is a quick reference only—the project details and experience are documented elsewhere.
-
-| Category | Technologies |
-| ---------- | -------------- |
-| **Core Languages** | TypeScript, JavaScript, Python, Go, Java, C, C#, Kotlin, SQL (PostgreSQL), Liquid |
-| **Frontend** | React, Next.js, HTML, CSS, Tailwind CSS, Vue.js / Nuxt.js, Svelte / SvelteKit, Angular, Vite, MUI, shadcn/ui, Vuetify, GSAP, Three.js, Anime.js, Storybook, Prismic, Plyr.js, Accessibility (W3C / ARIA), SCSS, jQuery, Bootstrap, Materialize, Video.js |
-| **Backend** | Node.js, Hono, Express, NestJS, FastAPI, Bun, REST APIs, tRPC, Prisma ORM, Supabase, Firebase, Stripe, BullMQ |
-| **Databases & Caching** | PostgreSQL, Redis |
-| **AI / LLM** | OpenAI API, Anthropic SDK, Vercel AI SDK, LangChain, Hugging Face, Ollama, OpenRouter, MCP (Model Context Protocol), Tool / Function Calling, Prompt Engineering, RAG / Embeddings, n8n, AI Coding Assistants (Cline, OpenCode) |
-| **Cloud & DevOps** | Docker, Docker Compose, AWS (Lambda, Fargate, IAM, S3, CloudWatch), AWS CLI, GitHub Actions, Cloudflare, nginx, Linux / WSL, PowerShell, Dependabot, Snyk, Serverless / Netlify Functions |
-| **Testing & Quality** | Vitest, Jest, Playwright, Puppeteer, Postman, Jasmine |
-| **Security & Auth** | Auth.js / NextAuth, JWT/OAuth, Kinde Auth, Helmet, Zod, Webhooks / HMAC Verification, Formspree |
-| **Observability** | OpenTelemetry, Jaeger, pino |
-| **Tooling & Workflow** | Git, GitHub, Bitbucket, Jira, Confluence, Slack, Husky, Chrome Extension Development (Manifest V3), Tampermonkey, pnpm, npm, Yarn, VSCode, IntelliJ IDEA, PyCharm, Vim, Jupyter, Chrome DevTools, Agile / Scrum |
-| **Design & UX** | Figma, UX Research, Human-Computer Interaction, UI / Web Design |
-| **Desktop / Mobile / Game Dev** | Unity, Maya, Jetpack Compose, Android Studio, Electron, Tkinter, Pygame |
-| **Data & Python** | Web Scraping, pandas, PRAW, nltk, gensim, matplotlib, pyLDAvis, OpenCV, NumPy |
-| **Systems & Graphics** | System Design, Computer Architecture, RISC-V Assembly, WebGL, Canvas API, SVG, GPU.js, Docusaurus, Twine, yt-dlp, FFmpeg, dat.GUI |
-| **Awareness / Familiarity** | Structured Vibe Coding Practices, Stagehand, Browserbase, PostHog |
-
----
-
 ## Learn Next
 
 > Technologies I want to properly learn or deepen my understanding of.
 
 | Priority | Technologies |
 | ---------- | -------------- |
-| **Highest** | Redux Toolkit, GraphQL, WebSockets / Real-time Systems, Kubernetes, AI Agent Orchestration & Evals, AI Security & LLM Security |
+| **Highest** | Redux Toolkit (used via AI assistance in Filmverse — deepen to actually own the patterns), GraphQL, WebSockets / Real-time Systems, Kubernetes, AI Agent Orchestration & Evals (LangGraph, Mastra), AI Security & LLM Security |
 | **Backend & Infrastructure** | Message Brokers (Kafka/RabbitMQ), Advanced API Design, Terraform, ElasticSearch / OpenSearch, gRPC, OpenAPI, AsyncAPI, Distributed Systems, Event-Driven Architecture |
 | **Cloud-Native Delivery** | Helm, Argo CD / GitOps, Kubernetes Operators, Platform Engineering, Infrastructure as Code, Cloud Networking, Secrets Management |
-| **AI Engineering** | LLMOps, Model Context Protocol in Production, AI Observability, Prompt-Injection Defense, Guardrails, Structured Outputs, AI Cost/Latency Optimization, Vector Databases / pgvector |
+| **AI Engineering** | LLMOps, Model Context Protocol in Production, A2A (Agent2Agent protocol — MCP's companion interop standard), LlamaIndex (RAG-focused framework, alongside LangChain), AI Observability (Langfuse / Phoenix / Helicone), Evaluation (RAGAS), Prompt-Injection Defense, Guardrails, Structured Outputs, AI Cost/Latency Optimization |
 | **Frontend** | TanStack Query, Zustand, Web Performance / Core Web Vitals, Modern CSS, Design Systems, Server-Driven UI |
-| **Security & Identity** | WebAuthn / Passkeys, OWASP Top 10, OWASP API Security, Supply-Chain Security, SAST/DAST, Threat Modeling |
+| **Security & Identity** | WebAuthn / Passkeys, OWASP Top 10, OWASP API Security, Supply-Chain Security / SAST-DAST (know the tools — Dependabot, Snyk — want the underlying practice), Threat Modeling |
 | **Cross-Platform** | React Native, Expo, Native Mobile Fundamentals |
 | **Languages** | Rust |
 | **Nice to Have** | Cloudflare Workers, Durable Objects, R2, D1, Queues, Workflows, WebAssembly, HTMX, Progressive Web Apps |
