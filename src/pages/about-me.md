@@ -1,6 +1,7 @@
 ---
 title: Abdul Hadi Khan — About Me
 description: Single source of truth for resume generation, cover letter drafting, portfolio copy, interview prep, and AI-assisted career tooling. Keep this updated as new skills, projects, and experiences are added.
+last_updated: August 6, 2026
 ---
 
 # Abdul Hadi Khan — About Me
@@ -908,6 +909,7 @@ _How to use this: when I say "interview me on X," pull from the list below and a
 | Git | Branching, merging, rebasing, conflicts, workflows, recovery strategies |
 | REST / HTTP | Status codes, idempotency, pagination, versioning, error handling, statelessness |
 | Testing | Unit/integration/e2e, mocks, spies, test quality, TDD concepts |
+| CI/CD (GitHub Actions) | Pipeline stages (lint/type-check/test/build), caching, matrix builds, secrets management, deployment gating, Docker build steps |
 
 ### Tier 2 — Full-Stack Architecture
 
@@ -926,6 +928,11 @@ _How to use this: when I say "interview me on X," pull from the list below and a
 | AWS | Lambda, Fargate, IAM, S3, CloudWatch |
 | OpenTelemetry | Traces, spans, propagation, exporters, observability architecture |
 | RAG / Embeddings | Retrieval pipeline, embeddings, chunking, similarity search, pgvector vs vector DB |
+| Web Scraping & Browser Automation | Puppeteer/Playwright architecture, headless browser tradeoffs, anti-bot/rate-limit handling, scaling 80+ scrapers, retry/idempotency design — this is core to your actual InsideDesk experience, expect deep questions here |
+| Schema Validation (Zod) | Runtime validation vs static types, parsing vs validating, type inference, env config safety |
+| MCP & AI Tool Calling | Tool/function calling pattern, MCP client-server architecture, context/session management, why MCP vs bespoke integrations, agent orchestration basics |
+| Payments & Webhooks (Stripe) | Webhook signature verification (HMAC), idempotency keys, async payment flows, PCI scope basics |
+| Sensitive Data & Compliance | HIPAA-style data handling, PII minimization, access controls, audit logging — ties to InsideDesk claims data |
 
 ### Tier 3 — Project / Experience Topics
 
@@ -939,6 +946,8 @@ _How to use this: when I say "interview me on X," pull from the list below and a
 | Linux / PowerShell | Shell, scripting, processes, permissions, SSH, environments |
 | Vitest | Setup, mocks, async testing, coverage, Vite integration |
 | Firebase | Firestore modeling, auth, storage, rules, functions, realtime features |
+| Redux Toolkit / RTK Query | Slices, selectors, middleware, RTK Query caching/invalidation — used in Filmverse via AI assistance, so make sure you can explain the patterns yourself, not just that they're there |
+| FastAPI | Async request handling, dependency injection, Pydantic validation, asyncpg/aiohttp usage — used in the Inventory Server distributed systems project |
 
 ---
 
