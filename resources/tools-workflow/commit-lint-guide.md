@@ -165,6 +165,122 @@ Note: `git cz` fails silently-ish with "No files added to staging! Did you forge
 
 ---
 
+## 🤖 AI-Assisted Commit Messages (Gitmoji + Conventional Commits)
+
+If you're using an AI assistant (e.g. a Claude Code hook, a Git alias, or an editor extension) to draft commit messages automatically, you can prompt it to follow the same Gitmoji + Conventional Commits style used by `cz-git` above. A typical system prompt for this looks like:
+
+**Format:**
+
+```
+<emoji> <type>: <summary>
+```
+
+**Requirements given to the model:**
+
+- Start with exactly one Gitmoji emoji.
+- Follow with a valid Conventional Commit type.
+- Write a concise summary in imperative mood (present tense).
+- Keep the summary under 72 characters whenever possible.
+- Don't end the summary with a period.
+- Don't include issue numbers, scope, body, footer, explanations, markdown, quotes, or code fences.
+- Return only the final commit message — no preamble.
+- When multiple categories apply, choose the emoji that best represents the primary purpose of the change.
+
+### Gitmoji → Commit Type Mapping
+
+| Emoji | Type(s) | Meaning |
+| --- | --- | --- |
+| 🎨 | style | Improve structure or formatting |
+| ⚡️ | perf | Improve performance |
+| 🔥 | refactor \| chore | Remove code or files |
+| 🐛 | fix | Fix a bug |
+| 🚑️ | fix | Critical hotfix |
+| ✨ | feat | Introduce new features |
+| 📝 | docs | Add or update documentation |
+| 🚀 | chore \| build | Deploy-related changes |
+| 💄 | style | Update UI or styling |
+| 🎉 | chore | Initial project setup |
+| ✅ | test | Add, update, or pass tests |
+| 🔒️ | fix \| sec | Security or privacy fixes |
+| 🔐 | chore | Add or update secrets |
+| 🔖 | chore \| release | Release or version tags |
+| 🚨 | style \| fix | Fix compiler or linter warnings |
+| 🚧 | wip | Work in progress |
+| 💚 | ci | Fix CI build |
+| ⬇️ | chore \| deps | Downgrade dependencies |
+| ⬆️ | chore \| deps | Upgrade dependencies |
+| 📌 | chore \| deps | Pin dependency versions |
+| 👷 | ci | Add or update CI configuration |
+| 📈 | feat \| chore | Add or update analytics |
+| ♻️ | refactor | Refactor code |
+| ➕ | chore \| deps | Add a dependency |
+| ➖ | chore \| deps | Remove a dependency |
+| 🔧 | chore | Add or update configuration files |
+| 🔨 | chore | Add or update development scripts |
+| 🌐 | feat \| i18n | Internationalization/localization |
+| ✏️ | docs \| style | Fix typos |
+| 💩 | refactor | Improve poor code |
+| ⏪️ | revert | Revert changes |
+| 🔀 | merge | Merge branches |
+| 📦️ | build \| chore | Add or update compiled files or packages |
+| 👽️ | fix \| refactor | Adapt to external API changes |
+| 🚚 | refactor \| chore | Move or rename files, paths, or routes |
+| 📄 | chore | Add or update license |
+| 💥 | feat! \| fix! | Introduce breaking changes |
+| 🍱 | chore \| style | Add or update assets |
+| ♿️ | accessibility \| style | Improve accessibility |
+| 💡 | docs | Add or update source code comments |
+| 🍻 | feat \| refactor | Experimental or playful coding |
+| 💬 | feat \| docs | Add or update text and literals |
+| 🗃️ | db \| chore | Database-related changes |
+| 🔊 | chore | Add or update logs |
+| 🔇 | chore | Remove logs |
+| 👥 | chore | Add or update contributors |
+| 🚸 | ux \| feat | Improve user experience |
+| 🏗️ | arch \| refactor | Architectural changes |
+| 📱 | style \| feat | Responsive design |
+| 🤡 | test | Add or update mocks |
+| 🥚 | feat | Add or update an easter egg |
+| 🙈 | chore | Add or update .gitignore |
+| 📸 | test | Add or update snapshots |
+| ⚗️ | experiment \| feat | Experiments or prototypes |
+| 🔍️ | seo \| feat | Improve SEO |
+| 🏷️ | types \| feat | Add or update types |
+| 🌱 | db \| chore | Add or update seed files |
+| 🚩 | feat | Add, update, or remove feature flags |
+| 🥅 | fix \| refactor | Catch errors |
+| 💫 | style \| feat | Add or update animations or transitions |
+| 🗑️ | refactor \| chore | Deprecate code pending cleanup |
+| 🛂 | feat \| sec | Authorization, roles, or permissions |
+| 🩹 | fix | Small non-critical fix |
+| 🧐 | chore \| test | Data inspection or exploration |
+| ⚰️ | refactor | Remove dead code |
+| 🧪 | test | Add a failing test |
+| 👔 | feat | Add or update business logic |
+| 🩺 | feat \| chore | Add or update health checks |
+| 🧱 | infra \| chore | Infrastructure changes |
+| 🧑‍💻 | dx \| chore | Improve developer experience |
+| 💸 | feat \| chore | Sponsorship or financial infrastructure |
+| 🧵 | refactor \| perf | Multithreading or concurrency |
+| 🦺 | feat \| fix | Validation-related changes |
+| ✈️ | feat | Improve offline support |
+| 🦖 | refactor | Add backwards compatibility |
+
+### Example outputs
+
+```
+✨ feat: add OAuth login
+🐛 fix: prevent null pointer when loading settings
+♻️ refactor: simplify authentication flow
+📝 docs: update installation guide
+⚡️ perf: optimize image loading
+🔧 chore: update eslint configuration
+🗃️ db: add user preferences table
+🦺 feat: validate email addresses before saving
+```
+
+---
+
 ## 🔗 Related Tools
 
 - [Gitmoji](https://gitmoji.dev/) — An interactive guide to using emojis on git commit messages

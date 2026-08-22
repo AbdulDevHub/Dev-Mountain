@@ -25,10 +25,25 @@ Common strategies:
 | Strategy | How it works |
 | --- | --- |
 | Round robin | Requests go to servers in rotation |
-| Least connections | Send to whichever server is currently least busy |
-| IP hash / consistent hashing | Same client (or key) consistently routes to the same server — useful for "stickiness" or cache locality |
+| Weighted round robin | Same as round robin, but stronger servers get proportionally more requests |
+| Least connections | Send to whichever server currently has the fewest active connections |
+| Least response time | Send to whichever server is currently responding fastest |
+| IP hash | Hash the client IP to consistently route the same client to the same server — useful for session "stickiness" |
+| Geographical | Route based on the user's physical location, to the nearest datacenter/edge |
+| Consistent hashing | Hash both servers and keys onto a virtual ring; each key goes to the next server clockwise on the ring |
 
-Load balancers also run **health checks** — unresponsive servers get pulled out of rotation automatically.
+**Why consistent hashing matters:** with plain hashing (`hash(key) % N`), adding or removing *one* server changes `N` and remaps almost every key to a different server — a cache stampede. Consistent hashing arranges servers as points on a ring; adding/removing a server only remaps the small slice of keys between it and its neighbor, leaving everything else untouched. This is why it shows up specifically in caching layers and sharded databases, where minimizing remapping during scale events matters a lot.
+
+Load balancers also run **health checks** — unresponsive servers get pulled out of rotation automatically. To avoid the load balancer itself being a single point of failure, production setups typically run a redundant **primary/standby pair** with active monitoring and DNS failover to the standby if the primary goes down.
+
+### Forward Proxy vs. Reverse Proxy
+
+A **proxy** is a middleman server. Which side it sits on determines what it's for:
+
+- **Forward proxy** — sits in front of *clients*, between them and the internet. Hides client identity from the destination server, and is used for things like content filtering, network access control, or caching outbound requests. (Think: a company's outbound internet gateway.)
+- **Reverse proxy** — sits in front of *servers*, between the internet and your backend. Hides server infrastructure from the outside world, and commonly handles load balancing, SSL/TLS termination (decrypting HTTPS so backend servers don't have to), and security rules (e.g., a Web Application Firewall). Nginx is a common example.
+
+> **Rule of thumb:** if it's protecting/anonymizing who's *asking*, it's a forward proxy. If it's protecting/optimizing who's *answering*, it's a reverse proxy — and in practice, most load balancers you'll design with are a form of reverse proxy.
 
 ### Caching Strategies
 
@@ -39,11 +54,33 @@ Core patterns:
 - **Cache-aside (lazy loading)** — app checks cache first; on a miss, it fetches from the DB and writes the result into the cache. Most common pattern.
 - **Write-through** — every write goes to the cache *and* the DB at the same time, keeping them in sync.
 - **Write-behind (write-back)** — write to cache immediately; DB is updated asynchronously later. Faster, but riskier if the cache crashes before syncing.
-- **TTL (time-to-live) / eviction policies** — memory is limited, so entries expire or get evicted. Common policies: **LRU** (least recently used), **LFU** (least frequently used).
+- **Write-around** — write goes straight to the DB, bypassing the cache entirely; the cache only gets populated later on a read (cache-aside style). Good when data is written once but rarely re-read soon after — avoids filling the cache with stuff nobody asks for again.
+- **TTL (time-to-live) / eviction policies** — memory is limited, so entries expire or get evicted. Common policies: **LRU** (least recently used), **LFU** (least frequently used), **FIFO** (first in, first out — simplest; evicts the oldest entry regardless of how often it's used).
+
+### CDN Caching Direction
+
+Beyond app-level caching, static assets (images, video, JS/CSS) are often cached at CDN edge nodes, geographically close to users. Two ways content gets there:
+
+- **Pull-based** — the CDN fetches the asset from the origin the first time it's requested, then caches it for later users. Simple, but the first requester pays a cold-miss penalty.
+- **Push-based** — content is proactively uploaded to the CDN ahead of time (e.g., right after a video finishes processing). No cold-miss penalty, but you have to manage what gets pushed and when.
 
 ---
 
 ## CAP Theorem and Database Scaling
+
+### Database Paradigms, at a Glance
+
+Before diving into CAP and replication, it helps to place databases into three broad buckets:
+
+| Type | Traits | Examples |
+| --- | --- | --- |
+| **Relational (SQL)** | Table-based, fixed schema, joins, **ACID** guarantees (Atomicity, Consistency, Isolation, Durability) | PostgreSQL, MySQL, SQLite |
+| **NoSQL** | Schema-less, optimized for flexibility and horizontal scale, usually relaxes strict/immediate consistency in favor of availability. Sub-types: key-value, document, graph | MongoDB (document), Cassandra (wide-column), Redis (key-value), Neo4j (graph) |
+| **In-memory** | Data lives in RAM instead of disk — extremely fast, often used as a cache layer or for ephemeral data | Redis, Memcached |
+
+**ACID**, spelled out: the transaction either fully happens or not at all (**Atomicity**), the DB moves from one valid state to another (**Consistency** — schema/constraint sense, not the CAP sense below), concurrent transactions don't see each other's half-finished work (**Isolation**), and once committed, data survives a crash (**Durability**).
+
+> **Naming note:** you'll also see replication described as **master-slave** (single writer, multiple readers) or **master-master** (multiple writers) — these map directly to the single-leader / multi-leader terms used below; different books use different vocabulary for the same idea.
 
 ### The CAP Theorem
 
@@ -85,6 +122,7 @@ Where replication *copies* the same data everywhere, **sharding splits the data*
 | Range-based | Split by value range (e.g., user IDs 1–1000 on shard A) | Simple, but can create hot shards |
 | Hash-based | Hash the key to pick a shard | Even load distribution, but range queries become expensive |
 | Directory-based | A lookup service tracks which shard owns which key | Flexible, but the lookup service itself needs to stay available |
+| Geographical | Shard by region (e.g., EU users on shard A, US users on shard B) | Keeps data close to users (lower latency, easier data-residency compliance), but regional traffic imbalances create hot shards |
 
 > Sharding trades simplicity for scale — cross-shard queries and joins become expensive or impossible to do efficiently. Usually a last resort after replication and caching aren't enough.
 ---
