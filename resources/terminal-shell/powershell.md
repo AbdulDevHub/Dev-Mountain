@@ -4,7 +4,7 @@ sidebar_label: PowerShell
 tags: [powershell, windows, cli, sysadmin]
 ---
 
-Personal reference notes on PowerShell: core concepts, syntax, and the cmdlets I reach for most often. For copy-paste project/file scripts I actually use, see [Terminal Commands](../scripting-automation/terminal-commands.md).
+Personal reference notes on PowerShell: core concepts, syntax, and the cmdlets I reach for most often. For copy-paste project/file scripts I actually use, see [Terminal Commands](./terminal-commands.md).
 
 :::tip Related
 See [Linux](./linux.md) for the Unix/bash equivalent of this page.
@@ -149,6 +149,7 @@ Set-Location C:\path              # change directory (alias: cd)
 Get-Location                        # print working directory (alias: pwd)
 New-Item -ItemType Directory name      # mkdir
 New-Item -ItemType File name.txt          # touch
+New-Item -Path . -Name "data.json" -ItemType "File"   # create a named file in current dir
 Copy-Item src dest -Recurse                 # cp
 Move-Item old new                             # mv / rename
 Remove-Item path -Recurse -Force                # rm -rf
@@ -269,6 +270,82 @@ command 2> file               # redirect errors (stream 2)
 command 2>&1                    # merge error stream into output
 command | Out-Null                # discard output
 command | Tee-Object file.txt        # write to file AND pass through
+```
+
+## Creating Aliases & Shortcuts
+
+Learn how to map long, complex commands to short keywords using CMD and PowerShell.
+
+### Method 1: Command Prompt (CMD)
+
+In CMD, command aliases are called **macros** and are managed using the `doskey` tool.
+
+#### Temporary Alias (Current Session Only)
+
+```cmd
+doskey lol=curl checkip.amazonaws.com
+```
+
+#### Make Aliases Permanent in CMD
+
+CMD clears macros when closed. To automatically load them every time CMD opens:
+
+1. Create a script file named `macros.cmd` (e.g., at `C:\Users\YourUsername\macros.cmd`).
+2. Add your custom macros line-by-line:
+
+   ```cmd
+   doskey lol=curl checkip.amazonaws.com
+   doskey wifi=netsh wlan show profile * key=clear
+   ```
+
+3. Open **Registry Editor** (`Win + R` → `regedit`).
+4. Navigate to: `HKEY_CURRENT_USER\Software\Microsoft\Command Processor`
+5. Right-click → **New** → **String Value**.
+6. Name it **`AutoRun`**.
+7. Set the Value Data to your file's path: `C:\Users\YourUsername\macros.cmd`.
+
+### Method 2: Windows PowerShell
+
+In PowerShell, aliases for full command lines with flags or parameters are best created using **functions**.
+
+#### Quick Syntax
+
+- **Simple command mapping:**
+
+  ```powershell
+  Set-Alias -Name lol -Value Get-Location
+  ```
+
+- **Complex/chained command mapping (recommended):**
+
+  ```powershell
+  function lol { curl.exe checkip.amazonaws.com }
+  ```
+
+#### Make Aliases Permanent in PowerShell
+
+To keep your shortcuts across sessions, save them to your PowerShell profile script:
+
+1. Open PowerShell and run:
+
+   ```powershell
+   notepad $PROFILE
+   ```
+
+2. If prompted to create a new file, click **Yes**.
+3. Paste your function definitions into the file:
+
+   ```powershell
+   function lol { curl.exe checkip.amazonaws.com }
+   function wifi { netsh wlan show profile * key=clear }
+   ```
+
+4. Save and close Notepad.
+
+If PowerShell shows a script execution error on startup, run this once:
+
+```powershell
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 ```
 
 ## Things I Keep Forgetting

@@ -111,6 +111,25 @@ const sidebars: SidebarsConfig = {
     },
 
     // =========================
+    // Terminal & Shell
+    // =========================
+    {
+      type: "category",
+      label: "Terminal & Shell",
+      collapsed: true,
+      items: [
+        { type: "doc", id: "terminal-shell/linux" },
+        { type: "doc", id: "terminal-shell/linux-terminal-tools" },
+        { type: "doc", id: "terminal-shell/macos-terminal" },
+        { type: "doc", id: "terminal-shell/powershell" },
+        { type: "doc", id: "terminal-shell/windows-cmd-commands" },
+        { type: "doc", id: "terminal-shell/terminal-commands" },
+        { type: "doc", id: "terminal-shell/terminal-themes" },
+        { type: "doc", id: "terminal-shell/git-commands" },
+      ],
+    },
+
+    // =========================
     // Scripting & Automation
     // =========================
     {
@@ -121,7 +140,6 @@ const sidebars: SidebarsConfig = {
         { type: "doc", id: "scripting-automation/frontend-snippets" },
         { type: "doc", id: "scripting-automation/python-scripts" },
         { type: "doc", id: "scripting-automation/browser-console-scripts" },
-        { type: "doc", id: "scripting-automation/terminal-commands" },
         { type: "doc", id: "scripting-automation/understanding-the-shebang" },
       ],
     },
@@ -136,7 +154,6 @@ const sidebars: SidebarsConfig = {
       items: [
         { type: "doc", id: "tools-workflow/vscode-setup" },
         { type: "doc", id: "tools-workflow/pnpm-guide" },
-        { type: "doc", id: "tools-workflow/terminal-themes" },
         { type: "doc", id: "tools-workflow/commit-lint-guide" },
         { type: "doc", id: "tools-workflow/github-label-setup" },
         { type: "doc", id: "tools-workflow/wsl-dev-setup" },
@@ -170,9 +187,6 @@ const sidebars: SidebarsConfig = {
       label: "Infrastructure & DevOps",
       collapsed: true,
       items: [
-        { type: "doc", id: "infrastructure-devops/linux" },
-        { type: "doc", id: "infrastructure-devops/powershell" },
-        { type: "doc", id: "infrastructure-devops/git-commands" },
         { type: "doc", id: "infrastructure-devops/nginx" },
         { type: "doc", id: "infrastructure-devops/aws" },
       ],

@@ -8,7 +8,7 @@ tags: [git, cli, version-control]
 A collection of git commands and workflows I frequently reach for, from everyday staging and committing to fixing my own mistakes after the fact.
 
 :::tip Related
-For general terminal and PowerShell commands, see [Terminal Commands](../scripting-automation/terminal-commands.md).
+For general terminal and PowerShell commands, see [Terminal Commands](./terminal-commands.md).
 :::
 
 ---

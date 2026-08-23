@@ -8,7 +8,7 @@ tags: [powershell, windows, cli, nodejs, file-management]
 A collection of terminal commands I frequently use for project maintenance, file management, dependency analysis, and PowerShell automation.
 
 :::tip Related
-For PowerShell syntax, variables, and pipeline concepts, see [PowerShell](../infrastructure-devops/powershell.md). For the Unix/bash equivalents, see [Linux](../infrastructure-devops/linux.md). For git-specific commands, see [Git Commands](../infrastructure-devops/git-commands.md).
+For PowerShell syntax, variables, and pipeline concepts, see [PowerShell](./powershell.md). For the Unix/bash equivalents, see [Linux](./linux.md). For git-specific commands, see [Git Commands](./git-commands.md).
 :::
 
 ---
@@ -111,13 +111,50 @@ Rename-Item nelitfy.toml netlify.toml
 
 Rename a file.
 
-### Create a New Markdown File
+### Create a New File
 
 ```powershell
 New-Item pnpm-guide.md
+New-Item -Path . -Name "data.json" -ItemType "File"
 ```
 
 Create a new file.
+
+### Get All File Extensions in a Directory
+
+```powershell
+Get-ChildItem -File | Select-Object -ExpandProperty Extension | Sort-Object -Unique
+```
+
+List every unique file extension present in the current directory.
+
+### Count Files by Extension
+
+```powershell
+Get-ChildItem -File -Recurse |
+    Group-Object Extension |
+    Sort-Object Count -Descending |
+    Select-Object Count, Name
+```
+
+Shows how many files of each extension exist, sorted by count descending.
+
+### Batch Rename Files by Pattern
+
+```powershell
+Get-ChildItem -File | Where-Object { $_.Extension -in '.jpeg', '.jpg', '.png' } |
+Rename-Item -NewName { "Bob - $($_.Name)" }
+```
+
+Prepend `"Bob - "` to every JPEG/PNG filename in the current directory.
+
+### List All Files and Empty Directories
+
+```powershell
+Get-ChildItem -Recurse | Where-Object { $_.Attributes -ne 'Directory' -or (Get-ChildItem $_.FullName -Force).Count -eq 0 } | Select-Object FullName
+```
+
+Lists all files and any empty directories, by full path.
 
 ---
 

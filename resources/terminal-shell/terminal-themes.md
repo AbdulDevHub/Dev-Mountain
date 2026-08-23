@@ -1,6 +1,7 @@
 ---
 title: Terminal Themes & Configuration
 description: Reference screenshots for Oh My Posh themes, terminal appearance settings, and PowerShell profile configuration.
+tags: [powershell, windows, terminal, themes]
 ---
 
 This page serves as a visual reference for terminal customization, including:
