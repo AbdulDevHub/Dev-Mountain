@@ -1,6 +1,7 @@
 ---
 title: UI Motion, Animation & Inspiration
 description: A curated collection of UI motion experiments, animation libraries, and creative inspiration
+tags: [ui, animation, motion, design, frontend, inspiration]
 ---
 
 ## UI Motion, Animation & Inspiration

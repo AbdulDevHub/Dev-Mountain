@@ -1,6 +1,7 @@
 ---
 title: Dev Resources & Tools
 description: A curated list of learning platforms, tools, and resources for software development, AI, and career growth
+tags: [learning, resources, education, tutorials, career]
 ---
 
 ## Dev Resources & Tools

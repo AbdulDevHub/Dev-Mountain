@@ -1,6 +1,7 @@
 ---
 title: Python Scripts
 description: Collection of useful Python scripts and utilities.
+tags: [python, scripts, automation, pdf, utilities]
 ---
 
 A collection of reusable Python scripts for automation, file processing, and development workflows.

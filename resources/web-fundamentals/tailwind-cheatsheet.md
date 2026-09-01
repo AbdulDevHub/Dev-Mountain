@@ -2,6 +2,8 @@
 id: tailwind-cheatsheet
 title: Tailwind CSS Quick Reference
 sidebar_label: Tailwind Cheatsheet
+description: Quick reference for Tailwind CSS v4 syntax, directives, utility classes, and layout rules.
+tags: [tailwind, css, styling, frontend, cheatsheet]
 ---
 
 # Tailwind CSS Quick Reference

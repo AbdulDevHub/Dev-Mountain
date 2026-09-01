@@ -1,5 +1,7 @@
 ---
 title: Resources
+description: Curated collection of developer resources, UI/UX inspiration, and workflow references.
+tags: [overview, resources, documentation, reference, guide]
 ---
 
 Welcome to the Resources hub — a structured collection of practical references, learning material, and workflow tools for modern development.

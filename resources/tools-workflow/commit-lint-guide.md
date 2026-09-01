@@ -1,6 +1,7 @@
 ---
 title: Commit Lint & Conventional Commits
 description: A quick reference guide for writing consistent, meaningful Git commit messages
+tags: [git, commitlint, conventional-commits, workflow, tooling]
 ---
 
 ## Commit Lint

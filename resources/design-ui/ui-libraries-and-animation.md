@@ -1,6 +1,7 @@
 ---
 title: UI Libraries & Animation Resources
 description: A curated list of UI component libraries, design systems, and animation tools
+tags: [ui, design, component-libraries, animation, frontend, icons]
 ---
 
 ## UI Libraries & Component Systems

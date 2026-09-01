@@ -3,6 +3,7 @@ id: javascript-quick-reference
 title: JavaScript Quick Reference
 sidebar_label: JS Quick Reference
 description: A cheat sheet for JavaScript array methods, syntax, and common patterns.
+tags: [javascript, js, frontend, cheatsheet, reference]
 ---
 
 A syntax refresher for when you've been away from JS for a while. Focused on array methods and other things that are easy to forget.

@@ -4,6 +4,7 @@ title: Markdown Cheat Sheet
 sidebar_label: Markdown Cheat Sheet
 description: A quick reference for Markdown syntax, including Docusaurus-flavored extras.
 keywords: [markdown, cheatsheet, reference, syntax, docusaurus]
+tags: [markdown, cheatsheet, reference, syntax, docusaurus]
 ---
 
 Quick reference for Markdown syntax. Bookmark this so you never have to Google

@@ -2,6 +2,8 @@
 id: html-quick-reference
 title: HTML Quick Reference
 sidebar_label: HTML Quick Reference
+description: Quick cheat sheet for HTML boilerplate, semantic elements, forms, and accessibility essentials.
+tags: [html, web, frontend, cheatsheet, reference]
 ---
 
 A cheat sheet for HTML syntax, semantics, and the stuff that's easy to forget.

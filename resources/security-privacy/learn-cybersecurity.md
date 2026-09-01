@@ -2,6 +2,8 @@
 id: learn-cybersecurity
 title: Learn Cybersecurity
 sidebar_label: Learn Cybersecurity
+description: Essential cybersecurity mental models, threat modeling (STRIDE), OWASP top risks, and web security fundamentals.
+tags: [cybersecurity, security, owasp, stride, auth, web-security]
 ---
 
 Security isn't a separate skill you bolt on at the end of a project — it's a way of thinking that shapes how you design, write, and review code from the start. This page covers the core mental models and vulnerability classes every developer should know: how to think like an attacker (STRIDE), what the most common web risks are (OWASP), how authentication actually works under the hood, and how to defend against the attacks you're most likely to run into.

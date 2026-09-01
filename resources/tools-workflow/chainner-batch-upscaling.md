@@ -3,12 +3,7 @@ id: chainner-batch-upscaling
 title: Image Upscaling & Enhancement with chaiNNer
 sidebar_label: chaiNNer & PyTorch Guide
 description: A complete reference guide for batch image upscaling using chaiNNer, PyTorch models (DAT, ESRGAN, SwinIR), node workflows, and performance optimization.
-tags:
-  - chaiNNer
-  - AI Upscaling
-  - PyTorch
-  - DAT Model
-  - Image Processing
+tags: [chainner, ai-upscaling, pytorch, dat-model, image-processing]
 ---
 
 This guide covers setting up node-based batch image upscaling workflows in **chaiNNer**, understanding model architectures (such as **4x-Nomos8kDAT**), optimizing VRAM usage, and mastering advanced model chaining.

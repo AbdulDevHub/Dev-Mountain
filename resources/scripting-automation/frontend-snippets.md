@@ -1,6 +1,7 @@
 ---
 title: Frontend Snippets
 description: Handy frontend snippets, visual effects, and asset references
+tags: [frontend, snippets, html, css, ui]
 ---
 
 ## Frontend Snippets

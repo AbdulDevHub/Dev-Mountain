@@ -2,6 +2,7 @@
 sidebar_label: Browser Console Scripting
 title: Browser Console Scripting
 description: A practical guide to using the browser console to automate tasks, inspect pages, and run useful scripts — no extensions required.
+tags: [javascript, devtools, browser, scripting, automation, dom]
 ---
 
 The browser console is one of the most underutilized tools available to developers and power users alike. If you know your way around DevTools, you already have access to a scriptable interface that can automate tedious tasks, extract data, and bend web pages to your will — all without installing anything.

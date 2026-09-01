@@ -3,6 +3,7 @@ id: database-selection-guide
 title: Database Selection Guide
 sidebar_label: Database Selection Guide
 description: A quick-reference guide and flowchart for choosing the right database type for your project.
+tags: [databases, system-design, sql, nosql, redis, architecture]
 ---
 
 Choosing the right database is one of those decisions that's easy to get wrong early and expensive to fix later. This guide gives you a decision flowchart plus a breakdown of each database family so you can pick with confidence.

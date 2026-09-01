@@ -1,6 +1,7 @@
 ---
 title: VS Code Setup
 description: My VS Code settings, themes, extensions, and customization preferences
+tags: [vscode, ide, editor, configuration, themes, extensions]
 ---
 
 This page documents my VS Code configuration, including editor preferences, formatting rules, themes, icons, terminal behavior, and custom color overrides.

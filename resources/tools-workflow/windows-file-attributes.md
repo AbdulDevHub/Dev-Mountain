@@ -3,6 +3,7 @@ id: windows-file-attributes
 title: "Windows File Attributes (the 'd-r--' Mode Column)"
 sidebar_label: Windows File Attributes
 description: What the Mode column (d----, d-r--, -a---, etc.) in PowerShell's ls output actually means.
+tags: [windows, powershell, file-attributes, cli, sysadmin]
 ---
 
 When I run `ls` (aliased to `Get-ChildItem`) in PowerShell, the `Mode`

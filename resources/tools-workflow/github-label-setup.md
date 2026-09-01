@@ -1,6 +1,7 @@
 ---
 title: GitHub Label Setup
 description: Optimized scoped label scheme for GitHub repos, with CLI scripts to apply them in bulk or to new repos.
+tags: [github, git, labels, workflow, project-management, cli]
 ---
 
 # GitHub Label Setup

@@ -2,6 +2,7 @@
 title: Custom uBlock Origin Lite Filter Rules
 sidebar_label: uBOL Custom Filters
 description: Quick reference for writing precise custom cosmetic filters in uBlock Origin Lite (uBOL).
+tags: [ublock-origin, adblocking, privacy, css-selectors, browser-extensions]
 ---
 
 Reference for the element picker's **Create Custom Filter** dialog in **uBlock Origin Lite (uBOL)** — the Manifest V3 build, not classic uBlock Origin. uBOL works differently enough from classic uBO that most generic uBO tutorials will mislead you. This page reflects what's actually confirmed working, as of testing in July 2026.

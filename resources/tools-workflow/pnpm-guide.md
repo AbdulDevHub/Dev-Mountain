@@ -1,6 +1,7 @@
 ---
 title: PNPM – Fast, Disk-Efficient Package Manager
 description: Learn what pnpm is, why it’s useful, and how to migrate from npm or Yarn
+tags: [pnpm, npm, package-manager, nodejs, javascript, tooling]
 ---
 
 ## What is pnpm?

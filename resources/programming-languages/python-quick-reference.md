@@ -2,6 +2,8 @@
 id: python-quick-reference
 title: Python Quick Reference
 sidebar_label: Python Quick Reference
+description: Quick-scan cheat sheet for Python syntax and LeetCode algorithmic patterns.
+tags: [python, cheatsheet, reference, leetcode, data-structures]
 ---
 
 Quick-scan cheat sheet for Python syntax I keep forgetting, plus a LeetCode toolkit section.

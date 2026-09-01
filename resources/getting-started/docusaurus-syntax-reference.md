@@ -23,7 +23,7 @@ description: A living reference of Docusaurus-specific Markdown/MDX syntax and c
 # slug: /syntax-reference
 
 # tags: optional taxonomy tags, if your site uses the tags feature.
-# tags: [docusaurus, reference]
+tags: [docusaurus, markdown, mdx, reference, syntax]
 ---
 
 This page is a living reference for the special Markdown/MDX syntax and

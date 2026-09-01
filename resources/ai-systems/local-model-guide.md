@@ -1,3 +1,9 @@
+---
+title: Ollama Local LLM Management Guide
+sidebar_label: Ollama Local LLMs
+description: A comprehensive handbook for managing, checking, and optimizing local Large Language Models (LLMs) with Ollama.
+tags: [ollama, llm, local-ai, powershell, automation]
+---
 # Ollama Local LLM Management Guide
 
 A comprehensive handbook for managing, checking, and optimization of local Large Language Models (LLMs) on standard laptop hardware configurations.

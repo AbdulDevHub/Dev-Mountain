@@ -3,6 +3,7 @@ id: typescript-quick-reference
 title: TypeScript Quick Reference
 sidebar_label: TS Quick Reference
 description: A cheat sheet for TypeScript types, syntax, and common patterns.
+tags: [typescript, ts, javascript, frontend, cheatsheet, reference]
 ---
 
 A syntax refresher for when you've been away from TS for a while.

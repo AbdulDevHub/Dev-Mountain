@@ -3,6 +3,7 @@ id: chmod-and-file-mode-basics
 title: "Chmod Fundamentals"
 sidebar_label: Chmod & File Permissions
 description: How chmod and Unix file permissions actually work — symbolic mode, numeric mode, and where chmod applies on a Windows machine.
+tags: [permissions, chmod, linux, cli, security, sysadmin]
 ---
 
 `chmod` ("change mode") is the standard Unix/Linux command for setting

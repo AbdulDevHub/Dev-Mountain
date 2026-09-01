@@ -3,6 +3,7 @@ id: home-directory-map
 title: What's in My Home Directory
 sidebar_label: Home Directory Map
 description: A reference for every folder and file living directly in C:\Users\kokok, so I remember what installed it and why it's there.
+tags: [windows, powershell, environment, configuration, directory-structure]
 ---
 
 This page exists so that the next time I open PowerShell, run `ls` in

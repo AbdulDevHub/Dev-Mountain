@@ -10,6 +10,7 @@ keywords:
   - linux
   - macos
   - scripting
+tags: [bash, terminal, linux, shell, scripting, devops]
 ---
 
 A **shebang** (written as `#!`) is a character sequence at the very first line of a script in Unix-like operating systems (such as Linux and macOS). It tells the operating system's kernel which program (interpreter) to use to execute the code in that file.

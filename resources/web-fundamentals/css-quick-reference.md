@@ -2,6 +2,8 @@
 id: css-quick-reference
 title: CSS Quick Reference
 sidebar_label: CSS Quick Reference
+description: Quick cheat sheet for CSS selectors, layouts, typography, and common styling patterns.
+tags: [css, styling, frontend, cheatsheet, reference]
 ---
 
 A cheat sheet for the CSS syntax I always forget after a break. Ctrl+F is your friend here.

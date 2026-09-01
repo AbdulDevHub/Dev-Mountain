@@ -3,6 +3,7 @@ id: copying-network-requests-for-ai
 title: "Cheat Sheet: Copying Network Requests for AI"
 sidebar_label: "Copying Network Requests for AI"
 description: "Quick reference for copying network requests from DevTools to share with AI tools."
+tags: [ai, devtools, curl, har, debugging, network]
 ---
 
 Use this quick reference to grab network request data from your browser's DevTools and share it with an AI assistant for debugging.

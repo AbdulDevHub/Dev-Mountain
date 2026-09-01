@@ -1,16 +1,7 @@
 ---
 title: NetworkChuck Hacking Guide
 description: Personal notes from three NetworkChuck cybersecurity videos covering password cracking, Tor, Tails, and malware fundamentals.
-tags:
-  - cybersecurity
-  - kali-linux
-  - hashcat
-  - hydra
-  - tor
-  - tails
-  - malware
-  - python
-  - networkchuck
+tags: [cybersecurity, kali-linux, hashcat, hydra, tor, tails, malware, python, networkchuck]
 ---
 
 > **Purpose**
