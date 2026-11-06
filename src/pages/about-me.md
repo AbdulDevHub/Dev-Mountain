@@ -563,7 +563,7 @@ A movie discovery web app with user authentication, light/dark mode, genre brows
 
 ### CaseCobra — Custom Phone Case Shop
 
-**GitHub:** [AbdulDevHub/Case-Cobra](https://github.com/AbdulDevHub/Case-Cobra)
+**GitHub:** [AbdulDevHub/Archive-Mountain › Web Apps/Case-Cobra](https://github.com/AbdulDevHub/Archive-Mountain/tree/main/Web%20Apps/Case-Cobra)
 
 A full-stack e-commerce shop for custom phone cases. Features a drag-and-drop phone case configurator, secret admin dashboard for order management, Stripe payments, Kinde authentication, and transactional thank-you emails. Built on Next.js 14 App Router with shadcn-ui.
 
@@ -682,7 +682,7 @@ An immersive 3D underwater adventure game set in the Bermuda Triangle. Features 
 
 ### Modern AliExpress (E-Commerce Clone)
 
-**GitHub:** [AbdulDevHub/Modern-AliExpress](https://github.com/AbdulDevHub/Modern-AliExpress) | [Live](https://modern-aliexpress.vercel.app/)
+**GitHub:** [AbdulDevHub/Archive-Mountain › Web Apps/Modern-AliExpress](https://github.com/AbdulDevHub/Archive-Mountain/tree/main/Web%20Apps/Modern-AliExpress) | [Live](https://modern-aliexpress.vercel.app/)
 
 A full-stack e-commerce web app cloning AliExpress with a modernized UI. Includes Google and GitHub OAuth, Stripe payment integration, and a Supabase-backed PostgreSQL database managed via Prisma ORM.
 
@@ -750,13 +750,13 @@ A monorepo tracking 48+ web and desktop development projects organized into seve
 
 **Linked submodules:** _(external repos tracked as Git submodules, not native code — each already has its own full entry elsewhere in this file, linked here for reference)_
 
-[Filmverse](https://github.com/AbdulDevHub/Filmverse) · [CaseCobra](https://github.com/AbdulDevHub/Case-Cobra) · [Glisten AI](https://github.com/AbdulDevHub/Glisten-AI) · [Modern AliExpress](https://github.com/AbdulDevHub/Modern-AliExpress) · [NoteMark](https://github.com/AbdulDevHub/NoteMark)
+[Filmverse](https://github.com/AbdulDevHub/Filmverse) · [CaseCobra](https://github.com/AbdulDevHub/Archive-Mountain/tree/main/Web%20Apps/Case-Cobra) · [Glisten AI](https://github.com/AbdulDevHub/Glisten-AI) · [Modern AliExpress](https://github.com/AbdulDevHub/Archive-Mountain/tree/main/Web%20Apps/Modern-AliExpress) · [NoteMark](https://github.com/AbdulDevHub/NoteMark)
 
 ---
 
 ### Web Mountain
 
-**GitHub:** [AbdulDevHub/Web-Mountain](https://github.com/AbdulDevHub/Web-Mountain)
+**GitHub:** [AbdulDevHub/Archive-Mountain](https://github.com/AbdulDevHub/Archive-Mountain) (merged in with full history) | [Live](https://archive-mountain.netlify.app/)
 
 A living archive of 50+ frontend experiments, UI concepts, and interactive web utilities, tracking a progression of skills from foundational HTML/CSS/JS to advanced WebGL and canvas-based effects. Organized into four categories: Awesome Websites, UI Experiments, Awesome Effects, and Chrome Extensions.
 
