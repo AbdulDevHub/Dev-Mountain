@@ -4,7 +4,19 @@
 
 A curated knowledge base for developers and designers — tools, UI/UX inspiration, motion design examples, workflow references, and more. Built with [Docusaurus](https://docusaurus.io/).
 
+**Live site:** [dev-mountain.vercel.app](https://dev-mountain.vercel.app)
+
 ![Screenshot](Screenshot.png)
+
+---
+
+## 🧭 Project Overview
+
+Dev Mountain is my personal developer handbook, published as a website. Instead of scattered bookmarks and notes, every cheatsheet, guide and useful link I collect lands here, sorted into topics like web fundamentals, AI systems, system design, terminal tools and DevOps. Each page is written to be skimmed: short sections, copy-paste commands, and links to the best outside resources. It runs on Docusaurus, so pages are plain Markdown, search works offline, and the whole site builds to static files hosted on Vercel.
+
+## 🤖 Agent Skills
+
+My AI coding agent skills live in a companion repo: **[Agent Skills Factory](https://github.com/AbdulDevHub/Agent-Skills-Factory)** (plus its [External Skills](https://github.com/AbdulDevHub/Agent-Skills-Factory/blob/main/External%20Skills.md) list). The site's [Agent Skills Library](https://dev-mountain.vercel.app/resources/ai-systems/agent-skills) page explains what skills are and where to find more.
 
 ---
 
@@ -23,11 +35,12 @@ A curated knowledge base for developers and designers — tools, UI/UX inspirati
 
 ### Adding a Resource
 
-1. Drop a `.md` file in `resources/`:
+1. Drop a `.md` file in the matching `resources/<category>/` folder:
    ```md
    ---
    title: My Topic
    description: Short description
+   tags: [tools]
    ---
 
    ## My Topic
@@ -38,7 +51,7 @@ A curated knowledge base for developers and designers — tools, UI/UX inspirati
    ```ts
    {
      type: "doc",
-     id: "my-topic",
+     id: "<category>/my-topic",
    },
    ```
    Place it in the desired position within the `resourcesSidebar` array.

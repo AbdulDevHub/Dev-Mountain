@@ -163,6 +163,7 @@ const sidebars: SidebarsConfig = {
         { type: "doc", id: "tools-workflow/chmod-and-file-mode-basics" },
         { type: "doc", id: "tools-workflow/windows-file-attributes" },
         { type: "doc", id: "tools-workflow/chainner-batch-upscaling" },
+        { type: "doc", id: "tools-workflow/publishing-npm-packages" },
       ],
     },
 
@@ -206,6 +207,7 @@ const sidebars: SidebarsConfig = {
         { type: "doc", id: "ai-systems/local-model-guide" },
         { type: "doc", id: "ai-systems/copying-network-requests-for-ai" },
         { type: "doc", id: "ai-systems/prompt-engineering-fundamentals" },
+        { type: "doc", id: "ai-systems/ai-agents-for-beginners-openclaw" },
       ],
     },
 
