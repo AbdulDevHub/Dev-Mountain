@@ -1,23 +1,123 @@
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
-
-.heroBanner {
-  padding: 4rem 0;
-  text-align: center;
+.hero {
   position: relative;
   overflow: hidden;
+  padding: 96px 0 64px;
 }
 
-@media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 2rem;
+.contours {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  color: var(--dm-contour);
+  pointer-events: none;
+}
+
+.summit {
+  fill: var(--dm-accent);
+}
+
+.summitLabel {
+  fill: var(--dm-muted);
+  font-size: 13px;
+  font-family: var(--ifm-font-family-base);
+  paint-order: stroke;
+  stroke: var(--dm-paper);
+  stroke-width: 6px;
+  stroke-linejoin: round;
+}
+
+.heroInner {
+  position: relative;
+}
+
+.title {
+  font-family: var(--dm-font-display);
+  font-weight: 800;
+  font-size: clamp(3rem, 9vw, 7rem);
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  max-width: 12ch;
+  margin-bottom: 20px;
+}
+
+.lede {
+  font-size: 1.25rem;
+  line-height: 1.55;
+  color: var(--dm-muted);
+  max-width: 52ch;
+  margin-bottom: 32px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: min(520px, 100%);
+  padding: 0 16px;
+  background: var(--dm-surface);
+  border: 1.5px solid var(--dm-line);
+  border-radius: 10px;
+  color: var(--dm-muted);
+  box-shadow: 0 2px 8px oklch(0.27 0.04 165 / 0.06);
+  transition: border-color 180ms var(--dm-ease);
+}
+
+.search:focus-within {
+  border-color: var(--dm-accent);
+  outline: 2px solid var(--dm-accent);
+  outline-offset: 2px;
+}
+
+.search input {
+  flex: 1;
+  min-height: 50px;
+  border: 0;
+  background: transparent;
+  color: var(--dm-ink);
+  font: inherit;
+  font-size: 1rem;
+  outline: none;
+}
+
+.search input::placeholder {
+  color: var(--dm-muted);
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  min-height: 50px;
+  padding: 0 20px;
+  border-radius: 10px;
+  background: var(--dm-accent);
+  color: var(--dm-paper);
+  font-weight: 600;
+  transition: background-color 180ms var(--dm-ease);
+}
+
+.cta:hover {
+  background: var(--ifm-color-primary-darker);
+  color: var(--dm-paper);
+  text-decoration: none;
+}
+
+@media (max-width: 996px) {
+  .hero {
+    padding: 56px 0 40px;
   }
 }
 
-.buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+@media (prefers-reduced-motion: reduce) {
+  .search,
+  .cta {
+    transition: none;
+  }
 }

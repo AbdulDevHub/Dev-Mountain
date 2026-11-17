@@ -1,30 +1,125 @@
 /**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
+ * Dev Mountain theme ("Contour Map"): forest-ink green on a faintly green-tinted paper.
+ * Tokens are documented in context/UI_TOKENS.md. Infima reads the --ifm-* variables.
  */
 
-/* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  --dm-paper: oklch(0.985 0.006 160);
+  --dm-surface: oklch(1 0 0);
+  --dm-ink: oklch(0.27 0.04 165);
+  --dm-muted: oklch(0.45 0.03 165);
+  --dm-line: oklch(0.88 0.02 160);
+  --dm-contour: oklch(0.82 0.045 160);
+  --dm-accent: oklch(0.5 0.11 160);
+  --dm-font-display: "Fraunces", Georgia, serif;
+  --dm-ease: cubic-bezier(0.25, 1, 0.5, 1);
+
+  --ifm-color-primary: var(--dm-accent);
+  --ifm-color-primary-dark: oklch(0.46 0.105 160);
+  --ifm-color-primary-darker: oklch(0.43 0.1 160);
+  --ifm-color-primary-darkest: oklch(0.37 0.09 160);
+  --ifm-color-primary-light: oklch(0.55 0.115 160);
+  --ifm-color-primary-lighter: oklch(0.58 0.115 160);
+  --ifm-color-primary-lightest: oklch(0.64 0.11 160);
+  --ifm-background-color: var(--dm-paper);
+  --ifm-background-surface-color: var(--dm-surface);
+  --ifm-font-color-base: var(--dm-ink);
+  --ifm-heading-color: var(--dm-ink);
+  --ifm-font-family-base: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --ifm-heading-font-family: var(--ifm-font-family-base);
+  --ifm-navbar-background-color: color-mix(in oklch, var(--dm-paper) 88%, transparent);
+  --ifm-footer-background-color: oklch(0.24 0.035 165);
+  --ifm-toc-border-color: var(--dm-line);
+  --ifm-hr-border-color: var(--dm-line);
   --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --docusaurus-highlighted-code-line-bg: oklch(0.27 0.04 165 / 0.08);
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+[data-theme="dark"] {
+  --dm-paper: oklch(0.2 0.015 165);
+  --dm-surface: oklch(0.24 0.018 165);
+  --dm-ink: oklch(0.94 0.012 160);
+  --dm-muted: oklch(0.78 0.02 160);
+  --dm-line: oklch(0.34 0.02 165);
+  --dm-contour: oklch(0.36 0.035 162);
+  --dm-accent: oklch(0.78 0.11 160);
+
+  --ifm-color-primary-dark: oklch(0.74 0.11 160);
+  --ifm-color-primary-darker: oklch(0.71 0.11 160);
+  --ifm-color-primary-darkest: oklch(0.65 0.1 160);
+  --ifm-color-primary-light: oklch(0.81 0.1 160);
+  --ifm-color-primary-lighter: oklch(0.84 0.09 160);
+  --ifm-color-primary-lightest: oklch(0.88 0.08 160);
+  --ifm-footer-background-color: oklch(0.16 0.015 165);
+  --docusaurus-highlighted-code-line-bg: oklch(0 0 0 / 0.3);
+}
+
+html {
+  color-scheme: light;
+  scrollbar-color: var(--dm-contour) transparent;
+}
+[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+::selection {
+  background: color-mix(in oklch, var(--dm-accent) 25%, transparent);
+}
+
+.navbar {
+  backdrop-filter: saturate(1.4) blur(8px);
+  box-shadow: 0 1px 0 var(--dm-line);
+}
+.navbar__title {
+  font-family: var(--dm-font-display);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+a {
+  text-underline-offset: 0.18em;
+}
+
+:focus-visible {
+  outline: 2px solid var(--dm-accent);
+  outline-offset: 2px;
+}
+
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+.markdown p {
+  text-wrap: pretty;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.footer--dark {
+  --ifm-footer-background-color: oklch(0.24 0.035 165);
+}
+[data-theme="dark"] .footer--dark {
+  --ifm-footer-background-color: oklch(0.16 0.015 165);
+}
+
+/* Navbar search (local search plugin): keep placeholder and key hints legible */
+.navbar__search-input::placeholder,
+.navbar input[type="search"]::placeholder {
+  color: var(--dm-muted);
+  opacity: 1;
+}
+.navbar kbd {
+  color: var(--dm-muted);
+  border-color: var(--dm-line);
 }

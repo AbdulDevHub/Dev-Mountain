@@ -3,28 +3,78 @@ import type { Config } from "@docusaurus/types"
 import type * as Preset from "@docusaurus/preset-classic"
 
 const config: Config = {
-  title: "Dev Dino Mountain",
+  title: "Dev Mountain",
   tagline: "Curated Dev Resources • Dynamic UI • T-Rex Energy",
-  favicon: "img/favicon.ico",
+  favicon: "img/favicon.svg",
 
-  // Set the production url of your site here
+  stylesheets: [
+    {
+      href: "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=IBM+Plex+Sans:wght@400;500;600&display=swap",
+      type: "text/css",
+    },
+  ],
+
   url: "https://dev-mountain.vercel.app",
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/",
+  trailingSlash: false,
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: "abdulDevHub", // Usually your GitHub org/user name.
-  projectName: "docusaurus", // Usually your repo name.
+  organizationName: "AbdulDevHub",
+  projectName: "Dev-Mountain",
+
+  future: {
+    v4: true,
+    faster: true,
+  },
 
   onBrokenLinks: "throw",
+
+  headTags: [
+    {
+      tagName: "link",
+      attributes: { rel: "preconnect", href: "https://fonts.googleapis.com" },
+    },
+    {
+      tagName: "link",
+      attributes: {
+        rel: "preconnect",
+        href: "https://fonts.gstatic.com",
+        crossorigin: "anonymous",
+      },
+    },
+    {
+      tagName: "script",
+      attributes: { type: "application/ld+json" },
+      innerHTML: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        name: "Dev Mountain",
+        url: "https://dev-mountain.vercel.app",
+        description:
+          "Developer cheatsheets, guides and curated links for web, AI, system design, terminal and DevOps.",
+        author: {
+          "@type": "Person",
+          name: "Abdul Khan",
+          url: "https://github.com/AbdulDevHub",
+        },
+        potentialAction: {
+          "@type": "SearchAction",
+          target: "https://dev-mountain.vercel.app/search?q={search_term_string}",
+          "query-input": "required name=search_term_string",
+        },
+      }),
+    },
+  ],
 
   markdown: {
     hooks: {
       onBrokenMarkdownLinks: "warn",
     },
     mermaid: true,
+    mdx1Compat: {
+      comments: true,
+      admonitions: true,
+      headingIds: true,
+    },
   },
   themes: [
     "@docusaurus/theme-mermaid",
@@ -40,9 +90,6 @@ const config: Config = {
     ],
   ],
 
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: "en",
     locales: ["en"],
@@ -54,20 +101,23 @@ const config: Config = {
       {
         docs: {
           sidebarPath: "./sidebars.ts",
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            "https://github.com/AbdulDevHub/Docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+          editUrl: "https://github.com/AbdulDevHub/Dev-Mountain/tree/main/",
+          showLastUpdateTime: true,
         },
         blog: {
           showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            "https://github.com/AbdulDevHub/Docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+          editUrl: "https://github.com/AbdulDevHub/Dev-Mountain/tree/main/",
+          onInlineAuthors: "ignore",
+          onUntruncatedBlogPosts: "ignore",
         },
         theme: {
           customCss: "./src/css/custom.css",
+        },
+        sitemap: {
+          lastmod: "date",
+          changefreq: null,
+          priority: null,
+          ignorePatterns: ["/tags/**", "/blog/tags/**", "/search"],
         },
       } satisfies Preset.Options,
     ],
@@ -81,19 +131,33 @@ const config: Config = {
         path: "resources",
         routeBasePath: "resources",
         sidebarPath: "./sidebars-resources.ts",
-        editUrl: "https://github.com/AbdulDevHub/Docusaurus/tree/main/",
+        editUrl: "https://github.com/AbdulDevHub/Dev-Mountain/tree/main/",
+        showLastUpdateTime: true,
       },
     ],
   ],
 
   themeConfig: {
-    // Replace with your project's social card
-    image: "img/docusaurus-social-card.jpg",
+    image: "img/social-card.png",
+    metadata: [
+      {
+        name: "keywords",
+        content:
+          "developer cheatsheets, programming guides, web development, AI agents, system design, terminal commands, devops, docusaurus",
+      },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "author", content: "Abdul Khan" },
+    ],
+    colorMode: {
+      respectPrefersColorScheme: true,
+    },
     navbar: {
-      title: "Dev Dino Mountain",
+      title: "Dev Mountain",
+      hideOnScroll: true,
       logo: {
-        alt: "Dev Dino Mountain Logo",
+        alt: "Dev Mountain logo",
         src: "img/logo.svg",
+        srcDark: "img/logo-dark.svg",
       },
       items: [
         {
@@ -130,24 +194,24 @@ const config: Config = {
             },
             {
               label: "Resources",
+              to: "/resources",
+            },
+            {
+              label: "Learning Platforms",
               to: "/resources/references-knowledge/learning-platforms",
             },
           ],
         },
         {
-          title: "Community",
+          title: "Projects",
           items: [
             {
-              label: "Stack Overflow",
-              href: "https://stackoverflow.com/questions/tagged/docusaurus",
+              label: "Agent Skills Factory",
+              href: "https://github.com/AbdulDevHub/Agent-Skills-Factory",
             },
             {
-              label: "Discord",
-              href: "https://discordapp.com/invite/docusaurus",
-            },
-            {
-              label: "Twitter",
-              href: "https://twitter.com/docusaurus",
+              label: "AbdulDevHub on GitHub",
+              href: "https://github.com/AbdulDevHub",
             },
           ],
         },
@@ -169,7 +233,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Dev-Mountain by Abdul Khan. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Dev Mountain by Abdul Khan. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
