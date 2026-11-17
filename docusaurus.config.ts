@@ -4,7 +4,7 @@ import type * as Preset from "@docusaurus/preset-classic"
 
 const config: Config = {
   title: "Dev Mountain",
-  tagline: "Curated Dev Resources • Dynamic UI • T-Rex Energy",
+  tagline: "A developer handbook you can climb",
   favicon: "img/favicon.svg",
 
   stylesheets: [

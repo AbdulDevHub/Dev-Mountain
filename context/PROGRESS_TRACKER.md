@@ -33,6 +33,7 @@
 
 - `src/pages/about-me.md` had uncommitted edits on 2026-11-17: commit them with item f or separately.
 - `static/assets/loading-player.gif` is untracked and not used by any page yet.
+- **Submit to Google Search Console**: add the property for https://dev-mountain.vercel.app (DNS or HTML-tag verification), then submit https://dev-mountain.vercel.app/sitemap.xml once the rebrand deploy is live. Needs Abdul's Google login.
 
 ## Session log
 

@@ -1,6 +1,6 @@
 # ⛰️ Dev Mountain
 
-> **Curated Dev Resources • Dynamic UI • T-Rex Energy**
+> **A developer handbook you can climb**
 
 A curated knowledge base for developers and designers — tools, UI/UX inspiration, motion design examples, workflow references, and more. Built with [Docusaurus](https://docusaurus.io/).
 

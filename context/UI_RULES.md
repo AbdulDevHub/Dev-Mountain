@@ -10,5 +10,5 @@
 - **Homepage**: hero (headline, lede, real search form posting to `/search?q=`, one solid CTA), then the trail index. The trail index is generated from `sidebars-resources.ts` by `src/components/TrailIndex` (`useTrails`), so new categories and pages appear automatically; never hard-code counts.
 - **Lists over cards**: topics are a divided list with counts, not a grid of icon cards.
 - **States**: every link/control has hover (colour to accent), visible `:focus-visible` ring (2px accent, 2px offset) and a 48px minimum target.
-- **Mascot**: the T-Rex is no longer part of the brand visuals; the tagline "T-Rex Energy" remains in config only.
+- **Mascot and tagline**: no T-Rex in the brand. Tagline is "A developer handbook you can climb" (config, README, homepage h1, social card).
 - **Brand name**: always "Dev Mountain" (two words, no hyphen) in UI copy.
